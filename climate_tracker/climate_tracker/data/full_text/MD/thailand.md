@@ -41,6 +41,68 @@ Thailand recorded a large LULUCF sink in its latest inventory equivalent to arou
 We rate Thailand’s net zero target as Average. In Thailand’s Second NDC, it references its continuing efforts “to meet the long-term goal of carbon neutrality by 2050 and net-zero greenhouse gas emission by 2065”. This supersedes Thailand’s previous ‘carbon neutrality’ target for 2065 target submitted to the UNFCCC in October 2021. Thailand officially submitted these revised targets as part of its new long-term low greenhouse gas emission development strategy (LT-LEDS) on 7 November 2022.
 
 
+# Targets
+
+
+## Target Overview
+
+Thailand submitted its second NDC target to the UNFCCC on November 2, 2022 (Government of the Kingdom of Thailand, 2022). The second NDC includes revised unconditional and conditional targets, both of which has been strengthened. Additionally, the new NDC has included reference to Thailand’s revision of its long-term target.
+
+The remaining critical elements of the NDC remains the same as its previously updated NDC in 2020. The NDC still covers economy-wide emissions excluding LULUCF, covers all greenhouse gases except NF3, has omitted explanation of why the target is a fair contribution, and maintains the same target formulation of emission reductions under business-as-usual.
+
+In order to receive a 1.5°C compatible rating for its climate targets, Thailand would need to do the following:
+
+- Submit a conditional NDC target to reduce emissions by approximately 44% by 2030 compared to 2021 levels, or 65% reduction under its stated BAU.
+- Submit an unconditional NDC target to reduce emissions by approximately 31% by 2030 compared to 2021 levels, or 57% reduction under its stated BAU.
+
+## NDC Updates
+
+Thailand’s second NDC, submitted on November 2, 2022, is an improvement on its updated NDC submitted in 2020 through strengthened emission reduction targets, although several elements can still be improved.
+
+The second NDC’s overall targets include its unconditional GHG reduction target of 30% (up from 20%) and a conditional target of 40% (up from 25%) below BAU level by 2030, excluding LULUCF. Thailand has included a reference to its LT-LEDS revision, which aims for carbon neutrality by 2050 and net zero GHGs by 2065, although the alignment of the mid-term and long-term targets remain unclear from the NDC.
+
+The document has several elements which could still be improved to increase the transparency of its targets. Like the previous submission, the NDC provides no details on sectoral targets, although it has indicated forthcoming implementation plans such as the NDC Roadmap on Mitigation and Sectoral NDC plans, does not explain why its targets are a fair contribution, and does not yet cover all GHGs (missing NF3). Furthermore, Thailand has kept the same BAU emissions level of 555 MtCO2e by 2030 (the same as in the first NDC and updated NDC). The BAU should be updated, especially in the light of the global pandemic and energy crisis of recent years. The best practice revision to this target type, would be to submit an absolute emissions target.
+
+The document notes it intends to achieve its unconditional target through domestic efforts, but continues to explore the potential of international market-based cooperation, which could include the use of Article 6 mechanisms. Thailand has not included LULUCF within the scope of the NDC but highlights its domestic actions in forestry. Thailand’s exclusion of LULUCF from its NDC target is welcome, given it improves transparency in the target and highlights the need for action in other sectors (LULUCF in Thailand is historically a carbon sink) A separate target for LULUCF would further strengthen the NDC.
+
+The CAT calculates that the unconditional target would lead to an emissions level of 389 MtCO2e (a 13% improvement from its previous NDC) by 2030 excluding LULUCF, while the conditional target would lead to 333 MtCO2e (a 20% improvement from previous), excluding LULUCF. To achieve its conditional target, Thailand indicates that it would require adequate and enhanced access to technology development and transfer, financial resources and capacity building support. The CAT rating for Thailand’s unconditional target remains the same at “Critically insufficient”, although a slight increase in ambition would raise the target to the next rating. The CAT’s rating for Thailand’s conditional target has improved to “Insufficient”.
+
+* Before September 2021, all CAT ratings were based exclusively on fair share and only assessed a country’s target.
+
+N/A
+
+
+## CAT rating of targets
+
+The CAT rates NDC targets against what a fair contribution to achieving the Paris Agreement’s long-term temperature goal would be as well as against what needs to happen within a country’s own borders.
+
+Thailand has put forward two targets in its NDC. One that it will achieve using its own resources and one that requires international support. We rate the country’s unconditional target against its fair share contribution (‘Unconditional NDC target against fair share’) and its conditional target against the level of reductions needed within its border (‘conditional NDC target against modelled domestic pathways’).
+
+Conditional NDC target against modelled domestic pathways
+
+We rate Thailand’s 2030 conditional target as “Insufficient”. The “Insufficient” rating indicates that Thailand’s conditional NDC target in 2030 is not yet consistent with the 1.5°C temperature limit, and is associated with a 3 °C-compatible trajectory, when compared to modelled domestic pathways.
+
+Unconditional NDC target against fair share
+
+We rate Thailand’s unconditional NDC target “Critically insufficient” when compared to its fair share. Thailand’s unconditional targets remain based on an inflated BAU that is significantly higher than its current and planned policy projections, even before the onset of COVID-19. Economic trends post-pandemic now lends even more weight to the possibility that the BAU is unrealistic and should be revised downward, with a corresponding strengthening of its emissions reduction targets. If all countries were to follow Thailand’s current approach, warming would exceed 4°C.
+
+**Further information on how the CAT rates countries (against Modelled domestic pathways and Fair share) can be found** **here****.**
+
+
+## Net zero and other long-term target(s)
+
+Thailand submitted its revised Long-term Low Greenhouse Gas Emission Development Strategy on 7 November, 2022, which moved the ‘carbon neutrality’ target forward to 2050 and committed to ‘net zero’ emissions by 2065 (ONEP, 2022). This represents an accelerated target from its original ‘carbon neutrality’ target for 2065 submitted to the UNFCCC in October 2021 (Thailand Government, 2021).
+
+We evaluate the net zero target as: **Average.** For details on the analysis, see the Net zero tab.
+
+
+## 2020 pledge
+
+The target of a GHG emissions reduction of 7–20% below BAU in the energy and transport sectors had been included in Thailand’s NAMAs and Climate Change Master Plan (Ministry of Natural Resources and Environment, 2014, 2015). The measures included mitigation actions in the energy and transport sectors.
+
+The 3rd Biennial Update Report notes that in 2018, Thailand had achieved a GHG emissions reduction of 15.76% under its BAU (Ministry of Natural Resources and Environment, 2020b). The CAT calculates Thailand’s 2020 BAU reference to be 470 MtCO2e and its GHG emissions reduction targets to be around 375 to 435 MtCO2e/year in 2020. According to CAT analysis, Thailand overachieved this goal due to the economic downturn caused by COVID-19, although it was on track to be within the range pre-COVID as well.
+
+
 # Net zero targets
 
 
@@ -371,66 +433,4 @@ We take 2021 as the last historical data point and for emissions between 2022 an
 ## Global Warming Potentials values
 
 The CAT uses Global Warming Potential (GWP) values from the IPCC's Fourth Assessment Report (AR4) for all its figures and time series. Assessments completed prior to December 2018 (COP24) used GWP values from the Second Assessment Report (SAR).
-
-
-# Targets
-
-
-## Target Overview
-
-Thailand submitted its second NDC target to the UNFCCC on November 2, 2022 (Government of the Kingdom of Thailand, 2022). The second NDC includes revised unconditional and conditional targets, both of which has been strengthened. Additionally, the new NDC has included reference to Thailand’s revision of its long-term target.
-
-The remaining critical elements of the NDC remains the same as its previously updated NDC in 2020. The NDC still covers economy-wide emissions excluding LULUCF, covers all greenhouse gases except NF3, has omitted explanation of why the target is a fair contribution, and maintains the same target formulation of emission reductions under business-as-usual.
-
-In order to receive a 1.5°C compatible rating for its climate targets, Thailand would need to do the following:
-
-- Submit a conditional NDC target to reduce emissions by approximately 44% by 2030 compared to 2021 levels, or 65% reduction under its stated BAU.
-- Submit an unconditional NDC target to reduce emissions by approximately 31% by 2030 compared to 2021 levels, or 57% reduction under its stated BAU.
-
-## NDC Updates
-
-Thailand’s second NDC, submitted on November 2, 2022, is an improvement on its updated NDC submitted in 2020 through strengthened emission reduction targets, although several elements can still be improved.
-
-The second NDC’s overall targets include its unconditional GHG reduction target of 30% (up from 20%) and a conditional target of 40% (up from 25%) below BAU level by 2030, excluding LULUCF. Thailand has included a reference to its LT-LEDS revision, which aims for carbon neutrality by 2050 and net zero GHGs by 2065, although the alignment of the mid-term and long-term targets remain unclear from the NDC.
-
-The document has several elements which could still be improved to increase the transparency of its targets. Like the previous submission, the NDC provides no details on sectoral targets, although it has indicated forthcoming implementation plans such as the NDC Roadmap on Mitigation and Sectoral NDC plans, does not explain why its targets are a fair contribution, and does not yet cover all GHGs (missing NF3). Furthermore, Thailand has kept the same BAU emissions level of 555 MtCO2e by 2030 (the same as in the first NDC and updated NDC). The BAU should be updated, especially in the light of the global pandemic and energy crisis of recent years. The best practice revision to this target type, would be to submit an absolute emissions target.
-
-The document notes it intends to achieve its unconditional target through domestic efforts, but continues to explore the potential of international market-based cooperation, which could include the use of Article 6 mechanisms. Thailand has not included LULUCF within the scope of the NDC but highlights its domestic actions in forestry. Thailand’s exclusion of LULUCF from its NDC target is welcome, given it improves transparency in the target and highlights the need for action in other sectors (LULUCF in Thailand is historically a carbon sink) A separate target for LULUCF would further strengthen the NDC.
-
-The CAT calculates that the unconditional target would lead to an emissions level of 389 MtCO2e (a 13% improvement from its previous NDC) by 2030 excluding LULUCF, while the conditional target would lead to 333 MtCO2e (a 20% improvement from previous), excluding LULUCF. To achieve its conditional target, Thailand indicates that it would require adequate and enhanced access to technology development and transfer, financial resources and capacity building support. The CAT rating for Thailand’s unconditional target remains the same at “Critically insufficient”, although a slight increase in ambition would raise the target to the next rating. The CAT’s rating for Thailand’s conditional target has improved to “Insufficient”.
-
-* Before September 2021, all CAT ratings were based exclusively on fair share and only assessed a country’s target.
-
-N/A
-
-
-## CAT rating of targets
-
-The CAT rates NDC targets against what a fair contribution to achieving the Paris Agreement’s long-term temperature goal would be as well as against what needs to happen within a country’s own borders.
-
-Thailand has put forward two targets in its NDC. One that it will achieve using its own resources and one that requires international support. We rate the country’s unconditional target against its fair share contribution (‘Unconditional NDC target against fair share’) and its conditional target against the level of reductions needed within its border (‘conditional NDC target against modelled domestic pathways’).
-
-Conditional NDC target against modelled domestic pathways
-
-We rate Thailand’s 2030 conditional target as “Insufficient”. The “Insufficient” rating indicates that Thailand’s conditional NDC target in 2030 is not yet consistent with the 1.5°C temperature limit, and is associated with a 3 °C-compatible trajectory, when compared to modelled domestic pathways.
-
-Unconditional NDC target against fair share
-
-We rate Thailand’s unconditional NDC target “Critically insufficient” when compared to its fair share. Thailand’s unconditional targets remain based on an inflated BAU that is significantly higher than its current and planned policy projections, even before the onset of COVID-19. Economic trends post-pandemic now lends even more weight to the possibility that the BAU is unrealistic and should be revised downward, with a corresponding strengthening of its emissions reduction targets. If all countries were to follow Thailand’s current approach, warming would exceed 4°C.
-
-**Further information on how the CAT rates countries (against Modelled domestic pathways and Fair share) can be found** **here****.**
-
-
-## Net zero and other long-term target(s)
-
-Thailand submitted its revised Long-term Low Greenhouse Gas Emission Development Strategy on 7 November, 2022, which moved the ‘carbon neutrality’ target forward to 2050 and committed to ‘net zero’ emissions by 2065 (ONEP, 2022). This represents an accelerated target from its original ‘carbon neutrality’ target for 2065 submitted to the UNFCCC in October 2021 (Thailand Government, 2021).
-
-We evaluate the net zero target as: **Average.** For details on the analysis, see the Net zero tab.
-
-
-## 2020 pledge
-
-The target of a GHG emissions reduction of 7–20% below BAU in the energy and transport sectors had been included in Thailand’s NAMAs and Climate Change Master Plan (Ministry of Natural Resources and Environment, 2014, 2015). The measures included mitigation actions in the energy and transport sectors.
-
-The 3rd Biennial Update Report notes that in 2018, Thailand had achieved a GHG emissions reduction of 15.76% under its BAU (Ministry of Natural Resources and Environment, 2020b). The CAT calculates Thailand’s 2020 BAU reference to be 470 MtCO2e and its GHG emissions reduction targets to be around 375 to 435 MtCO2e/year in 2020. According to CAT analysis, Thailand overachieved this goal due to the economic downturn caused by COVID-19, although it was on track to be within the range pre-COVID as well.
 

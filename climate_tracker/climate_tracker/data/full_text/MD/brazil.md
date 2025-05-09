@@ -69,6 +69,73 @@ Brazil’s aims to achieve climate neutrality by 2050, a target reiterated in it
 The full net zero target analysis can be found here.
 
 
+# Targets
+
+
+## Target Overview
+
+On 27 October 2023, the Brazilian government reverted to the original NDC's absolute emission targets it submitted when it joined the Paris Agreement in 2016, moving away from the NDC updates communicated by the Bolsonaro administration.
+
+In this 2023 NDC, Brazil sets an unconditional target to limit emissions to 1.32 GtCO2e in 2025 and to 1.2 GtCO2e in 2030. This target covers all sectors and is reported using AR5 GWP values. The CAT excludes emissions from the land use, land use change and forestry (LULUCF) sector and converts it to AR4 GWP (see Assumptions section for more details), resulting in a 2025 target of up to 979 MtCO2e and a 2030 target of up to 884 MtCO2e. The CAT rates Brazil’s 2030 target as “Almost sufficient” when compared to both Brazil’s fair share and modelled domestic pathways.
+
+In its NDC, Brazil includes a goal to reach climate neutrality by 2050 but they it not submitted an LTS or communicated further details on the target. In particular, Brazil should clearly state its plans for reducing emissions in all sectors, including LULUCF.
+
+* Using Global Warming Potential (GWP) values from the IPCC AR5 report
+
+
+## NDC Updates
+
+In October 2023, Brazil resubmitted the emissions limits for 2025 and 2030 originally included in its first NDC of 2016. The government did not increase its mitigation ambition with this new submission, nor did it respond to the COP26 mandate to revisit and strengthen its 2030 targets.
+
+In its 2023 submission, Brazil reconfirmed the 1.32 GtCO2e and 1.2 GtCO2e emission limits for 2025 and 2030, respectively. It noted that these limits are consistent with emission reductions of 48.4% and 53.1%, below 2005 levels based on the latest inventory data. While the emission limits are the same in the two submissions, we consider the nature of Brazil’s target formulation to have improved, given it now emphasises the emission limits, rather than percentage reduction targets.
+
+Brazil is one of the few countries that has both a 2025 and 2030 target and has indicated that its next target will also be on a five-year scale to 2035. According to its NDC, Brazil will strive to meet its targets through domestic measures, but has not ruled out the use of international carbon markets. Brazil’s targets are not conditional on international support, though cooperation is welcome.
+
+According to our calculations, Brazil will need to implement additional policies and actions to be able to reduce emissions and achieve its NDC targets.
+
+* The difference in the CAT quantification of the original and 2023 NDC emissions limits is due to our conversion into AR4 values and the method use (see the Assumptions tab for details). The limits put forward by Brazil are the same.** Before September 2021, all CAT ratings were based exclusively on fair share and only assessed a country’s target.
+
+**Target development timeline & previous CAT analysis**
+
+- 9.12.2020: Brazil submitted an updated NDC to the UNFCCC
+- 5.12.2023: Brazil re-communicates its NDC to the UNFCCC
+
+## CAT rating of targets
+
+The CAT rates NDC targets against each country’s fair share contribution to global climate change mitigation, considering a range of equity principles including responsibility, capability, and equality. The CAT also rates NDC targets against indicative national emissions from global least-cost emission pathways ("modelled domestic pathways"). Most developing countries may need support to achieve emissions reductions in line with its share of a global least-cost pathway to achieving the 1.5°C long-term temperature goal.
+
+Brazil has one NDC target. It has not specified whether a portion of the target is conditional on international support or whether its NDC has an international element, so we rate its NDC target against both its fair share contribution and the level of reductions needed in line with modelled domestic pathways.
+
+The CAT assesses emissions excluding LULUCF. Our estimates of Brazil’s targets excluding LULUCF — and their corresponding rating — are highly dependent on the assumptions on the extent to which Brazil will rely on the sector to achieve its NDC. Brazil’s NDC mentions their commitment to achieve zero deforestation by 2030 but it does not give further details as to the expected emissions level for the sector in the future. We expect additional clarity from Brazil in its next communication.
+
+NDC target against modelled domestic pathways
+
+We rate Brazil’s 2030 NDC target as “Almost sufficient” when compared to modelled domestic emissions pathways. The “Almost sufficient” rating indicates that Brazil’s NDC target in 2030 is not yet consistent with its share of a global least-cost pathway limiting warming to 1.5°C but could be, with moderate improvements. If all countries were to follow Brazil’s approach, warming could be held below—but not well below—2°C.
+
+While the current NDC is stronger than the one submitted in 2022 under the previous administration, it is not enough to improve its rating against our modelled domestic pathways. Brazil is not on track to achieve either its 2025 or 2030 targets and needs to adopt additional policies to cut its emissions.
+
+Whether Brazil should receive climate finance from abroad to reduce its emissions is a matter of debate. Our methods do not provide a clear answer to this question. On balance, the CAT methodology shows Brazil needing a small amount of international support is technically consistent with a wide range of literature on fair share contributions to meet the Paris Agreement's goals. However, this contribution would likely be small under most equity perspectives. As a result, the NDC target achieved with its own resources would still need to be improved to align more closely with the 1.5°C limit, regardless of international support.
+
+NDC target against fair share
+
+We rate Brazil’s 2030 NDC target as “Almost sufficient” when compared with its fair share contribution to climate action. In 2023, Lula’s administration reverted to the original NDC's absolute emission targets submitted in 2016, which improved this rating by one category compared to the NDC submitted in 2022. However, according to our methodology, this new submission still falls short of being a fair contribution by Brazil to global climate action.
+
+The “Almost sufficient” rating indicates that Brazil’s NDC target in 2030 is not yet consistent with its fair share of the global mitigation effort to limit warming to 1.5°C but could be, with moderate improvements. Brazil’s target would require other countries to make deeper reductions and comparably greater effort to limit warming to 1.5°C. If all countries were to follow Brazil’s approach, warming could be held below—but not well below—2°C.
+
+Brazil is not on track to achieve either its 2025 or 2030 targets and will need to adopt additional policies to cut their emissions.
+
+**Further information on how the CAT rates countries (against modelled domestic pathways and fair share) can be found** **here****.**
+
+
+## Net zero target
+
+Brazil’s aims to achieve climate neutrality by 2050, a target reiterated in its 2023 NDC submission. However, no further details have been communicated so far, which limits our ability to assess the comprehensiveness of the target. As of August 2024, Brazil has not submitted a long-term strategy to the UNFCCC.
+
+Aiming for climate neutrality by 2050 is a step in the right direction: transitioning to a low-emissions development pathway in compliance with international climate change commitments. However, Brazil should clearly state its plans for reducing emissions across all sectors of the economy, including LULUCF.
+
+The full net zero target analysis can be found here.
+
+
 # Net zero targets
 
 
@@ -468,71 +535,4 @@ Total GHG emissions excluding LULUCF taken from the 2023 Global Energy and Clima
 ## Global Warming Potentials
 
 The CAT uses Global Warming Potential (GWP) values from the IPCC's Fourth Assessment Report (AR4) for all its figures and time series. Assessments completed prior to December 2018 (COP24) used GWP values from the Second Assessment Report (SAR).
-
-
-# Targets
-
-
-## Target Overview
-
-On 27 October 2023, the Brazilian government reverted to the original NDC's absolute emission targets it submitted when it joined the Paris Agreement in 2016, moving away from the NDC updates communicated by the Bolsonaro administration.
-
-In this 2023 NDC, Brazil sets an unconditional target to limit emissions to 1.32 GtCO2e in 2025 and to 1.2 GtCO2e in 2030. This target covers all sectors and is reported using AR5 GWP values. The CAT excludes emissions from the land use, land use change and forestry (LULUCF) sector and converts it to AR4 GWP (see Assumptions section for more details), resulting in a 2025 target of up to 979 MtCO2e and a 2030 target of up to 884 MtCO2e. The CAT rates Brazil’s 2030 target as “Almost sufficient” when compared to both Brazil’s fair share and modelled domestic pathways.
-
-In its NDC, Brazil includes a goal to reach climate neutrality by 2050 but they it not submitted an LTS or communicated further details on the target. In particular, Brazil should clearly state its plans for reducing emissions in all sectors, including LULUCF.
-
-* Using Global Warming Potential (GWP) values from the IPCC AR5 report
-
-
-## NDC Updates
-
-In October 2023, Brazil resubmitted the emissions limits for 2025 and 2030 originally included in its first NDC of 2016. The government did not increase its mitigation ambition with this new submission, nor did it respond to the COP26 mandate to revisit and strengthen its 2030 targets.
-
-In its 2023 submission, Brazil reconfirmed the 1.32 GtCO2e and 1.2 GtCO2e emission limits for 2025 and 2030, respectively. It noted that these limits are consistent with emission reductions of 48.4% and 53.1%, below 2005 levels based on the latest inventory data. While the emission limits are the same in the two submissions, we consider the nature of Brazil’s target formulation to have improved, given it now emphasises the emission limits, rather than percentage reduction targets.
-
-Brazil is one of the few countries that has both a 2025 and 2030 target and has indicated that its next target will also be on a five-year scale to 2035. According to its NDC, Brazil will strive to meet its targets through domestic measures, but has not ruled out the use of international carbon markets. Brazil’s targets are not conditional on international support, though cooperation is welcome.
-
-According to our calculations, Brazil will need to implement additional policies and actions to be able to reduce emissions and achieve its NDC targets.
-
-* The difference in the CAT quantification of the original and 2023 NDC emissions limits is due to our conversion into AR4 values and the method use (see the Assumptions tab for details). The limits put forward by Brazil are the same.** Before September 2021, all CAT ratings were based exclusively on fair share and only assessed a country’s target.
-
-**Target development timeline & previous CAT analysis**
-
-- 9.12.2020: Brazil submitted an updated NDC to the UNFCCC
-- 5.12.2023: Brazil re-communicates its NDC to the UNFCCC
-
-## CAT rating of targets
-
-The CAT rates NDC targets against each country’s fair share contribution to global climate change mitigation, considering a range of equity principles including responsibility, capability, and equality. The CAT also rates NDC targets against indicative national emissions from global least-cost emission pathways ("modelled domestic pathways"). Most developing countries may need support to achieve emissions reductions in line with its share of a global least-cost pathway to achieving the 1.5°C long-term temperature goal.
-
-Brazil has one NDC target. It has not specified whether a portion of the target is conditional on international support or whether its NDC has an international element, so we rate its NDC target against both its fair share contribution and the level of reductions needed in line with modelled domestic pathways.
-
-The CAT assesses emissions excluding LULUCF. Our estimates of Brazil’s targets excluding LULUCF — and their corresponding rating — are highly dependent on the assumptions on the extent to which Brazil will rely on the sector to achieve its NDC. Brazil’s NDC mentions their commitment to achieve zero deforestation by 2030 but it does not give further details as to the expected emissions level for the sector in the future. We expect additional clarity from Brazil in its next communication.
-
-NDC target against modelled domestic pathways
-
-We rate Brazil’s 2030 NDC target as “Almost sufficient” when compared to modelled domestic emissions pathways. The “Almost sufficient” rating indicates that Brazil’s NDC target in 2030 is not yet consistent with its share of a global least-cost pathway limiting warming to 1.5°C but could be, with moderate improvements. If all countries were to follow Brazil’s approach, warming could be held below—but not well below—2°C.
-
-While the current NDC is stronger than the one submitted in 2022 under the previous administration, it is not enough to improve its rating against our modelled domestic pathways. Brazil is not on track to achieve either its 2025 or 2030 targets and needs to adopt additional policies to cut its emissions.
-
-Whether Brazil should receive climate finance from abroad to reduce its emissions is a matter of debate. Our methods do not provide a clear answer to this question. On balance, the CAT methodology shows Brazil needing a small amount of international support is technically consistent with a wide range of literature on fair share contributions to meet the Paris Agreement's goals. However, this contribution would likely be small under most equity perspectives. As a result, the NDC target achieved with its own resources would still need to be improved to align more closely with the 1.5°C limit, regardless of international support.
-
-NDC target against fair share
-
-We rate Brazil’s 2030 NDC target as “Almost sufficient” when compared with its fair share contribution to climate action. In 2023, Lula’s administration reverted to the original NDC's absolute emission targets submitted in 2016, which improved this rating by one category compared to the NDC submitted in 2022. However, according to our methodology, this new submission still falls short of being a fair contribution by Brazil to global climate action.
-
-The “Almost sufficient” rating indicates that Brazil’s NDC target in 2030 is not yet consistent with its fair share of the global mitigation effort to limit warming to 1.5°C but could be, with moderate improvements. Brazil’s target would require other countries to make deeper reductions and comparably greater effort to limit warming to 1.5°C. If all countries were to follow Brazil’s approach, warming could be held below—but not well below—2°C.
-
-Brazil is not on track to achieve either its 2025 or 2030 targets and will need to adopt additional policies to cut their emissions.
-
-**Further information on how the CAT rates countries (against modelled domestic pathways and fair share) can be found** **here****.**
-
-
-## Net zero target
-
-Brazil’s aims to achieve climate neutrality by 2050, a target reiterated in its 2023 NDC submission. However, no further details have been communicated so far, which limits our ability to assess the comprehensiveness of the target. As of August 2024, Brazil has not submitted a long-term strategy to the UNFCCC.
-
-Aiming for climate neutrality by 2050 is a step in the right direction: transitioning to a low-emissions development pathway in compliance with international climate change commitments. However, Brazil should clearly state its plans for reducing emissions across all sectors of the economy, including LULUCF.
-
-The full net zero target analysis can be found here.
 

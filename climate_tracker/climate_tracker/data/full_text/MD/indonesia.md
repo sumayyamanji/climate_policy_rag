@@ -77,63 +77,6 @@ Indonesia’s emissions from land-use, land-use change and forestry have account
 Indonesia has not yet communicated an explicit net zero target but explores scenarios that could lead to net zero by 2060 or sooner in its long-term strategy (LTS) submitted to the UNFCCC in July 2021.
 
 
-# Targets
-
-
-## Target overview
-
-On 23 September 2022, Indonesia submitted its enhanced NDC to the UNFCCC, an update that increased the unconditional target from 29% to 32% below the business-as-usual scenario (BAU), and the conditional target from 41% to 43% below BAU, including emissions from land use, land use change and forestry (LULUCF). Excluding the LULUCF emissions, this translates to an unconditional target of 1,805 MtCO2e and a conditional target of 1,710 MtCO2e in 2030. The CAT rates both Indonesia’s unconditional and conditional targets as “Critically insufficient”.
-
-The updated NDC links to the long-term strategy (LTS), submitted with Indonesia’s 2021 NDC update. Indonesia has not yet communicated an explicit net zero target but explores scenarios that could lead to net zero by 2060 or sooner in its LTS. The government also commits to considering the LTS in the formulation of broader development planning documents and subsequent NDCs. Indonesia has made progress in integrating its long-term target into key planning documents in the energy sector (draft RUKN and RUEN) and the forestry sector (Operational Plan for FOLU Net Sink 2030).
-
-
-## NDC updates
-
-Indonesia submitted its enhanced NDC to the UNFCCC on 23 September 2022. While numerically stronger, it can still be easily met with current policies and will not drive further climate action. We therefore do not consider Indonesia's target to be stronger than its predecessor. The 2022 NDC increased the unconditional target from 29% to 32% below its business-as-usual scenario (BAU), and its conditional target from 41% to 43% below its BAU, including emissions from land use, land use change and forestry (LULUCF).
-
-Indonesia’s relative reductions below BAU are not as ambitious as they sound, for two reasons. First, Indonesia aims to meet a large share of its commitments through emission reductions in the forestry sector. The sector is expected to contribute almost 60% of the emissions reductions necessary to meet both conditional and unconditional NDC targets. This means that other sectors will see substantially lower relative reductions below BAU. The BAU used in the NDC projects emissions that are substantially above current policy projections. Indonesia will likely achieve its targets (excl. forestry) without any additional efforts, while almost doubling today’s emissions.
-
-In August 2024, the Indonesian government released a draft of its Second Nationally Determined Contribution (NDC), introducing a new target for 2035 and a slight adjustment to the 2030 goal. The draft has been forwarded to Parliament (DPR: Dewan Perwakilan Rakyat) but has not yet been formally submitted to the UNFCCC; its submission is expected by Q1 2025. Until then, we cannot incorporate the draft into our rating assessment. A preliminary analysis of Indonesia’s revised climate goals is available on the Climate Action Tracker blog, highlighting both positive developments alongside some red flags.
-
-The Indonesian government has also issued implementing regulations, for example, the Ministry of Environment and Forestry Regulation (MoEF/KLHK: Kementerian Lingkungan Hidup dan Kehutanan) No. 12 of 2024, laying out frameworks to support its new climate targets and further operationalise the previously enacted Presidential Regulation No. 98 of 2021 on the implementation of carbon pricing.
-
-* Before September 2021, all CAT ratings were based exclusively on fair share and only assessed a country’s target
-
-● 23.07.2021 Indonesia improves long-term planning towards net zero, but NDC remains unchanged
-
-● 20.04.2020 Indonesia government wants to focus on existing targets - media reports
-
-
-## CAT rating of targets
-
-The CAT rates NDC targets against each country’s fair share contribution to global climate change mitigation, considering a range of equity principles including responsibility, capability, and equality. The CAT also rates NDC targets against indicative national emissions from global least-cost pathways that achieve the Paris Agreement’s temperature goal (modelled domestic pathways). Indonesia will need support to reduce emissions to the level of its modelled domestic pathway.
-
-Indonesia has put forward two targets in its NDC: one that it will achieve using its own resources and one that requires international support. We rate Indonesia’s unconditional target against its fair share contribution and its conditional target against its modelled domestic pathway.
-
-Conditional NDC target against modelled domestic pathways
-
-**We rate Indonesia’s conditional NDC, excluding the land-use, land-use change and forestry (LULUCF) sector, as “Critically insufficient” when compared to modelled domestic pathways.** The “Critically insufficient” rating indicates that Indonesia’s internationally supported target in 2030 reflects minimal to no action and is not at all consistent with modelled domestic pathways limiting warming to 1.5°C, for which Indonesia would need to lower its conditional NDC target to 62% below its NDC BAU scenario excl. LULUCF. If all countries were to follow Indonesia’s approach, warming would exceed 4°C.
-
-Unconditional NDC target against fair share
-
-**We rate Indonesia’s unconditional NDC, excluding the land-use, land-use change and forestry (LULUCF) sector, as “Critically insufficient”.** The “Critically insufficient” rating indicates that Indonesia’s fair share target in 2030 reflects minimal to no action and is not at all consistent with its fair share of the global mitigation effort to limit warming to 1.5°C, for which Indonesia would need to lower its unconditional NDC target to 60% below its NDC BAU scenario excl. LULUCF. If all countries were to follow Indonesia’s approach, warming would exceed 4°C.
-
-**Further information on how the CAT rates countries (against modelled domestic pathways and fair share) can be found** **here****.**
-
-
-## Net zero and other long-term target(s)
-
-**We evaluate the net zero target as: Target information incomplete.**
-
-Indonesia has not yet communicated an explicit net zero target but explores scenarios that could lead to net zero by 2060 or sooner in its long-term strategy (LTS) submitted to the UNFCCC in July 2021 (Government of Indonesia, 2021).
-
-The government has made steps in integrating its long-term target into core sectoral planning documents. It is now central in the energy sector’s draft National Electricity Master Plan (RUKN) and JETP Comprehensive Investment and Policy Plan (CIPP), and in the forestry sector's plan for net negative forestry emissions by 2030 (MoEF, 2022; JETP Secretariat, 2023; MEMR, 2023a).
-
-The CAT does not yet evaluate Indonesia’s net zero target, given its preliminary nature and lack of more detailed information. We will do so once the government communicates further details.
-
-**For the full analysis** **click here****.**
-
-
 # Net zero targets
 
 
@@ -690,4 +633,61 @@ We estimate the emissions resulting from full implementation of the JETP pathway
 ## Global Warming Potentials values
 
 The CAT uses Global Warming Potential (GWP) values from the IPCC's Fourth Assessment Report (AR4) for all its figures and time series. Assessments completed prior to December 2018 (COP24) used GWP values from the Second Assessment Report (SAR).
+
+
+# Targets
+
+
+## Target overview
+
+On 23 September 2022, Indonesia submitted its enhanced NDC to the UNFCCC, an update that increased the unconditional target from 29% to 32% below the business-as-usual scenario (BAU), and the conditional target from 41% to 43% below BAU, including emissions from land use, land use change and forestry (LULUCF). Excluding the LULUCF emissions, this translates to an unconditional target of 1,805 MtCO2e and a conditional target of 1,710 MtCO2e in 2030. The CAT rates both Indonesia’s unconditional and conditional targets as “Critically insufficient”.
+
+The updated NDC links to the long-term strategy (LTS), submitted with Indonesia’s 2021 NDC update. Indonesia has not yet communicated an explicit net zero target but explores scenarios that could lead to net zero by 2060 or sooner in its LTS. The government also commits to considering the LTS in the formulation of broader development planning documents and subsequent NDCs. Indonesia has made progress in integrating its long-term target into key planning documents in the energy sector (draft RUKN and RUEN) and the forestry sector (Operational Plan for FOLU Net Sink 2030).
+
+
+## NDC updates
+
+Indonesia submitted its enhanced NDC to the UNFCCC on 23 September 2022. While numerically stronger, it can still be easily met with current policies and will not drive further climate action. We therefore do not consider Indonesia's target to be stronger than its predecessor. The 2022 NDC increased the unconditional target from 29% to 32% below its business-as-usual scenario (BAU), and its conditional target from 41% to 43% below its BAU, including emissions from land use, land use change and forestry (LULUCF).
+
+Indonesia’s relative reductions below BAU are not as ambitious as they sound, for two reasons. First, Indonesia aims to meet a large share of its commitments through emission reductions in the forestry sector. The sector is expected to contribute almost 60% of the emissions reductions necessary to meet both conditional and unconditional NDC targets. This means that other sectors will see substantially lower relative reductions below BAU. The BAU used in the NDC projects emissions that are substantially above current policy projections. Indonesia will likely achieve its targets (excl. forestry) without any additional efforts, while almost doubling today’s emissions.
+
+In August 2024, the Indonesian government released a draft of its Second Nationally Determined Contribution (NDC), introducing a new target for 2035 and a slight adjustment to the 2030 goal. The draft has been forwarded to Parliament (DPR: Dewan Perwakilan Rakyat) but has not yet been formally submitted to the UNFCCC; its submission is expected by Q1 2025. Until then, we cannot incorporate the draft into our rating assessment. A preliminary analysis of Indonesia’s revised climate goals is available on the Climate Action Tracker blog, highlighting both positive developments alongside some red flags.
+
+The Indonesian government has also issued implementing regulations, for example, the Ministry of Environment and Forestry Regulation (MoEF/KLHK: Kementerian Lingkungan Hidup dan Kehutanan) No. 12 of 2024, laying out frameworks to support its new climate targets and further operationalise the previously enacted Presidential Regulation No. 98 of 2021 on the implementation of carbon pricing.
+
+* Before September 2021, all CAT ratings were based exclusively on fair share and only assessed a country’s target
+
+● 23.07.2021 Indonesia improves long-term planning towards net zero, but NDC remains unchanged
+
+● 20.04.2020 Indonesia government wants to focus on existing targets - media reports
+
+
+## CAT rating of targets
+
+The CAT rates NDC targets against each country’s fair share contribution to global climate change mitigation, considering a range of equity principles including responsibility, capability, and equality. The CAT also rates NDC targets against indicative national emissions from global least-cost pathways that achieve the Paris Agreement’s temperature goal (modelled domestic pathways). Indonesia will need support to reduce emissions to the level of its modelled domestic pathway.
+
+Indonesia has put forward two targets in its NDC: one that it will achieve using its own resources and one that requires international support. We rate Indonesia’s unconditional target against its fair share contribution and its conditional target against its modelled domestic pathway.
+
+Conditional NDC target against modelled domestic pathways
+
+**We rate Indonesia’s conditional NDC, excluding the land-use, land-use change and forestry (LULUCF) sector, as “Critically insufficient” when compared to modelled domestic pathways.** The “Critically insufficient” rating indicates that Indonesia’s internationally supported target in 2030 reflects minimal to no action and is not at all consistent with modelled domestic pathways limiting warming to 1.5°C, for which Indonesia would need to lower its conditional NDC target to 62% below its NDC BAU scenario excl. LULUCF. If all countries were to follow Indonesia’s approach, warming would exceed 4°C.
+
+Unconditional NDC target against fair share
+
+**We rate Indonesia’s unconditional NDC, excluding the land-use, land-use change and forestry (LULUCF) sector, as “Critically insufficient”.** The “Critically insufficient” rating indicates that Indonesia’s fair share target in 2030 reflects minimal to no action and is not at all consistent with its fair share of the global mitigation effort to limit warming to 1.5°C, for which Indonesia would need to lower its unconditional NDC target to 60% below its NDC BAU scenario excl. LULUCF. If all countries were to follow Indonesia’s approach, warming would exceed 4°C.
+
+**Further information on how the CAT rates countries (against modelled domestic pathways and fair share) can be found** **here****.**
+
+
+## Net zero and other long-term target(s)
+
+**We evaluate the net zero target as: Target information incomplete.**
+
+Indonesia has not yet communicated an explicit net zero target but explores scenarios that could lead to net zero by 2060 or sooner in its long-term strategy (LTS) submitted to the UNFCCC in July 2021 (Government of Indonesia, 2021).
+
+The government has made steps in integrating its long-term target into core sectoral planning documents. It is now central in the energy sector’s draft National Electricity Master Plan (RUKN) and JETP Comprehensive Investment and Policy Plan (CIPP), and in the forestry sector's plan for net negative forestry emissions by 2030 (MoEF, 2022; JETP Secretariat, 2023; MEMR, 2023a).
+
+The CAT does not yet evaluate Indonesia’s net zero target, given its preliminary nature and lack of more detailed information. We will do so once the government communicates further details.
+
+**For the full analysis** **click here****.**
 

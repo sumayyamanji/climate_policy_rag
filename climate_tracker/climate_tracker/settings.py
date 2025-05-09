@@ -63,8 +63,9 @@ DOWNLOAD_DELAY = 3
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+# In settings.py
 #ITEM_PIPELINES = {
-#    "climate_tracker.pipelines.ClimateTrackerPipeline": 300,
+#   'climate_tracker.pipelines.ClimateTrackerPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -91,3 +92,6 @@ DOWNLOAD_DELAY = 3
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+
+

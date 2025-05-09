@@ -16,9 +16,10 @@ def extract(log_level="INFO"):
     """
     print(f"Starting Climate Action Tracker data extraction with log level {log_level}...")
     
-    # Ensure the output directories exist
-    project_root = Path(__file__).parent
-    data_dir = project_root / "climate_tracker" / "data" / "full_text"
+    # Correct directory structure based on the actual file location
+    # Since the file is in climate_tracker directory, not the project root
+    current_dir = Path(__file__).parent
+    data_dir = current_dir / "data" / "full_text"
     md_dir = data_dir / "MD"
     structured_dir = data_dir / "structured"
     unstructured_dir = data_dir / "unstructured"
@@ -26,10 +27,17 @@ def extract(log_level="INFO"):
     for directory in [md_dir, structured_dir, unstructured_dir]:
         directory.mkdir(parents=True, exist_ok=True)
     
-    # Run the spider - using the exact name from your spider class
+    # Navigate up one directory to run the scrapy command from project root
+    # (where scrapy.cfg is located)
+    project_root = current_dir.parent
+    
+    # Run the spider
     cmd = ["scrapy", "crawl", "climate_action_tracker_fulltext", f"--loglevel={log_level}"]
     
     try:
+        # Change to project root to run scrapy command
+        os.chdir(project_root)
+        
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         
         # Stream output in real-time

@@ -65,6 +65,100 @@ Switzerland committed to a 2050 net-zero target as part of its long-term strateg
 **The full net zero target analysis can be found** **here****.**
 
 
+# Targets
+
+
+## Target Overview
+
+Switzerland submitted its updated NDC to the UNFCCC in December 2020, responded to paragraph 29 of the Glasgow Climate Pact and to the rejection of the CO2 Act with another update in December 2021, and submitted another update in November 2024, after the CO2 act finally passed legislation. All updates did not increase in ambition but in the 2021 update language slightly changed from the original NDC’s commitment of “a 50% reduction below 1990” levels by 2030 to “at least 50%” below 1990 levels (Swiss Confederation, 2021). In absolute terms, this translates to emissions levels of at most 27 MtCO2e excluding LULUCF by 2030. Switzerland has also committed to reaching net zero GHG emissions by 2050 as enshrined into law and outlined both in its NDC and LTS.
+
+In its updated NDC, Switzerland does not specify a domestic emissions reduction component of its 2030 target, but instead clearly states its intention to use provisions under Article 6 of the Paris Agreement to offset its own emissions. In its NDC it states that “Switzerland will realise its NDC mainly domestically and will partly use internationally transferred mitigation outcomes (ITMOs) from cooperation under Article 6” (Swiss Confederation, 2021).
+
+Since the CO2 Act was rejected in a public referendum in 2021, Switzerland has passed a new amended CO2 Act in 2024, which strongly decreased in ambition (known as Succession Act). Earlier drafts in 2021 still included a targeted 33% reduction in domestic emissions, which reflects two thirds of the total emissions reduction of its 50% target (Der Bundesrat, 2021). However, since then this has been replaced by vague comments stating that “The reduction of greenhouse gas emissions is primarily achieved with measures within Switzerland. The Federal Council determines the share.” (Bundesgesetz Über Die Reduktion Der CO2-Emissionen (CO2-Gesetz), 2024).
+
+In January to March 2024, the matter of a domestic component was again discussed in commissions in both chambers of parliament with proposals for 75% and 70% (of the overall target to halve emissions in 2030, relative to 1990 level) on the table, but all proposals were rejected. Consequently, the Environment Minister Albert Rösti announced that he would propose a 66% share to the Federal Council (Das Schweizer Parlament, 2024). Other official communications imply that at least 30% (60% of the overall target) will be targeted domestically (Botschaft Zur Revision Des CO2-Gesetzes Für Die Zeit Nach 2024, 2022(Das Schweizer Parlament, 2024)).
+
+
+## NDC Updates
+
+Switzerland submitted an update to its NDC both in December 2021 – to account for changes when the CO2 act was rejected – and again in November 2024 – when a watered-down version of the CO2 act finally passed legislation. Both updates did not increase ambition.
+
+A first update to Switzerland’s NDC target in December 2020 did not represent an increase in ambition, as it changed only from a 50% reduction below 1990 levels to an “at least” 50% reduction, but the domestic component of the target increased from 60% to 75%. A subsequent update to Switzerland’s NDC in December 2021, however, removed entirely any specific reference to a domestic component to its overall 2030 target. The November 2024 update also left the target unchanged and did not raise ambition, instead focusing on adapting the text to better reflect recent policy developments.
+
+* Before September 2021, all CAT ratings were based exclusively on fair share and only assessed a country’s target
+
+- 22.12.2024: Switzerland submitted a further update to its NDC to the UNFCCC
+- 17.12.2021: Switzerland submitted a further update to its NDC to the UNFCCC
+- 09.12.2020: Switzerland submitted its new NDC target to the UNFCCC
+
+## CAT rating of targets
+
+The CAT rates NDC targets against each country’s fair share contribution to global climate change mitigation, considering a range of equity principles including responsibility, capability, and equality. The CAT also rates NDC targets against indicative national emissions from global least-cost emissions pathways (called modelled domestic pathways). For assessing targets against a fair share, we consider both a country’s domestic emissions reductions and any emissions reductions it supports abroad through the use of market mechanisms or other ways of support, as relevant.
+
+Switzerland has clearly stated that it will achieve a portion of emission reductions to meet its NDC target through the use of mitigation outcomes sourced from abroad. To rate Switzerland’s NDC target, we assess a domestic component of its NDC against what needs to happen within its border based on modelled domestic pathways and the full NDC target (reduction achieved both domestically and abroad) against what a fair contribution would be.
+
+Switzerland, however, has not communicated a domestic share of its 2030 target in its NDC. Instead, it has remained vague on the extent to which its NDC target will be achieved through domestic reductions. In earlier amendments of the CO2 Act, Switzerland had proposed a domestic share target of at least 75% of the full target by 2030 below 1990 (Schweizer Parlament, 2020). In a follow-up amendment of the CO2 Act (known as Succession Act) of 2021, however, it included a targeted 67% reduction of the full target (Der Bundesrat, 2021).
+
+This has since been replaced by vague comments stating that “The reduction of greenhouse gas emissions is primarily achieved with measures within Switzerland. The Federal Council determines the share.” (Bundesgesetz Über Die Reduktion Der CO2-Emissionen (CO2-Gesetz) (Entwurf), 2022). This wording has remains the same in the current draft of 2024 (Bundesgesetz Über Die Reduktion Der CO2-Emissionen (CO2-Gesetz), 2024).
+
+In January to March 2024, the matter was discussed in commissions in both chambers of Parliament with proposals for 75% and 70% (of the full target) on the table, but all proposals were rejected. Consequently, the Environment Minister Albert Rösti promised that he would propose a 67% share to the Federal Council (Das Schweizer Parlament, 2024). Other official messages imply that at least 30% of emissions reductions (60% of the 50%) will be targeted domestically.
+
+To rate Switzerland’s NDC we have therefore had to make assumptions on the domestic component. A range between 30%, which seems to be the current consensus to aspire for (Botschaft Zur Revision Des CO2-Gesetzes Für Die Zeit Nach 2024, 2022) and 33%, which was removed from previous drafts for unknown reasons (Der Bundesrat, 2021) and was “promised” by the Environment Minister (Das Schweizer Parlament, 2024) seem to be where Switzerland is realistically headed and was thus assessed here.
+
+The lack of specificity regarding the proportion of emissions that Switzerland intends to reduce domestically versus abroad is problematic, as it becomes difficult to assess the effectiveness of its overall emissions reduction strategy. This makes it challenging to hold Switzerland accountable for its emission reduction commitments. Equally, the lack of transparency raises questions about the sincerity of Switzerland's commitment. It is important for governments to provide transparent information on their emission reduction plans, as reducing GHG emissions is a global effort and trust and international cooperation are key.
+
+Switzerland intends to achieve the remaining target through Internationally Transferred Mitigation Outcomes (ITMOs). Since October 2020, Switzerland has signed bilateral agreements with several countries including Peru, Ghana, Senegal, Georgia, Vanuatu, Dominica, Thailand, Ukraine, Morocco, Malawi, Uruguay, Chile and Tunisia, which establish means of cooperation on the transfer of mitigation outcomes under Article 6 of the Paris Agreement (Schweizerische Eidgenossenschaft, 2024).
+
+While developed countries have to support mitigation in less developed countries, there is a more constructive way to pursue bilateral cooperation, which is climate finance. Governments should prioritise fulfilling their fair share of climate finance contributions before transferring mitigation outcomes supported abroad (Warnecke et al., 2021).
+
+To effectively address all these concerns, Switzerland should provide a clear and detailed NDC with deep emission reductions domestically, and provide sufficient climate finance.
+
+The CAT rates Switzerland’s estimated domestic target as “Almost sufficient” and its overall NDC target compared with its fair-share emissions allocation as “Insufficient.”
+
+NDC target (domestic) against modelled domestic pathways
+
+We rate the estimated domestic component of Switzerland’s 2030 emissions target, a 30% to 33% reduction below 1990 levels, as “Insufficient” when compared with modelled domestic pathways.
+
+The “Insufficient” rating indicates that Switzerland’s domestic component of its NDC target in 2030 needs substantial improvement to be consistent with modelled domestic pathways limiting warming to 1.5°C. If all countries were to follow Switzerland’s approach, warming would reach over 2°C and up to 3°C.
+
+NDC target (full) against fair share
+
+We rate Switzerland’s overall NDC target as “Insufficient” when compared with its fair-share emissions allocation. The “Insufficient” rating indicates that Switzerland’s NDC target needs substantial improvements to be consistent with its fair share of the global mitigation effort to limit warming to 1.5°C .
+
+Switzerland’s target is at the least stringent end of what would be a fair share of global effort, and is not consistent with the 1.5°C limit, unless other countries make much deeper reductions and comparably greater effort. If all countries were to follow Switzerland’s approach, warming would reach up to 3°C.
+
+Switzerland’s international climate finance is rated “Insufficient” (see below) and is not enough to improve Switzerland’s fair share rating.
+
+Switzerland’s international public climate finance contribution is rated “Insufficient”. Switzerland has committed to increase its climate finance and, despite a steady annual increase leading to USD 411m in 2020, its contributions to date have been low compared to its fair share. In 2020 Switzerland additionally mobilised USD 106m from the private sector and increased its specific support for bilateral adaptation activities to USD 129m (Swiss Federal Office for the Environment, 2022).
+
+Climate finance contributions fall short of Switzerland’s fair share contribution to the USD 100bn goal but show an increasing trend. Several recent developments indicate a commitment to international climate finance.
+
+Switzerland is one of the only countries that has explicitly prioritised an equal distribution of adaptation and mitigation funding for public bilateral financing (Alliance Sud, 2020). Other decisions that lead to the upward trend are the increase of the level of official development assistance to 0.5 per cent of gross national income, the gradual shift of development assistance to place an enhanced focus on climate change, and the new strategy for international development cooperation 2021–2024, which provides for an increase in funding for climate change mitigation and adaptation to CHF 400 m (approximately USD 426 m) per year by 2024 (Swiss Federal Office for the Environment, 2022).
+
+Switzerland remains committed to the USD 100bn goal in climate finance for developing countries per year through 2025, and it considers multilateral mobilised private climate finance as well as the full-face value of the climate finance outflow of multilateral institutions as climate finance accountable towards the 100 billion US dollars goal.
+
+Based on Switzerland's economic performance and the polluter-pays principle, the Swiss government estimates its fair share of international finance contributions to be around CHF 450-600m (Federal Council of Switzerland, 2017). This is close to its current investments; however, civil society organisations recommend a fair share of around CHF 1 bn per year (Alliance Sud, 2020). In addition, the USD 100bn goal itself is insufficient for the post-2020 period, and the scale of financial contributions would remain insufficient to increase Switzerland’s CAT climate finance rating. A clear and sustained increase in international climate mitigation finance is therefore needed.
+
+To fulfil the non-domestic component of its emissions reduction target, Switzerland is one of only a few countries that officially intends to achieve part of its NDC target through Internationally Transferred Mitigation Outcomes (ITMOs) on the basis of Article 6 of the Paris Agreement and has already signed bilateral agreements.
+
+Switzerland has signed bilateral carbon credit agreements with Peru, Ghana, Senegal, Georgia, Vanuatu, Dominica, Thailand, Ukraine, Morocco, Malawi, Uruguay, Chile, and Tunisia (Schweizerische Eidgenossenschaft, 2024). These developments are not rated in the finance component of the CAT rating. Instead, the full international NDC, that includes such agreements, is rated against Switzerland’s fair share goal - and rated “Insufficient”.
+
+To align with the sentiment of “highest possible ambition”, Switzerland must first set its domestic NDC within at least an “Almost sufficient” range. Although not transparently communicated (see NDC target), the estimated domestic share in Switzerland lies outside this threshold. As a second step, the country would have to provide its fair share of climate finance. This should be prioritised before purchasing credits and accounting the associated emission reductions. As Switzerland is not providing its fair share of international climate finance, the CAT does not consider it legitimate to offset for the fair share rating. Nevertheless, the CAT does acknowledge the transparency of Switzerland’s credit purchase agreements.
+
+**Further information on how the CAT rates countries (against modelled pathways and fair share) can be found** **here****.**
+
+
+## Net zero and other long-term target(s)
+
+Switzerland committed to a net-zero target as part of its long-term strategy submitted to the UNFCCC in January 2021, and in June 2023, in the public referendum on Switzerland's Climate Protection Act, Switzerland's net-zero target was enshrined into law (Bundesgesetz Über Die Ziele Im Klimaschutz, Die Innovation Und Die Stärkung Der Energiesicherheit (KlG), 2023). The net-zero target generally covers key elements and now meets good practice for many of them.
+
+Switzerland’s net-zero target covers all sectors and gases underpinned by emissions pathway analysis and the communication of clear strategic goals and emissions targets per sector. It also now covers emissions from fuels for international aviation and shipping that are refuelled in Switzerland. The proposed measures aim to achieve net zero on Switzerland’s own territory, but it reserves the right to use international offset credits, even if only for technically unavoidable domestic emissions.
+
+Switzerland's new Climate Protection Act, which was accepted in a referendum in June 2023, introduced interim and sectoral targets and requires the parliament to develop periodic roadmaps for achieving the target (Bundesgesetz Über Die Ziele Im Klimaschutz, Die Innovation Und Die Stärkung Der Energiesicherheit (KlG), 2023). Because of these improvements across several key elements, the CAT now evaluates the scope, architecture, and transparency of Switzerland’s net-zero target as ‘Acceptable’.
+
+**For the full analysis click** **here****.**
+
+
 # Net zero targets
 
 
@@ -468,100 +562,6 @@ In its ZERO-basis scenario of the Energy perspectives 2050+, the Swiss governmen
 ## Global Warming Potentials values
 
 The CAT uses Global Warming Potential (GWP) values from the IPCC’s Fourth Assessment Report (AR4) for all figures and time series. Assessments completed prior to December 2018 (COP24) used GWP values from the IPCC’s Second Assessment Report (SAR).
-
-
-# Targets
-
-
-## Target Overview
-
-Switzerland submitted its updated NDC to the UNFCCC in December 2020, responded to paragraph 29 of the Glasgow Climate Pact and to the rejection of the CO2 Act with another update in December 2021, and submitted another update in November 2024, after the CO2 act finally passed legislation. All updates did not increase in ambition but in the 2021 update language slightly changed from the original NDC’s commitment of “a 50% reduction below 1990” levels by 2030 to “at least 50%” below 1990 levels (Swiss Confederation, 2021). In absolute terms, this translates to emissions levels of at most 27 MtCO2e excluding LULUCF by 2030. Switzerland has also committed to reaching net zero GHG emissions by 2050 as enshrined into law and outlined both in its NDC and LTS.
-
-In its updated NDC, Switzerland does not specify a domestic emissions reduction component of its 2030 target, but instead clearly states its intention to use provisions under Article 6 of the Paris Agreement to offset its own emissions. In its NDC it states that “Switzerland will realise its NDC mainly domestically and will partly use internationally transferred mitigation outcomes (ITMOs) from cooperation under Article 6” (Swiss Confederation, 2021).
-
-Since the CO2 Act was rejected in a public referendum in 2021, Switzerland has passed a new amended CO2 Act in 2024, which strongly decreased in ambition (known as Succession Act). Earlier drafts in 2021 still included a targeted 33% reduction in domestic emissions, which reflects two thirds of the total emissions reduction of its 50% target (Der Bundesrat, 2021). However, since then this has been replaced by vague comments stating that “The reduction of greenhouse gas emissions is primarily achieved with measures within Switzerland. The Federal Council determines the share.” (Bundesgesetz Über Die Reduktion Der CO2-Emissionen (CO2-Gesetz), 2024).
-
-In January to March 2024, the matter of a domestic component was again discussed in commissions in both chambers of parliament with proposals for 75% and 70% (of the overall target to halve emissions in 2030, relative to 1990 level) on the table, but all proposals were rejected. Consequently, the Environment Minister Albert Rösti announced that he would propose a 66% share to the Federal Council (Das Schweizer Parlament, 2024). Other official communications imply that at least 30% (60% of the overall target) will be targeted domestically (Botschaft Zur Revision Des CO2-Gesetzes Für Die Zeit Nach 2024, 2022(Das Schweizer Parlament, 2024)).
-
-
-## NDC Updates
-
-Switzerland submitted an update to its NDC both in December 2021 – to account for changes when the CO2 act was rejected – and again in November 2024 – when a watered-down version of the CO2 act finally passed legislation. Both updates did not increase ambition.
-
-A first update to Switzerland’s NDC target in December 2020 did not represent an increase in ambition, as it changed only from a 50% reduction below 1990 levels to an “at least” 50% reduction, but the domestic component of the target increased from 60% to 75%. A subsequent update to Switzerland’s NDC in December 2021, however, removed entirely any specific reference to a domestic component to its overall 2030 target. The November 2024 update also left the target unchanged and did not raise ambition, instead focusing on adapting the text to better reflect recent policy developments.
-
-* Before September 2021, all CAT ratings were based exclusively on fair share and only assessed a country’s target
-
-- 22.12.2024: Switzerland submitted a further update to its NDC to the UNFCCC
-- 17.12.2021: Switzerland submitted a further update to its NDC to the UNFCCC
-- 09.12.2020: Switzerland submitted its new NDC target to the UNFCCC
-
-## CAT rating of targets
-
-The CAT rates NDC targets against each country’s fair share contribution to global climate change mitigation, considering a range of equity principles including responsibility, capability, and equality. The CAT also rates NDC targets against indicative national emissions from global least-cost emissions pathways (called modelled domestic pathways). For assessing targets against a fair share, we consider both a country’s domestic emissions reductions and any emissions reductions it supports abroad through the use of market mechanisms or other ways of support, as relevant.
-
-Switzerland has clearly stated that it will achieve a portion of emission reductions to meet its NDC target through the use of mitigation outcomes sourced from abroad. To rate Switzerland’s NDC target, we assess a domestic component of its NDC against what needs to happen within its border based on modelled domestic pathways and the full NDC target (reduction achieved both domestically and abroad) against what a fair contribution would be.
-
-Switzerland, however, has not communicated a domestic share of its 2030 target in its NDC. Instead, it has remained vague on the extent to which its NDC target will be achieved through domestic reductions. In earlier amendments of the CO2 Act, Switzerland had proposed a domestic share target of at least 75% of the full target by 2030 below 1990 (Schweizer Parlament, 2020). In a follow-up amendment of the CO2 Act (known as Succession Act) of 2021, however, it included a targeted 67% reduction of the full target (Der Bundesrat, 2021).
-
-This has since been replaced by vague comments stating that “The reduction of greenhouse gas emissions is primarily achieved with measures within Switzerland. The Federal Council determines the share.” (Bundesgesetz Über Die Reduktion Der CO2-Emissionen (CO2-Gesetz) (Entwurf), 2022). This wording has remains the same in the current draft of 2024 (Bundesgesetz Über Die Reduktion Der CO2-Emissionen (CO2-Gesetz), 2024).
-
-In January to March 2024, the matter was discussed in commissions in both chambers of Parliament with proposals for 75% and 70% (of the full target) on the table, but all proposals were rejected. Consequently, the Environment Minister Albert Rösti promised that he would propose a 67% share to the Federal Council (Das Schweizer Parlament, 2024). Other official messages imply that at least 30% of emissions reductions (60% of the 50%) will be targeted domestically.
-
-To rate Switzerland’s NDC we have therefore had to make assumptions on the domestic component. A range between 30%, which seems to be the current consensus to aspire for (Botschaft Zur Revision Des CO2-Gesetzes Für Die Zeit Nach 2024, 2022) and 33%, which was removed from previous drafts for unknown reasons (Der Bundesrat, 2021) and was “promised” by the Environment Minister (Das Schweizer Parlament, 2024) seem to be where Switzerland is realistically headed and was thus assessed here.
-
-The lack of specificity regarding the proportion of emissions that Switzerland intends to reduce domestically versus abroad is problematic, as it becomes difficult to assess the effectiveness of its overall emissions reduction strategy. This makes it challenging to hold Switzerland accountable for its emission reduction commitments. Equally, the lack of transparency raises questions about the sincerity of Switzerland's commitment. It is important for governments to provide transparent information on their emission reduction plans, as reducing GHG emissions is a global effort and trust and international cooperation are key.
-
-Switzerland intends to achieve the remaining target through Internationally Transferred Mitigation Outcomes (ITMOs). Since October 2020, Switzerland has signed bilateral agreements with several countries including Peru, Ghana, Senegal, Georgia, Vanuatu, Dominica, Thailand, Ukraine, Morocco, Malawi, Uruguay, Chile and Tunisia, which establish means of cooperation on the transfer of mitigation outcomes under Article 6 of the Paris Agreement (Schweizerische Eidgenossenschaft, 2024).
-
-While developed countries have to support mitigation in less developed countries, there is a more constructive way to pursue bilateral cooperation, which is climate finance. Governments should prioritise fulfilling their fair share of climate finance contributions before transferring mitigation outcomes supported abroad (Warnecke et al., 2021).
-
-To effectively address all these concerns, Switzerland should provide a clear and detailed NDC with deep emission reductions domestically, and provide sufficient climate finance.
-
-The CAT rates Switzerland’s estimated domestic target as “Almost sufficient” and its overall NDC target compared with its fair-share emissions allocation as “Insufficient.”
-
-NDC target (domestic) against modelled domestic pathways
-
-We rate the estimated domestic component of Switzerland’s 2030 emissions target, a 30% to 33% reduction below 1990 levels, as “Insufficient” when compared with modelled domestic pathways.
-
-The “Insufficient” rating indicates that Switzerland’s domestic component of its NDC target in 2030 needs substantial improvement to be consistent with modelled domestic pathways limiting warming to 1.5°C. If all countries were to follow Switzerland’s approach, warming would reach over 2°C and up to 3°C.
-
-NDC target (full) against fair share
-
-We rate Switzerland’s overall NDC target as “Insufficient” when compared with its fair-share emissions allocation. The “Insufficient” rating indicates that Switzerland’s NDC target needs substantial improvements to be consistent with its fair share of the global mitigation effort to limit warming to 1.5°C .
-
-Switzerland’s target is at the least stringent end of what would be a fair share of global effort, and is not consistent with the 1.5°C limit, unless other countries make much deeper reductions and comparably greater effort. If all countries were to follow Switzerland’s approach, warming would reach up to 3°C.
-
-Switzerland’s international climate finance is rated “Insufficient” (see below) and is not enough to improve Switzerland’s fair share rating.
-
-Switzerland’s international public climate finance contribution is rated “Insufficient”. Switzerland has committed to increase its climate finance and, despite a steady annual increase leading to USD 411m in 2020, its contributions to date have been low compared to its fair share. In 2020 Switzerland additionally mobilised USD 106m from the private sector and increased its specific support for bilateral adaptation activities to USD 129m (Swiss Federal Office for the Environment, 2022).
-
-Climate finance contributions fall short of Switzerland’s fair share contribution to the USD 100bn goal but show an increasing trend. Several recent developments indicate a commitment to international climate finance.
-
-Switzerland is one of the only countries that has explicitly prioritised an equal distribution of adaptation and mitigation funding for public bilateral financing (Alliance Sud, 2020). Other decisions that lead to the upward trend are the increase of the level of official development assistance to 0.5 per cent of gross national income, the gradual shift of development assistance to place an enhanced focus on climate change, and the new strategy for international development cooperation 2021–2024, which provides for an increase in funding for climate change mitigation and adaptation to CHF 400 m (approximately USD 426 m) per year by 2024 (Swiss Federal Office for the Environment, 2022).
-
-Switzerland remains committed to the USD 100bn goal in climate finance for developing countries per year through 2025, and it considers multilateral mobilised private climate finance as well as the full-face value of the climate finance outflow of multilateral institutions as climate finance accountable towards the 100 billion US dollars goal.
-
-Based on Switzerland's economic performance and the polluter-pays principle, the Swiss government estimates its fair share of international finance contributions to be around CHF 450-600m (Federal Council of Switzerland, 2017). This is close to its current investments; however, civil society organisations recommend a fair share of around CHF 1 bn per year (Alliance Sud, 2020). In addition, the USD 100bn goal itself is insufficient for the post-2020 period, and the scale of financial contributions would remain insufficient to increase Switzerland’s CAT climate finance rating. A clear and sustained increase in international climate mitigation finance is therefore needed.
-
-To fulfil the non-domestic component of its emissions reduction target, Switzerland is one of only a few countries that officially intends to achieve part of its NDC target through Internationally Transferred Mitigation Outcomes (ITMOs) on the basis of Article 6 of the Paris Agreement and has already signed bilateral agreements.
-
-Switzerland has signed bilateral carbon credit agreements with Peru, Ghana, Senegal, Georgia, Vanuatu, Dominica, Thailand, Ukraine, Morocco, Malawi, Uruguay, Chile, and Tunisia (Schweizerische Eidgenossenschaft, 2024). These developments are not rated in the finance component of the CAT rating. Instead, the full international NDC, that includes such agreements, is rated against Switzerland’s fair share goal - and rated “Insufficient”.
-
-To align with the sentiment of “highest possible ambition”, Switzerland must first set its domestic NDC within at least an “Almost sufficient” range. Although not transparently communicated (see NDC target), the estimated domestic share in Switzerland lies outside this threshold. As a second step, the country would have to provide its fair share of climate finance. This should be prioritised before purchasing credits and accounting the associated emission reductions. As Switzerland is not providing its fair share of international climate finance, the CAT does not consider it legitimate to offset for the fair share rating. Nevertheless, the CAT does acknowledge the transparency of Switzerland’s credit purchase agreements.
-
-**Further information on how the CAT rates countries (against modelled pathways and fair share) can be found** **here****.**
-
-
-## Net zero and other long-term target(s)
-
-Switzerland committed to a net-zero target as part of its long-term strategy submitted to the UNFCCC in January 2021, and in June 2023, in the public referendum on Switzerland's Climate Protection Act, Switzerland's net-zero target was enshrined into law (Bundesgesetz Über Die Ziele Im Klimaschutz, Die Innovation Und Die Stärkung Der Energiesicherheit (KlG), 2023). The net-zero target generally covers key elements and now meets good practice for many of them.
-
-Switzerland’s net-zero target covers all sectors and gases underpinned by emissions pathway analysis and the communication of clear strategic goals and emissions targets per sector. It also now covers emissions from fuels for international aviation and shipping that are refuelled in Switzerland. The proposed measures aim to achieve net zero on Switzerland’s own territory, but it reserves the right to use international offset credits, even if only for technically unavoidable domestic emissions.
-
-Switzerland's new Climate Protection Act, which was accepted in a referendum in June 2023, introduced interim and sectoral targets and requires the parliament to develop periodic roadmaps for achieving the target (Bundesgesetz Über Die Ziele Im Klimaschutz, Die Innovation Und Die Stärkung Der Energiesicherheit (KlG), 2023). Because of these improvements across several key elements, the CAT now evaluates the scope, architecture, and transparency of Switzerland’s net-zero target as ‘Acceptable’.
-
-**For the full analysis click** **here****.**
 
 
 # Summary

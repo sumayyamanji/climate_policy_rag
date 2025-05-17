@@ -63,3 +63,12 @@ For issues or questions:
 - Post in the `#help` channel on Slack
 - Check out the [Scrapy Documentation](https://docs.scrapy.org/)
 - Contact Jon directly if you face persistent issues
+
+
+Should not forget to : pip install psycopg2-binary
+Should not forget to run this : ALTER TABLE countries ADD COLUMN embedding vector(768);
+Should maybe also not forget to run this : climate=# ALTER TABLE countries
+ALTER COLUMN embedding TYPE vector(1024);
+ALTER TABLE
+
+Should also not forget to run : DELETE FROM countries WHERE LENGTH(text) <= 20;

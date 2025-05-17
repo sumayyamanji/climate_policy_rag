@@ -3,6 +3,20 @@
 import json
 import os
 from itemadapter import ItemAdapter
+import os
+from datetime import datetime, date
+from dotenv import load_dotenv
+from itemadapter import ItemAdapter
+import requests
+import pdfplumber
+
+from scrapy.exceptions import DropItem
+
+from .models import NDCDocumentModel, init_db, get_db_session
+from .utils import now_london_time
+from .utils import generate_word_embeddings, save_word2vec_model
+from sentence_transformers import SentenceTransformer
+
 
 class ClimateTrackerPipeline:
     def __init__(self):
@@ -31,3 +45,256 @@ class ClimateTrackerPipeline:
             json.dump(list(self.countries), f, indent=2)
         
         spider.logger.info(f"Processed {len(self.countries)} countries in total")
+
+
+def extract_text_from_pdf(pdf_path):
+    """Extract text from a PDF file using pdfplumber."""
+    try:
+        if not pdf_path or not os.path.exists(pdf_path):
+            print(f"PDF file not found: {pdf_path}")
+            return None
+            
+        all_text = ""
+        with pdfplumber.open(pdf_path) as pdf:
+            for page in pdf.pages:
+                try:
+                    text = page.extract_text() or ''
+                    all_text += text + "\n\n"
+                except Exception as e:
+                    print(f"Error extracting text from page: {e}")
+                    continue
+                    
+        return all_text
+    except Exception as e:
+        print(f"Error processing PDF {pdf_path}: {e}")
+        return None
+
+def generate_doc_id(item):
+    """Generate a document ID from item metadata."""
+    country = item.get('country', 'unknown').lower().replace(" ", "_")
+    lang = item.get('language', 'unknown').lower().replace(" ", "_")
+    try:
+        # Ensure we're using just the date part for the ID
+        submission_date = item.get('submission_date')
+        if isinstance(submission_date, datetime):
+            date_str = submission_date.date().strftime('%Y%m%d')
+        elif isinstance(submission_date, date):
+            date_str = submission_date.strftime('%Y%m%d')
+        else:
+            date_str = 'unknown_date'
+    except:
+        date_str = 'unknown_date'
+    
+    return f"{country}_{lang}_{date_str}"
+
+class PostgreSQLPipeline:
+    """Pipeline for storing NDC documents in PostgreSQL."""
+
+    def __init__(self, db_url=None):
+        # Load environment variables
+        load_dotenv()
+        self.db_url = db_url or os.getenv('DATABASE_URL')
+        if not self.db_url:
+            raise ValueError("DATABASE_URL not found in environment variables")
+        print("PostgreSQLPipeline initialized")
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls()
+
+    def open_spider(self, spider):
+        """Initialize database connection when spider opens."""
+        self.logger = spider.logger
+        print("PostgreSQLPipeline: Opening spider")
+        init_db(self.db_url)  # Create tables if they don't exist
+        self.session = get_db_session(self.db_url)
+
+    def close_spider(self, spider):
+        """Close database connection when spider closes."""
+        print("PostgreSQLPipeline: Closing spider")
+        self.session.close()
+
+    def process_item(self, item, spider):
+        """Process scraped item and store in PostgreSQL."""
+        print(f"PostgreSQLPipeline: Processing item for {item.get('country')}")
+        adapter = ItemAdapter(item)
+        
+        # Convert submission_date to date if it's a datetime
+        if 'submission_date' in item:
+            submission_date = item['submission_date']
+            if isinstance(submission_date, datetime):
+                item['submission_date'] = submission_date.date()
+        
+        # Generate doc_id from metadata (same as future file name)
+        doc_id = generate_doc_id(item)
+        print(f"PostgreSQLPipeline: Generated doc_id: {doc_id}")
+
+        # Create or update document record
+        doc = self.session.query(NDCDocumentModel).filter_by(doc_id=doc_id).first()
+
+        if doc:
+            print(f"PostgreSQLPipeline: Document found in database: {doc_id}")
+            retrieved_doc_as_dict = adapter.asdict()
+            
+            # Check if any data has changed
+            has_changes = False
+            changes = []
+            
+            for key, value in retrieved_doc_as_dict.items():
+                if key in ['downloaded_at', 'processed_at', 'scraped_at']:
+                    continue
+
+                if hasattr(doc, key):
+                    current_value = getattr(doc, key)
+                    
+                    if current_value != value:
+                        changes.append(f"{key}: {current_value} -> {value}")
+                        has_changes = True
+                        setattr(doc, key, value)
+            
+            if has_changes:
+                doc.scraped_at = now_london_time()
+                print(f"PostgreSQLPipeline: Updating document {doc_id} with changes: {', '.join(changes)}")
+            else:
+                print(f"PostgreSQLPipeline: No changes detected for document {doc_id}")
+                raise DropItem(f"No changes detected for document {doc_id}, skipping update")
+        else:
+            print(f"PostgreSQLPipeline: Creating new document: {doc_id}")
+            doc = NDCDocumentModel(
+                doc_id=doc_id,
+                country=adapter.get('country'),
+                title=adapter.get('title'),
+                url=adapter.get('url'),
+                language=adapter.get('language'),
+                submission_date=adapter.get('submission_date'),
+                file_path=None,
+                file_size=None,
+                extracted_text=None,
+                chunks=None,
+                downloaded_at=None,
+                processed_at=None
+            )
+            try:
+                self.session.add(doc)
+                print(f"PostgreSQLPipeline: Added new document to session: {doc_id}")
+            except Exception as e:
+                print(f"PostgreSQLPipeline: Error adding document: {str(e)}")
+                raise DropItem(f"Failed to add document to PostgreSQL: {str(e)}")
+        
+        try:
+            self.session.commit()
+            print(f"PostgreSQLPipeline: Committed document to database: {doc_id}")
+            # Add doc_id back to the item for downstream processing
+            item['doc_id'] = doc_id
+        except Exception as e:
+            self.session.rollback()
+            print(f"PostgreSQLPipeline: Error committing document: {str(e)}")
+            raise DropItem(f"Failed to store item in PostgreSQL: {e}")
+        
+        return item
+
+class TextExtractionPipeline:
+    """Pipeline to extract text from PDFs."""
+    def __init__(self):
+        # Import pdfplumber here to avoid dependency issues
+        import pdfplumber
+        self.pdfplumber = pdfplumber
+        
+    def process_item(self, item, spider):
+        """Extract text from PDF and update the item."""
+        file_path = item.get('file_path')
+        if not file_path:
+            print("TextExtractionPipeline: No file path provided, skipping text extraction")
+            return item
+            
+        print(f"TextExtractionPipeline: Extracting text from {file_path}")
+        text = extract_text_from_pdf(file_path)
+        
+        if text:
+            item['extracted_text'] = text
+            print(f"TextExtractionPipeline: Successfully extracted {len(text)} characters")
+        else:
+            print(f"TextExtractionPipeline: Failed to extract text from {file_path}")
+            
+        return item
+
+class WordEmbeddingPipeline:
+    """Pipeline to generate embeddings from extracted text."""
+    def __init__(self, model_dir=None):
+        # Load environment variables
+        load_dotenv()
+        self.model_dir = model_dir or os.path.join(os.getenv('DATA_DIR', 'data'), 'models')
+        os.makedirs(self.model_dir, exist_ok=True)
+        
+    def process_item(self, item, spider):
+        if not item.get('extracted_text'):
+            print("WordEmbeddingPipeline: No extracted text, skipping embedding generation")
+            return item
+            
+        try:
+            print(f"WordEmbeddingPipeline: Generating embeddings for {item.get('doc_id')}")
+            embeddings = generate_word_embeddings(item['extracted_text'])
+            
+            if embeddings:
+                item['word_embeddings'] = embeddings.get('document_vector')
+                
+                # Save the model if needed
+                if item.get('doc_id') and embeddings.get('model'):
+                    model_path = save_word2vec_model(
+                        embeddings['model'], 
+                        item['doc_id'], 
+                        self.model_dir
+                    )
+                    if model_path:
+                        print(f"WordEmbeddingPipeline: Model saved to {model_path}")
+            else:
+                print(f"WordEmbeddingPipeline: No embeddings generated")
+        except Exception as e:
+            print(f"WordEmbeddingPipeline: Error generating embeddings: {str(e)}")
+            
+        return item
+
+
+class ExtractionPipeline:
+    """Pipeline to extract structured information from documents."""
+    def process_item(self, item, spider):
+        # Import here to avoid circular imports
+        from .extraction_organised_2 import PolicyExtractor
+        
+        print(f"ExtractionPipeline: Extracting information for {item.get('doc_id')}")
+        try:
+            extractor = PolicyExtractor()
+            results = extractor.extract_document(item.get('doc_id'))
+            
+            if results:
+                item.update(results)
+                print(f"ExtractionPipeline: Successfully extracted information")
+            else:
+                print(f"ExtractionPipeline: No information extracted")
+                
+        except Exception as e:
+            print(f"ExtractionPipeline: Error extracting information: {str(e)}")
+            
+        return item
+    
+
+
+
+
+    
+
+from sentence_transformers import SentenceTransformer
+from datetime import datetime
+from .utils import now_london_time
+
+
+class TransformerPipeline:
+    def __init__(self):
+        self.model = SentenceTransformer('all-mpnet-base-v2')
+        
+    def process_item(self, item, spider):
+        if item.get('content'):
+            item['embedding'] = self.model.encode(item['content'])
+            item['model_type'] = 'transformer'
+            item['processed_at'] = now_london_time()
+        return item

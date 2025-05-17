@@ -93,5 +93,56 @@ DOWNLOAD_DELAY = 3
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+from my_logging import setup_colored_logging
 
+# Load environment variables
+load_dotenv()
 
+# Project and directory setup
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
+STRUCTURED_JSON_DIR = os.path.join(DATA_DIR, 'full_text', 'structured')
+
+# Logging setup
+LOG_FILE = os.path.join(PROJECT_ROOT, 'scrapy.log')
+LOG_ENABLED = True
+LOG_LEVEL = 'DEBUG'
+LOG_FILE_APPEND = True
+LOG_FORMAT = '%(asctime)s [%(name)s] %(levelname)s: %(message)s'
+LOG_DATEFORMAT = '%Y-%m-%d %H:%M:%S'
+
+# Create only the necessary data directories
+os.makedirs(STRUCTURED_JSON_DIR, exist_ok=True)
+
+# Standard Scrapy settings
+BOT_NAME = "climate_tracker"
+SPIDER_MODULES = ["climate_tracker.spiders"]
+NEWSPIDER_MODULE = "climate_tracker.spiders"
+
+USER_AGENT = 'LSE DS205 Student Spider (GitHub: @your-username) (+https://lse-dsi.github.io/DS205)'
+ROBOTSTXT_OBEY = True
+FEED_EXPORT_ENCODING = "utf-8"
+TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+
+# Enable AutoThrottle (useful if you ever do supplemental scraping)
+AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_START_DELAY = 3
+AUTOTHROTTLE_MAX_DELAY = 10
+
+# Embedding model settings (used downstream)
+EMBEDDING_SETTINGS = {
+    'model_name': os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-mpnet-base-v2"),
+    'batch_size': 32,
+    'chunk_size': 1000,
+    'overlap': 200,
+}
+
+# Optional Word2Vec or FastText if ever used (you can drop this if unused)
+WORD_EMBEDDING_SETTINGS = {
+    'vector_size': 100,
+    'window': 5,
+    'min_count': 5,
+}

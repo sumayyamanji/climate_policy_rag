@@ -5,40 +5,30 @@ from pathlib import Path
 from dotenv import load_dotenv
 from sqlalchemy import text
 from tqdm import tqdm
-from transformers import AutoTokenizer, AutoModel
-import torch
-import torch.nn.functional as F
 
-# Load env and project root
-load_dotenv()
-project_root = Path(__file__).resolve().parents[1]
-sys.path.append(str(project_root))
+# --- Path setup: START ---
+# Current file is DS205-final-project-team-CPR-1/climate_tracker/climate_tracker/scripts/04_generate_embeddings.py
+# We want DS205-final-project-team-CPR-1/ to be in sys.path
+_project_root = Path(__file__).resolve().parents[3] # Go up 3 levels: scripts -> climate_tracker -> climate_tracker -> project_root
+sys.path.insert(0, str(_project_root)) # Insert at beginning to take precedence
+# --- Path setup: END ---
 
-from my_logging import get_logger
+load_dotenv(dotenv_path=_project_root / ".env") # Load .env from explicit project root
+
+# Now use absolute imports from the 'climate_tracker.climate_tracker' sub-package
+from climate_tracker.climate_tracker.my_logging import get_logger
 logger = get_logger(__name__)
-from models import Base, get_db_session, CountryModel  # No import of NDCDocumentModel
-from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, String, Text
-from pgvector.sqlalchemy import Vector
+# Note: The original script had 'from models import ...' which implies models.py is in the same directory 
+# or in a directory already in sys.path. The path adjustment above makes 'climate_tracker.climate_tracker' accessible.
+from climate_tracker.climate_tracker.models import Base, get_db_session, CountryModel
+from climate_tracker.climate_tracker.embedding_utils import BAAIEmbedder
 
-class BAAIEmbedder:
-    def __init__(self, model_path):
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
-        self.model = AutoModel.from_pretrained(model_path)
-        self.model.eval()
+def generate_embeddings(batch_size=5, max_chars=3000):
+    # Get model path from environment variable, fallback to Hugging Face ID
+    default_model_path = "BAAI/bge-m3"
+    model_path = os.getenv("BGE_MODEL_PATH", default_model_path)
+    logger.info(f"Using embedding model path: {model_path}")
 
-    def encode_batch(self, sentences):
-        inputs = self.tokenizer(sentences, padding=True, truncation=True, return_tensors="pt")
-        with torch.no_grad():
-            outputs = self.model(**inputs)
-        embeddings = self.mean_pooling(outputs.last_hidden_state, inputs['attention_mask'])
-        return F.normalize(embeddings, p=2, dim=1).cpu().numpy()
-
-    def mean_pooling(self, token_embeddings, attention_mask):
-        mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
-        return torch.sum(token_embeddings * mask_expanded, dim=1) / torch.clamp(mask_expanded.sum(dim=1), min=1e-9)
-
-def generate_embeddings(batch_size=5, model_path="/space_mounts/ps2-drive/local_models/BAAI/bge-m3", max_chars=3000):
     session = get_db_session(os.getenv("DATABASE_URL"))
     session.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
     session.commit()
@@ -83,8 +73,6 @@ def generate_embeddings(batch_size=5, model_path="/space_mounts/ps2-drive/local_
         session.commit()
         processed += len(valid_countries)
         logger.info(f"Processed {processed}/{total_to_process} countries")
-
-        torch.cuda.empty_cache()  # just in case (won't error if using CPU)
 
     logger.info("✅ Embedding generation complete")
     session.close()

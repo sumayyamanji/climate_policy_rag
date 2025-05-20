@@ -11,8 +11,8 @@ from sqlalchemy.orm import sessionmaker, relationship
 from pgvector.sqlalchemy import Vector  # Add this import
 
 
-from my_logging import get_logger
-from utils import now_london_time
+from .my_logging import get_logger
+from .utils import now_london_time
 
 Base = declarative_base()
 logger = get_logger(__name__)
@@ -25,6 +25,7 @@ class CountryModel(Base):
     country = Column(String)
     language = Column(String)
     text = Column(Text)
+    url = Column(String)
     embedding = Column(Vector(1024))  # ← Make sure this matches your DB
     created_at = Column(DateTime(timezone=True), default=now_london_time)
 

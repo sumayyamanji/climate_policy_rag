@@ -16,3 +16,12 @@ class ClimateTrackerItem(scrapy.Item):
     # Metadata
     timestamp = scrapy.Field()  # When the data was scraped
     version = scrapy.Field()  # Version information for tracking changes
+
+class CountryTextItem(scrapy.Item):
+    doc_id = scrapy.Field()         # Corresponds to CountryModel.doc_id (e.g., country_slug)
+    country = scrapy.Field()        # Corresponds to CountryModel.country (e.g., country_name)
+    language = scrapy.Field()       # Corresponds to CountryModel.language
+    text = scrapy.Field()           # Corresponds to CountryModel.text (aggregated content)
+    url = scrapy.Field()            # Corresponds to CountryModel.url (main country page or summary URL)
+    # embedding will be handled by a separate script
+    # created_at will be handled by the database model default

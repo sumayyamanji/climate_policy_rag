@@ -1,5 +1,3 @@
-
-
 import json
 import os
 from itemadapter import ItemAdapter
@@ -9,10 +7,12 @@ from dotenv import load_dotenv
 from itemadapter import ItemAdapter
 import requests
 import pdfplumber
+from pathlib import Path
 
 from scrapy.exceptions import DropItem
 
-from .models import NDCDocumentModel, init_db, get_db_session
+from .models import init_db, get_db_session, CountryModel
+from .items import CountryTextItem
 from .utils import now_london_time
 from .utils import generate_word_embeddings, save_word2vec_model
 from sentence_transformers import SentenceTransformer
@@ -297,4 +297,100 @@ class TransformerPipeline:
             item['embedding'] = self.model.encode(item['content'])
             item['model_type'] = 'transformer'
             item['processed_at'] = now_london_time()
+        return item
+
+class CountryDataPostgreSQLPipeline:
+    """Pipeline for storing CountryTextItem data in PostgreSQL using CountryModel."""
+
+    def __init__(self, db_url=None):
+        # Explicitly load .env from the project root
+        # __file__ refers to pipelines.py
+        # .parent.parent.parent should navigate to the project root directory
+        dotenv_path = Path(__file__).resolve().parent.parent.parent / ".env"
+        
+        if dotenv_path.exists():
+            load_dotenv(dotenv_path=dotenv_path, override=True)
+            # For debugging, let's see if it's loaded here
+            print(f"DEBUG (pipelines.py): Loaded .env from {dotenv_path}. DATABASE_URL: {os.getenv('DATABASE_URL')}")
+        else:
+            # This print is for debugging
+            print(f"DEBUG (pipelines.py): .env file not found at {dotenv_path}")
+
+        self.db_url = db_url or os.getenv('DATABASE_URL')
+        if not self.db_url:
+            print(f"ERROR: DATABASE_URL not found in environment variables for CountryDataPostgreSQLPipeline after attempting to load from {dotenv_path}")
+            raise ValueError("DATABASE_URL not found for CountryDataPostgreSQLPipeline")
+        self.logger = None # Will be set in open_spider
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        # This method is used by Scrapy to create your pipeline instance
+        return cls()
+
+    def open_spider(self, spider):
+        """Initialize database connection and session when spider opens."""
+        self.logger = spider.logger
+        self.logger.info("CountryDataPostgreSQLPipeline: Opening spider")
+        try:
+            init_db(self.db_url)  # Ensure tables are created (idempotent)
+            self.session = get_db_session(self.db_url)
+            self.logger.info("CountryDataPostgreSQLPipeline: Database session established.")
+        except Exception as e:
+            self.logger.error(f"CountryDataPostgreSQLPipeline: Failed to connect to DB: {e}")
+            raise # Reraise to stop the spider if DB connection fails
+
+    def close_spider(self, spider):
+        """Close database connection when spider closes."""
+        self.logger.info("CountryDataPostgreSQLPipeline: Closing spider")
+        if hasattr(self, 'session') and self.session:
+            self.session.close()
+            self.logger.info("CountryDataPostgreSQLPipeline: Database session closed.")
+
+    def process_item(self, item, spider):
+        """Process CountryTextItem and store in PostgreSQL using CountryModel."""
+        if not isinstance(item, CountryTextItem):
+            return item # Only process CountryTextItem
+
+        adapter = ItemAdapter(item)
+        doc_id = adapter.get('doc_id')
+
+        if not doc_id:
+            self.logger.warning("CountryDataPostgreSQLPipeline: Item lacks doc_id, skipping.")
+            raise DropItem("Item lacks doc_id")
+
+        self.logger.info(f"CountryDataPostgreSQLPipeline: Processing item for doc_id: {doc_id}")
+
+        try:
+            country_entry = self.session.query(CountryModel).filter_by(doc_id=doc_id).first()
+
+            if country_entry:
+                # Update existing entry
+                self.logger.info(f"CountryDataPostgreSQLPipeline: Updating existing entry for {doc_id}")
+                country_entry.country = adapter.get('country')
+                country_entry.language = adapter.get('language')
+                country_entry.text = adapter.get('text')
+                country_entry.url = adapter.get('url')
+                # created_at is managed by model default, embedding is handled later
+                country_entry.created_at = now_london_time() # Explicitly update timestamp on modification
+            else:
+                # Create new entry
+                self.logger.info(f"CountryDataPostgreSQLPipeline: Creating new entry for {doc_id}")
+                country_entry = CountryModel(
+                    doc_id=doc_id,
+                    country=adapter.get('country'),
+                    language=adapter.get('language'),
+                    text=adapter.get('text'),
+                    url=adapter.get('url')
+                    # embedding will be NULL initially
+                    # created_at has a default in the model
+                )
+                self.session.add(country_entry)
+            
+            self.session.commit()
+            self.logger.info(f"CountryDataPostgreSQLPipeline: Successfully committed {doc_id} to database.")
+        except Exception as e:
+            self.session.rollback()
+            self.logger.error(f"CountryDataPostgreSQLPipeline: Error processing/committing item {doc_id}: {e}")
+            raise DropItem(f"Failed to process item {doc_id} for PostgreSQL: {e}")
+        
         return item

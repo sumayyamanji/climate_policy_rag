@@ -3,7 +3,7 @@ import os
 import json
 from datetime import datetime
 from urllib.parse import urljoin
-from climate_tracker.items import ClimateTrackerItem
+from climate_tracker.items import ClimateTrackerItem, CountryTextItem
 
 class ClimateActionTrackerSpider(scrapy.Spider):
     name = "climate_action_tracker_fulltext"
@@ -218,8 +218,44 @@ class ClimateActionTrackerSpider(scrapy.Spider):
         self.logger.info(f"Exported unstructured JSON data for {country_slug}")
     
     def closed(self, reason):
-        """Export all country JSON files one final time when spider closes"""
-        for country_slug in self.countries_data:
-            self.export_json(country_slug)
-            self.export_unstructured_json(country_slug)
         self.logger.info(f"Spider closed: {reason}")
+        self.logger.info(f"Total countries in unstructured_data for final processing: {len(self.unstructured_data)}")
+
+        for country_slug, unstructured_entry in self.unstructured_data.items(): # Iterate over self.unstructured_data
+            # 'content' in unstructured_data is a list of text blocks/paragraphs
+            full_text_content = "\n\n".join(unstructured_entry.get('content', []))
+
+            if not full_text_content: # Skip if no text content was aggregated
+                self.logger.warning(f"No text content in unstructured_data for {country_slug}, skipping CountryTextItem.")
+                continue
+
+            country_item = CountryTextItem()
+            country_item['doc_id'] = country_slug
+            country_item['country'] = unstructured_entry.get('country_name', country_slug.replace('-', ' ').title())
+            country_item['language'] = 'en' # Assuming English for now, as in original logic
+            country_item['text'] = full_text_content
+            
+            # Try to get a main URL. The 'urls' dict in unstructured_data stores section_title: url
+            section_urls = unstructured_entry.get('urls', {})
+            main_url = section_urls.get('Summary') # Prioritize Summary URL
+            if not main_url and section_urls:
+                main_url = next(iter(section_urls.values()), None) # Fallback to the first URL found
+
+            country_item['url'] = main_url
+
+            self.logger.info(f"Yielding CountryTextItem for {country_slug} from unstructured_data")
+            yield country_item
+
+        # Keep the original logic for exporting individual JSON files if still desired
+        # (Though this might be redundant if the pipeline handles all DB storage)
+        self.logger.info("Exporting all individual country JSON files as a final step (if any pending).")
+        # Check if keys exist before trying to iterate, to prevent errors if these dicts are unexpectedly empty
+        if hasattr(self, 'countries_data') and self.countries_data:
+            for country_slug_cs in list(self.countries_data.keys()): # Use list() for safe iteration if dict changes
+                self.export_json(country_slug_cs)
+        
+        if hasattr(self, 'unstructured_data') and self.unstructured_data:
+            for country_slug_ud in list(self.unstructured_data.keys()): # Use list()
+                self.export_unstructured_json(country_slug_ud)
+
+        self.logger.info("All export processes in closed() method finished.")

@@ -11,8 +11,8 @@ from pathlib import Path
 
 from scrapy.exceptions import DropItem
 
-from .models import init_db, get_db_session, CountryModel
-from .items import CountryTextItem
+from .models import init_db, get_db_session, CountryModel, CountryPageSectionModel
+from .items import CountrySectionItem
 from .utils import now_london_time
 from .utils import generate_word_embeddings, save_word2vec_model
 from sentence_transformers import SentenceTransformer
@@ -300,97 +300,121 @@ class TransformerPipeline:
         return item
 
 class CountryDataPostgreSQLPipeline:
-    """Pipeline for storing CountryTextItem data in PostgreSQL using CountryModel."""
+    """Pipeline for storing Climate Action Tracker country and section data in PostgreSQL."""
 
     def __init__(self, db_url=None):
         # Explicitly load .env from the project root
         # __file__ refers to pipelines.py
         # .parent.parent.parent should navigate to the project root directory
-        dotenv_path = Path(__file__).resolve().parent.parent.parent / ".env"
-        
-        if dotenv_path.exists():
-            load_dotenv(dotenv_path=dotenv_path, override=True)
-            # For debugging, let's see if it's loaded here
-            print(f"DEBUG (pipelines.py): Loaded .env from {dotenv_path}. DATABASE_URL: {os.getenv('DATABASE_URL')}")
-        else:
-            # This print is for debugging
-            print(f"DEBUG (pipelines.py): .env file not found at {dotenv_path}")
-
+        project_root_env = Path(__file__).resolve().parent.parent.parent / ".env"
+        load_dotenv(dotenv_path=project_root_env)
         self.db_url = db_url or os.getenv('DATABASE_URL')
         if not self.db_url:
-            print(f"ERROR: DATABASE_URL not found in environment variables for CountryDataPostgreSQLPipeline after attempting to load from {dotenv_path}")
-            raise ValueError("DATABASE_URL not found for CountryDataPostgreSQLPipeline")
-        self.logger = None # Will be set in open_spider
+            self.logger.error("DATABASE_URL not found. Ensure .env file is in project root and variable is set.")
+            raise ValueError("DATABASE_URL not found in environment variables")
+        self.logger_set = False
 
     @classmethod
     def from_crawler(cls, crawler):
         # This method is used by Scrapy to create your pipeline instance
-        return cls()
+        # You can access crawler.settings here if needed
+        return cls(
+            db_url=crawler.settings.get('DATABASE_URL') # Allow override from settings
+        )
 
     def open_spider(self, spider):
         """Initialize database connection and session when spider opens."""
-        self.logger = spider.logger
-        self.logger.info("CountryDataPostgreSQLPipeline: Opening spider")
+        if not hasattr(self, 'logger'): # Ensure logger is set if not done in init
+             self.logger = spider.logger
+        self.logger.info(f"Opening spider. Connecting to database: {self.db_url}")
         try:
-            init_db(self.db_url)  # Ensure tables are created (idempotent)
+            init_db(self.db_url)  # Create tables if they don't exist based on models.py
             self.session = get_db_session(self.db_url)
-            self.logger.info("CountryDataPostgreSQLPipeline: Database session established.")
+            self.logger.info("Database session established.")
         except Exception as e:
-            self.logger.error(f"CountryDataPostgreSQLPipeline: Failed to connect to DB: {e}")
-            raise # Reraise to stop the spider if DB connection fails
+            self.logger.error(f"Error connecting to database or initializing tables: {e}")
+            raise # Reraise exception to stop spider if DB connection fails
 
     def close_spider(self, spider):
-        """Close database connection when spider closes."""
-        self.logger.info("CountryDataPostgreSQLPipeline: Closing spider")
+        """Close database session when spider closes."""
+        self.logger.info("Closing spider. Closing database session.")
         if hasattr(self, 'session') and self.session:
             self.session.close()
-            self.logger.info("CountryDataPostgreSQLPipeline: Database session closed.")
 
     def process_item(self, item, spider):
-        """Process CountryTextItem and store in PostgreSQL using CountryModel."""
-        if not isinstance(item, CountryTextItem):
-            return item # Only process CountryTextItem
+        if not isinstance(item, CountrySectionItem):
+            return item # Not for this pipeline
 
         adapter = ItemAdapter(item)
-        doc_id = adapter.get('doc_id')
-
-        if not doc_id:
-            self.logger.warning("CountryDataPostgreSQLPipeline: Item lacks doc_id, skipping.")
-            raise DropItem("Item lacks doc_id")
-
-        self.logger.info(f"CountryDataPostgreSQLPipeline: Processing item for doc_id: {doc_id}")
+        self.logger.debug(f"Processing CountrySectionItem for country_doc_id: {adapter.get('country_doc_id')}, section: {adapter.get('section_title')}")
 
         try:
-            country_entry = self.session.query(CountryModel).filter_by(doc_id=doc_id).first()
+            # --- 1. Find or Create Country --- 
+            country_doc_id = adapter.get('country_doc_id')
+            country_name = adapter.get('country_name')
+            country_main_url = adapter.get('country_main_url')
+            country_language = adapter.get('language', 'en') # Use section language or default
 
-            if country_entry:
-                # Update existing entry
-                self.logger.info(f"CountryDataPostgreSQLPipeline: Updating existing entry for {doc_id}")
-                country_entry.country = adapter.get('country')
-                country_entry.language = adapter.get('language')
-                country_entry.text = adapter.get('text')
-                country_entry.url = adapter.get('url')
-                # created_at is managed by model default, embedding is handled later
-                country_entry.created_at = now_london_time() # Explicitly update timestamp on modification
+            country_db_entry = self.session.query(CountryModel).filter_by(doc_id=country_doc_id).first()
+
+            if country_db_entry:
+                self.logger.debug(f"Found existing country: {country_doc_id}")
+                # Update if necessary (e.g., name or main URL changed, or last_scraped_at)
+                if country_db_entry.country_name != country_name: 
+                    country_db_entry.country_name = country_name
+                if country_db_entry.country_url != country_main_url:
+                    country_db_entry.country_url = country_main_url
+                country_db_entry.last_scraped_at = now_london_time()
             else:
-                # Create new entry
-                self.logger.info(f"CountryDataPostgreSQLPipeline: Creating new entry for {doc_id}")
-                country_entry = CountryModel(
-                    doc_id=doc_id,
-                    country=adapter.get('country'),
-                    language=adapter.get('language'),
-                    text=adapter.get('text'),
-                    url=adapter.get('url')
-                    # embedding will be NULL initially
-                    # created_at has a default in the model
+                self.logger.info(f"Creating new country: {country_doc_id} - {country_name}")
+                country_db_entry = CountryModel(
+                    doc_id=country_doc_id,
+                    country_name=country_name,
+                    country_url=country_main_url,
+                    language=country_language,
+                    # created_at and last_scraped_at have defaults
                 )
-                self.session.add(country_entry)
+                self.session.add(country_db_entry)
+                # We need to flush to get the country_db_entry if it's new and we need its ID, 
+                # but FK is based on doc_id, so direct add is fine before section.
+
+            # --- 2. Find or Create Country Page Section --- 
+            section_url = adapter.get('section_url')
+            section_title = adapter.get('section_title')
+            section_text_content = adapter.get('section_text_content')
+            section_language = adapter.get('language', 'en')
+
+            section_db_entry = self.session.query(CountryPageSectionModel).filter_by(section_url=section_url).first()
+
+            if section_db_entry:
+                self.logger.debug(f"Found existing section: {section_title} for URL {section_url}")
+                # Update existing section
+                section_db_entry.section_title = section_title # Title might change slightly
+                if section_db_entry.text_content != section_text_content:
+                    section_db_entry.text_content = section_text_content
+                    section_db_entry.embedding = None # Clear embedding if text changes
+                section_db_entry.language = section_language
+                section_db_entry.scraped_at = now_london_time()
+                # country_doc_id should not change for an existing section_url
+            else:
+                self.logger.info(f"Creating new section: {section_title} for country {country_doc_id} (URL: {section_url})")
+                section_db_entry = CountryPageSectionModel(
+                    country_doc_id=country_doc_id, # Link to the parent country
+                    section_title=section_title,
+                    section_url=section_url,
+                    text_content=section_text_content,
+                    language=section_language,
+                    # embedding is None initially
+                    # scraped_at has default
+                )
+                self.session.add(section_db_entry)
             
             self.session.commit()
-            self.logger.info(f"CountryDataPostgreSQLPipeline: Successfully committed {doc_id} to database.")
+            self.logger.info(f"Successfully processed and committed section: {section_title} for country {country_doc_id}")
+
         except Exception as e:
+            self.logger.error(f"Error processing item for section {adapter.get('section_title')} (URL: {adapter.get('section_url')}): {e}")
             self.session.rollback()
-            self.logger.error(f"CountryDataPostgreSQLPipeline: Error processing/committing item {doc_id}: {e}")
-            raise DropItem(f"Failed to process item {doc_id} for PostgreSQL: {e}")
-        
+            raise DropItem(f"Error in PostgreSQL pipeline: {e}")
+
         return item

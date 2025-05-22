@@ -13,7 +13,7 @@ _project_root = Path(__file__).resolve().parents[3] # Go up 3 levels: scripts ->
 sys.path.insert(0, str(_project_root)) # Insert at beginning to take precedence
 # --- Path setup: END ---
 
-load_dotenv(dotenv_path=_project_root / ".env") # Load .env from explicit project root
+load_dotenv() # Load .env from explicit project root
 
 # Now use absolute imports from the 'climate_tracker.climate_tracker' sub-package
 from climate_tracker.climate_tracker.my_logging import get_logger

@@ -11,7 +11,7 @@ _project_root = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(_project_root))
 # --- Path setup: END ---
 
-load_dotenv(dotenv_path=_project_root / ".env")
+load_dotenv()
 
 from climate_tracker.climate_tracker.my_logging import get_logger
 # Import both CountryModel (for countries_v2) and CountryPageSectionModel (for country_page_sections_v2)

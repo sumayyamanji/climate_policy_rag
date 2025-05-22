@@ -9,10 +9,10 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from models import Base, get_db_session, NDCDocumentModel, DocChunk
-from climate_tracker.utils import now_london_time
-from climate_tracker.utils import generate_word_embeddings, save_word2vec_model
-from climate_tracker.scripts.generate_embeddings import generate_embeddings as generate_embeddings_main
+from models import Base, get_db_session
+from utils import now_london_time
+from utils import generate_word_embeddings, save_word2vec_model
+load_dotenv()
 DATABASE_URL = os.getenv('DATABASE_URL')
 
 def create_engine_and_extension():
@@ -24,7 +24,6 @@ def create_engine_and_extension():
     return engine
 
 
-load_dotenv()
 """Initialize the database with vector support."""
 engine = create_engine_and_extension()
     

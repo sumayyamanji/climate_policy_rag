@@ -56,20 +56,47 @@ def load_combined_text(json_path):
         logger.warning(f"Failed to parse {json_path}: {e}")
         return None
 
-# Update DB
-def store_text(doc_id, full_text, conn, country_name):
+def ensure_country_exists(doc_id, country_name, conn):
+    # Generate fallback URL using doc_id
+    country_url = f"https://climateactiontracker.org/countries/{doc_id}/"
+
     try:
         with conn.cursor() as cur:
             cur.execute("""
-                INSERT INTO countries (doc_id, country, text, created_at)
-                VALUES (%s, %s, %s, NOW())
-                ON CONFLICT (doc_id)
-                DO UPDATE SET text = EXCLUDED.text, country = EXCLUDED.country, created_at = NOW()
-            """, (doc_id, country_name, full_text))
+                INSERT INTO countries_v2 (doc_id, country_name, country_url)
+                VALUES (%s, %s, %s)
+                ON CONFLICT (doc_id) DO NOTHING
+            """, (doc_id, country_name, country_url))
         conn.commit()
         return True
     except Exception as e:
-        logger.error(f"Error storing DB entry for {doc_id}: {e}")
+        logger.error(f"Error inserting into countries_v2 for {doc_id}: {e}")
+        conn.rollback()
+        return False
+# Update DB
+def store_sections(doc_id, country_name, data, conn):
+    try:
+        with conn.cursor() as cur:
+            for section_title, section_data in data.get("sections", {}).items():
+                section_url = section_data.get("url")
+                content_list = section_data.get("content", [])
+                text_content = "\n".join(content_list).strip() if isinstance(content_list, list) else None
+
+                if not section_url or not text_content or len(text_content) < 20:
+                    logger.warning(f"Skipping section '{section_title}' for {doc_id} due to missing or short content.")
+                    continue
+
+                cur.execute("""
+                    INSERT INTO country_page_sections_v2 (
+                        country_doc_id, section_title, section_url, text_content, language, scraped_at
+                    )
+                    VALUES (%s, %s, %s, %s, %s, NOW())
+                    ON CONFLICT (section_url) DO NOTHING
+                """, (doc_id, section_title, section_url, text_content, 'en'))
+        conn.commit()
+        return True
+    except Exception as e:
+        logger.error(f"Error storing sections for {doc_id}: {e}")
         conn.rollback()
         return False
 
@@ -82,32 +109,27 @@ def main():
     updated, failed = 0, 0
 
     for json_path in STRUCTURED_DIR.glob("*.json"):
-        doc_id = json_path.name
-
+        doc_id = json_path.stem  # remove .json extension
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            country_name = data.get("country_name") or json_path.stem.capitalize()
-            if not country_name:
-                logger.warning(f"⚠ No country_name in {json_path}")
-                failed += 1
-                continue
+            country_name = data.get("country_name") or doc_id.capitalize()
         except Exception as e:
             logger.error(f"❌ Failed to read JSON {json_path}: {e}")
             failed += 1
             continue
 
-        full_text = load_combined_text(json_path)
-        if full_text:
-            success = store_text(doc_id, full_text, conn, country_name)
-            if success:
-                logger.info(f"✔ Stored {doc_id}")
-                updated += 1
-            else:
-                logger.error(f"✖ Failed to store {doc_id}")
-                failed += 1
+        if not ensure_country_exists(doc_id, country_name, conn):
+            logger.error(f"✖ Failed to ensure country record for {doc_id}")
+            failed += 1
+            continue
+
+        success = store_sections(doc_id, country_name, data, conn)
+        if success:
+            logger.info(f"✔ Stored sections for {doc_id}")
+            updated += 1
         else:
-            logger.warning(f"✖ No text found in {json_path}")
+            logger.error(f"✖ Failed to store sections for {doc_id}")
             failed += 1
 
     conn.close()

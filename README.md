@@ -200,7 +200,7 @@ CHUNK_DIR=data/full_text/structured
 ```
  
 
-4. Initialize the database
+5. Initialize the database
 
 ```bash
 

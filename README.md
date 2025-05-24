@@ -143,8 +143,8 @@ climate_tracker/
 ### Installation
 
  
-
-1. Clone the repository
+#### Step 1
+Clone the repository
 
 ```bash
 
@@ -155,8 +155,8 @@ cd climate_tracker
 ```
 
  
-
-2. Install dependencies
+#### Step 2
+Install dependencies
 
 ```bash
 
@@ -165,25 +165,34 @@ pip install -r requirements.txt
 ```
 
 
-3. Install PostGRESQL Extension for pgvector 
-If you don't already have HomeBrew: 
+#### Step 3
+Install PostgreSQL and `pgvector` Extension (if not already installed)
+
+If you're on **macOS** and don't already have [Homebrew](https://brew.sh/) installed, you can install it by running:
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-Then install the pgvector extension: 
+Then, install PostgreSQL and the pgvector extension:
+
 ```bash
+brew install postgresql
 brew install pgvector
 ```
+Once PostgreSQL is installed and running, connect to your database using the psql command-line tool:
+```bash
+psql -U postgres
+```
 
-Once PostgreSQL is running, connect to your database and run:
+Then, enable the vector extension in your database by running:
 ```bash
 CREATE EXTENSION IF NOT EXISTS vector;
 ```
 This enables vector similarity search functionality used by the project.
 
 
-
-4. Set up environment variables
+#### Step 4
+Set up environment variables
 
 Create a .env file from the provided example:
 
@@ -199,8 +208,8 @@ EMBEDDING_MODEL=models/local/BAAI-bge-m3
 CHUNK_DIR=data/full_text/structured
 ```
  
-
-5. Initialize the database
+#### Step 5
+Initialize the database
 
 ```bash
 

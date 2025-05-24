@@ -1,26 +1,27 @@
 # Web scraping
 scrapy==2.12.0
 selenium==4.28.1
-pdfplumber
+pdfplumber==0.10.3
 
-# Data analysis
+# Data analysis & NLP
 pandas==2.2.3
-nltk
-gensim
-sentence-transformers
+nltk==3.8.1
+scipy==1.11.4
+gensim==4.3.2
+sentence-transformers==2.2.2
 
 # Database
-SQLAlchemy
-pgvector
-psycopg2-binary
+SQLAlchemy==2.0.30
+pgvector==0.2.1
+psycopg2-binary==2.9.9
 
 # Development tools
-ipykernel>=6.21.2
-jupyterlab>=3.6.1
+ipykernel==6.21.2
+jupyterlab==3.6.1
 
 # Debugging Utilities
-requests==2.31.0 
+requests==2.31.0
 ipdb==0.13.13
 
 # Environment configuration
-python-dotenv
+python-dotenv==1.0.1

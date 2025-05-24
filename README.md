@@ -164,18 +164,40 @@ pip install -r requirements.txt
 
 ```
 
- 
 
-3. Set up environment variables
-
+3. Install PostGRESQL Extension for pgvector 
+If you don't already have HomeBrew: 
 ```bash
-
-cp .env.example .env
-
-# Edit .env with your database credentials
-
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Then install the pgvector extension: 
+```bash
+brew install pgvector
 ```
 
+Once PostgreSQL is running, connect to your database and run:
+```bash
+CREATE EXTENSION IF NOT EXISTS vector;
+```
+This enables vector similarity search functionality used by the project.
+
+
+
+4. Set up environment variables
+
+Create a .env file from the provided example:
+
+```bash
+cp .env.example .env
+```
+
+Then edit the .env file with your actual PostgreSQL credentials and model path. For example:
+
+```bash
+DATABASE_URL=postgresql://postgres:yourpassword@localhost:5432/climate_db
+EMBEDDING_MODEL=models/local/BAAI-bge-m3
+CHUNK_DIR=data/full_text/structured
+```
  
 
 4. Initialize the database

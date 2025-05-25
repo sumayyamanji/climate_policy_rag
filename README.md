@@ -124,7 +124,7 @@ climate_tracker/
 
  
 
-## 🚀 Quick Start
+## Quick Start
 
  
 
@@ -150,7 +150,7 @@ Clone the repository
 
 git clone <repository-url>
 
-cd climate_tracker
+cd DS205-final-project-team-CPR
 
 ```
 
@@ -188,6 +188,12 @@ Then, enable the vector extension in your database by running:
 ```bash
 CREATE EXTENSION IF NOT EXISTS vector;
 ```
+
+Then exit:
+```bash 
+\q
+```
+
 This enables vector similarity search functionality used by the project.
 
 
@@ -203,12 +209,20 @@ cp .env.example .env
 Then edit the .env file with your actual PostgreSQL credentials and model path. For example:
 
 ```bash
+# Example if your database is named climate_db:
 DATABASE_URL=postgresql://postgres:yourpassword@localhost:5432/climate_db
 EMBEDDING_MODEL=models/local/BAAI-bge-m3
 CHUNK_DIR=data/full_text/structured
 ```
  
 #### Step 5
+Create climate database: 
+
+```bash
+createdb -U postgres climate_db
+ ```
+
+#### Step 6
 Initialize the database
 
 ```bash
@@ -219,45 +233,41 @@ python climate_tracker/scripts/02_create-table.py
 
 ```
 
- 
+
+### Python Path Configuration
+To simplify all script execution, set the PYTHONPATH once per session:
+
+```bash
+export PYTHONPATH=climate_tracker
+```
+
 
 ### Running the Pipeline
-
  
 
 #### Step 1: Web Scraping
 
- 
-
 ```bash
-
 cd climate_tracker
-
 scrapy crawl climate_action_tracker_fulltext
+cd ..
 
 ```
-
  
 
 #### Step 2: Data Storage
 
- 
-
 ```bash
-
-python scripts/03_store.py
-
+python climate_tracker/scripts/03_store.py
 ```
 
  
 
 #### Step 3: Generate Embeddings
 
- 
 
 ```bash
-
-python scripts/04_generate_embeddings.py
+python climate_tracker/scripts/04_generate_embeddings.py
 
 ```
 
@@ -266,11 +276,8 @@ python scripts/04_generate_embeddings.py
 #### Step 4: Generate Fact Sheets
 
  
-
 ```bash
-
-python scripts/05_information_retrieval.py
-
+python climate_tracker/scripts/05_information_retrieval.py
 ```
 
  

@@ -235,7 +235,7 @@ python climate_tracker/scripts/02_create-table.py
 
 
 ### Python Path Configuration
-To simplify all script execution, set the PYTHONPATH once per session:
+To simplify all script execution, export the Python path once per terminal session:
 
 ```bash
 export PYTHONPATH=climate_tracker
@@ -250,12 +250,13 @@ export PYTHONPATH=climate_tracker
 ```bash
 cd climate_tracker
 scrapy crawl climate_action_tracker_fulltext
-cd ..
+cd .. # Return to project root
 
 ```
  
 
 #### Step 2: Data Storage
+Assuming you're in the project root: 
 
 ```bash
 python climate_tracker/scripts/03_store.py

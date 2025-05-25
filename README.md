@@ -6,7 +6,7 @@ A comprehensive RAG (Retrieval-Augmented Generation) pipeline for extracting and
 
  
 
-## 🎯 Project Overview
+## Project Overview
 
  
 
@@ -30,7 +30,7 @@ This project builds upon previous NDC (Nationally Determined Contributions) extr
 
  
 
-## 🏗️ System Architecture
+## System Architecture
 
  
 
@@ -58,7 +58,7 @@ This project builds upon previous NDC (Nationally Determined Contributions) extr
 
  
 
-## 📁 Repository Structure
+## Repository Structure
 
  
 
@@ -232,9 +232,9 @@ Initialize the database
 
 ```bash
 
-python climate_tracker/scripts/01_init-db.py
+PYTHONPATH=climate_tracker python climate_tracker/scripts/01_init-db.py
+PYTHONPATH=climate_tracker python climate_tracker/scripts/02_create-table.py
 
-python climate_tracker/scripts/02_create-table.py
 
 ```
 
@@ -255,7 +255,7 @@ export PYTHONPATH=climate_tracker
 ```bash
 cd climate_tracker
 scrapy crawl climate_action_tracker_fulltext
-cd .. # Return to project root
+cd ..  # Return to project root
 
 ```
  
@@ -264,7 +264,7 @@ cd .. # Return to project root
 Assuming you're in the project root: 
 
 ```bash
-python climate_tracker/scripts/03_store.py
+PYTHONPATH=climate_tracker python climate_tracker/scripts/03_store.py
 ```
 
  
@@ -273,39 +273,39 @@ python climate_tracker/scripts/03_store.py
 
 
 ```bash
-python climate_tracker/scripts/04_generate_embeddings.py
+PYTHONPATH=climate_tracker python climate_tracker/scripts/04_generate_embeddings.py
 
 ```
 
  
-#### Step 4: Generate Fact Sheets
+#### Step 4: Generate Fact Sheets (Information Retrieval)
 
  
 ```bash
-python climate_tracker/scripts/05_information_retrieval.py
+PYTHONPATH=climate_tracker python climate_tracker/scripts/05_information_retrieval.py
 ```
 
-#### Step 5: Running refined policy extraction
-Assuming the markdown reports are saved in retrieved_country_reports_v2_chunked:
+#### Step 5: Run Refined Policy Extraction
+Assuming your markdown reports are saved in retrieved_country_reports_v2_chunked:
 
 ```bash
-# Run refined policy extraction on all countries
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/06_policy_extraction.py --save
+# All countries
+PYTHONPATH=climate_tracker python climate_tracker/scripts/06_policy_extraction.py --save
 
-# Run on one country (e.g. Nigeria)
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/06_policy_extraction.py --country nigeria --save
+# Specific country (e.g., Nigeria)
+PYTHONPATH=climate_tracker python climate_tracker/scripts/06_policy_extraction.py --country nigeria --save
+
 ```
  
 
-## 📊 Output Examples
-
+## Output
  
 
 The system generates comprehensive fact sheets for each country, addressing key policy questions:
 
  
 
-### Sample Country Report Structure
+### Sample Country Report Structure (Factsheet)
 
  
 
@@ -329,7 +329,26 @@ The system generates comprehensive fact sheets for each country, addressing key 
 
 ```
 
- 
+
+### Sample Country Report Structure (Policy Extraction)
+
+```markdown
+
+Net Zero Target
+
+- **Answer**: `yes`
+
+- **Explanation**: Mentions net zero target.
+
+- **Year(s)**: 2022, 2050
+
+- **Confidence**: 0.8189
+
+- **Source URL**: https://climateactiontracker.org/countries/argentina/targets/
+
+> Answer/Evidence (Similarity: 0.8251): Further information on how the CAT rates countries (against modelled domestic pathways and fair share) can be found here. **    ## Net zero and other long-term target(s)   We evaluate the net zero target as: Poor. **   In November 2022, Argentina submitted...
+
+```
 
 ### Data Output Structure
 
@@ -383,7 +402,7 @@ The scraping system generates data in three formats to support different analysi
 
  
 
-## 🔍 Key Analytical Questions
+## Key Analytical Questions
 
  
 
@@ -403,7 +422,7 @@ The system addresses five critical policy assessment questions:
 
  
 
-## 🛠️ Technical Implementation
+## Technical Implementation
 
  
 
@@ -559,7 +578,7 @@ class CountrySectionItem(scrapy.Item):
 
  
 
-## 📚 Previous Work Integration
+## Previous Work Integration
 
  
 
@@ -591,7 +610,7 @@ This project builds upon extensive previous research in climate policy extractio
 
  
 
-## 🔬 Evaluation & Validation
+## Evaluation & Validation
 
  
 
@@ -619,7 +638,7 @@ This project builds upon extensive previous research in climate policy extractio
 
  
 
-## 🚧 Limitations & Future Work
+## Limitations & Future Work
 
  
 
@@ -631,7 +650,7 @@ This project builds upon extensive previous research in climate policy extractio
 
 - **Real-time Updates**: Static snapshots require manual refresh
 
-- **Answer Generation**: Retrieval-only system without natural language generation
+- **Answer Generation**: Retrieval-only system without natural language generation, ie. our system does not generate free-text answers
 
  
 
@@ -645,7 +664,7 @@ This project builds upon extensive previous research in climate policy extractio
 
 - **Temporal Tracking**: Historical policy evolution analysis
 
-- **Answer Synthesis**: LLM integration for natural language responses
+- **Answer Synthesis**: LLM integration for natural language responses for answering queries 
 
  
 

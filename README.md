@@ -238,15 +238,6 @@ PYTHONPATH=climate_tracker python climate_tracker/scripts/02_create-table.py
 
 ```
 
-
-### Python Path Configuration
-To simplify all script execution, export the Python path once per terminal session:
-
-```bash
-export PYTHONPATH=climate_tracker
-```
-
-
 ### Running the Pipeline
  
 

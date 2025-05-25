@@ -156,18 +156,18 @@ cd DS205-final-project-team-CPR
 
  
 #### Step 2
-    A) Install dependencies
+A) Install dependencies
 
-    ```bash
+```bash
 
-    pip install -r requirements.txt
+pip install -r requirements.txt
 
-    ```
+```
 
-    B) And to complete the setup, make sure the English SpaCy model is installed (this isn't handled by     requirements.txt directly). After installing dependencies, run this:
-   ```bash
-    python -m spacy download en_core_web_sm
-    ```
+B) And to complete the setup, make sure the English SpaCy model is installed (this isn't handled by     requirements.txt directly). After installing dependencies, run this:
+```bash
+python -m spacy download en_core_web_sm
+```
 
 
 #### Step 3

@@ -156,13 +156,18 @@ cd DS205-final-project-team-CPR
 
  
 #### Step 2
-Install dependencies
+    A) Install dependencies
 
-```bash
+    ```bash
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
-```
+    ```
+
+    B) And to complete the setup, make sure the English SpaCy model is installed (this isn't handled by     requirements.txt directly). After installing dependencies, run this:
+   ```bash
+    python -m spacy download en_core_web_sm
+    ```
 
 
 #### Step 3
@@ -273,7 +278,6 @@ python climate_tracker/scripts/04_generate_embeddings.py
 ```
 
  
-
 #### Step 4: Generate Fact Sheets
 
  
@@ -281,6 +285,16 @@ python climate_tracker/scripts/04_generate_embeddings.py
 python climate_tracker/scripts/05_information_retrieval.py
 ```
 
+#### Step 5: Running refined policy extraction
+Assuming the markdown reports are saved in retrieved_country_reports_v2_chunked:
+
+```bash
+# Run refined policy extraction on all countries
+PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/06_policy_extraction.py --save
+
+# Run on one country (e.g. Nigeria)
+PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/06_policy_extraction.py --country nigeria --save
+```
  
 
 ## 📊 Output Examples

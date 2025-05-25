@@ -22,7 +22,7 @@ import psycopg2
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from models import Base, get_db_session, NDCDocumentModel, DocChunk
+from models import Base, get_db_session
 from utils import now_london_time
 load_dotenv()
 DATABASE_URL = os.getenv('DATABASE_URL')

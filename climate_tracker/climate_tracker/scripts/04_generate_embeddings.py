@@ -16,12 +16,12 @@ sys.path.insert(0, str(_project_root)) # Insert at beginning to take precedence
 load_dotenv() # Load .env from explicit project root
 
 # Now use absolute imports from the 'climate_tracker.climate_tracker' sub-package
-from climate_tracker.climate_tracker.my_logging import get_logger
+from climate_tracker.my_logging import get_logger
 logger = get_logger(__name__)
 # Note: The original script had 'from models import ...' which implies models.py is in the same directory 
 # or in a directory already in sys.path. The path adjustment above makes 'climate_tracker.climate_tracker' accessible.
-from climate_tracker.climate_tracker.models import Base, get_db_session, CountryPageSectionModel
-from climate_tracker.climate_tracker.embedding_utils import BAAIEmbedder
+from climate_tracker.models import Base, get_db_session, CountryPageSectionModel
+from climate_tracker.embedding_utils import BAAIEmbedder
 
 def generate_embeddings(batch_size=5, max_chars=30000):
     # Get model path from environment variable, fallback to Hugging Face ID

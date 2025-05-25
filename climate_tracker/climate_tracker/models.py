@@ -11,8 +11,8 @@ from sqlalchemy.orm import sessionmaker, relationship
 from pgvector.sqlalchemy import Vector  # Add this import
 
 
-from climate_tracker.climate_tracker.my_logging import get_logger
-from climate_tracker.climate_tracker.utils import now_london_time
+from climate_tracker.my_logging import get_logger
+from climate_tracker.utils import now_london_time
 
 Base = declarative_base()
 logger = get_logger(__name__)

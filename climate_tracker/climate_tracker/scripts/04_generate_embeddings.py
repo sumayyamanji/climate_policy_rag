@@ -1,30 +1,25 @@
 import os
 import sys
 import logging
+import argparse
 from pathlib import Path
 from dotenv import load_dotenv
-from sqlalchemy import text
+from sqlalchemy import text, and_
 from tqdm import tqdm
 
 # --- Path setup: START ---
-# Current file is DS205-final-project-team-CPR-1/climate_tracker/climate_tracker/scripts/04_generate_embeddings.py
-# We want DS205-final-project-team-CPR-1/ to be in sys.path
-_project_root = Path(__file__).resolve().parents[3] # Go up 3 levels: scripts -> climate_tracker -> climate_tracker -> project_root
-sys.path.insert(0, str(_project_root)) # Insert at beginning to take precedence
+_project_root = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(_project_root))
 # --- Path setup: END ---
 
-load_dotenv() # Load .env from explicit project root
+load_dotenv()
 
-# Now use absolute imports from the 'climate_tracker.climate_tracker' sub-package
 from climate_tracker.my_logging import get_logger
 logger = get_logger(__name__)
-# Note: The original script had 'from models import ...' which implies models.py is in the same directory 
-# or in a directory already in sys.path. The path adjustment above makes 'climate_tracker.climate_tracker' accessible.
 from climate_tracker.models import Base, get_db_session, CountryPageSectionModel
 from climate_tracker.embedding_utils import BAAIEmbedder
 
-def generate_embeddings(batch_size=5, max_chars=30000):
-    # Get model path from environment variable, fallback to Hugging Face ID
+def generate_embeddings(batch_size=5, max_chars=30000, only_country=None):
     default_model_path = "BAAI/bge-m3"
     model_path = os.getenv("BGE_MODEL_PATH", default_model_path)
     logger.info(f"Using embedding model path: {model_path}")
@@ -36,15 +31,21 @@ def generate_embeddings(batch_size=5, max_chars=30000):
     embedder = BAAIEmbedder(model_path)
 
     logger.info("Fetching sections without embeddings...")
-    # Query CountryPageSectionModel for sections to embed
-    total_to_process = session.query(CountryPageSectionModel).filter(CountryPageSectionModel.embedding == None).count()
+
+    base_filter = [CountryPageSectionModel.embedding == None]
+    if only_country:
+        base_filter.append(CountryPageSectionModel.country_doc_id == only_country)
+
+    total_to_process = session.query(CountryPageSectionModel).filter(and_(*base_filter)).count()
     logger.info(f"Total sections to embed: {total_to_process}")
 
     processed = 0
 
     while True:
-        # Fetch a batch of sections from CountryPageSectionModel
-        sections_to_embed = session.query(CountryPageSectionModel).filter(CountryPageSectionModel.embedding == None).limit(batch_size).all()
+        sections_to_embed = session.query(CountryPageSectionModel)\
+            .filter(and_(*base_filter))\
+            .limit(batch_size).all()
+
         if not sections_to_embed:
             break
 
@@ -55,7 +56,7 @@ def generate_embeddings(batch_size=5, max_chars=30000):
                 logger.warning(f"Section ID {section_obj.id} (URL: {section_obj.section_url}) has no text_content. Skipping.")
                 continue
             trimmed_text = section_obj.text_content.strip()[:max_chars]
-            if len(trimmed_text) < 20: # Simple check for minimal content length
+            if len(trimmed_text) < 20:
                 logger.warning(f"Section ID {section_obj.id} (URL: {section_obj.section_url}) text_content too short after trimming. Skipping. Content: '{trimmed_text[:50]}...'")
                 continue
             texts.append(trimmed_text)
@@ -63,22 +64,34 @@ def generate_embeddings(batch_size=5, max_chars=30000):
 
         if not texts:
             logger.info("No valid texts to embed in the current batch. Checking if more sections are pending...")
-            # This condition might be hit if all remaining sections in the DB are empty or too short.
-            # The outer while loop will break if sections_to_embed is empty on the next fetch.
-            if not session.query(CountryPageSectionModel).filter(CountryPageSectionModel.embedding == None).first():
-                 logger.info("No more sections found to process at all.")
-                 break # Break if truly no more sections to process are found
-            continue # Continue to fetch next batch if some might still exist beyond this one
+
+            # NEW SAFETY CHECK — if nothing is valid for this country, exit
+            if only_country:
+                logger.info(f"No valid sections with text found for country: {only_country}. Exiting early.")
+                break
+
+            # For general case, continue looping in case next batch has valid sections
+            if not session.query(CountryPageSectionModel).filter(and_(*base_filter)).first():
+                logger.info("No more sections found to process at all.")
+                break
+            continue
+
 
         logger.info(f"Embedding batch of {len(texts)} sections...")
-        try:
-            embeddings = embedder.encode_batch(texts)
-        except Exception as e:
-            logger.error(f"Failed to embed batch: {e}")
-            # Potentially skip this batch or implement more granular error handling if needed
-            break # For now, break on batch embedding error
+        embeddings = []
+        for i, txt in enumerate(texts):
+            try:
+                vec = embedder.encode_batch([txt])[0]
+
+                embeddings.append(vec)
+            except Exception as e:
+                logger.warning(f"⚠ Failed to embed section index {i}: {e}")
+                embeddings.append(None)
 
         for i, section_obj in enumerate(valid_sections):
+            if embeddings[i] is None:
+                logger.warning(f"Skipping section ID {section_obj.id} (URL: {section_obj.section_url}) due to embedding failure.")
+                continue
             section_obj.embedding = embeddings[i].tolist()
             logger.debug(f"Generated embedding for section ID {section_obj.id} (URL: {section_obj.section_url})")
 
@@ -89,11 +102,14 @@ def generate_embeddings(batch_size=5, max_chars=30000):
         except Exception as e:
             logger.error(f"Failed to commit batch of embeddings: {e}")
             session.rollback()
-            # Decide if to break or continue. For now, let's break to investigate commit issues.
-            break 
+            break
 
-    logger.info("✅ Embedding generation complete for all sections.")
+    logger.info("✅ Embedding generation complete.")
     session.close()
 
 if __name__ == "__main__":
-    generate_embeddings()
+    parser = argparse.ArgumentParser(description="Generate embeddings for section texts.")
+    parser.add_argument("--only-country", type=str, help="Optionally limit to one country_doc_id (e.g., 'gabon')")
+    args = parser.parse_args()
+
+    generate_embeddings(only_country=args.only_country)

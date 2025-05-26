@@ -13,10 +13,10 @@ sys.path.insert(0, str(_project_root))
 
 load_dotenv()
 
-from climate_tracker.climate_tracker.my_logging import get_logger
+from climate_tracker.my_logging import get_logger
 # Import both CountryModel (for countries_v2) and CountryPageSectionModel (for country_page_sections_v2)
-from climate_tracker.climate_tracker.models import get_db_session, CountryModel, CountryPageSectionModel 
-from climate_tracker.climate_tracker.embedding_utils import BAAIEmbedder
+from climate_tracker.models import get_db_session, CountryModel, CountryPageSectionModel 
+from climate_tracker.embedding_utils import BAAIEmbedder
 
 logger = get_logger(__name__)
 
@@ -67,6 +67,9 @@ def retrieve_and_format_answers(output_dir_name="retrieved_country_reports_v2_ch
     logger.info(f"Fetched {len(countries)} countries from 'countries_v2' table for processing.")
 
     for country_data in countries: 
+        if country_data.doc_id != "gabon":
+            continue
+            
         country_doc_id = country_data.doc_id
         country_name = country_data.country_name
         logger.info(f"Processing country: {country_name} ({country_doc_id})")
@@ -85,9 +88,9 @@ def retrieve_and_format_answers(output_dir_name="retrieved_country_reports_v2_ch
             logger.info(f"Wrote minimal report for {country_name} to {output_path / country_file_name}")
             continue
 
-        all_country_chunks = []
-        all_country_chunk_source_urls = []
-        all_country_chunk_source_section_titles = []
+        valid_chunk_texts = []
+        valid_chunk_urls = []
+        valid_chunk_titles = []
 
         for section in country_sections:
             if not section.text_content or not section.text_content.strip():
@@ -96,11 +99,11 @@ def retrieve_and_format_answers(output_dir_name="retrieved_country_reports_v2_ch
             
             chunks_from_section = chunk_text(section.text_content)
             for chunk in chunks_from_section:
-                all_country_chunks.append(chunk)
-                all_country_chunk_source_urls.append(section.section_url or country_data.country_url) # Fallback for URL
-                all_country_chunk_source_section_titles.append(section.section_title)
+                valid_chunk_texts.append(chunk)
+                valid_chunk_urls.append(section.section_url or country_data.country_url) # Fallback for URL
+                valid_chunk_titles.append(section.section_title)
         
-        if not all_country_chunks:
+        if not valid_chunk_texts:
             logger.warning(f"No valid text chunks produced for {country_name} after processing all sections. Skipping questions for this country.")
             country_markdown_parts.append(f"\n*No text chunks could be generated from sections for this country.*\n\n---\n")
             country_file_name = f"{country_doc_id.replace('.', '_')}_report.md"
@@ -108,18 +111,39 @@ def retrieve_and_format_answers(output_dir_name="retrieved_country_reports_v2_ch
             logger.info(f"Wrote minimal report for {country_name} to {output_path / country_file_name}")
             continue
 
-        logger.info(f"Embedding {len(all_country_chunks)} chunks for {country_name}...")
-        country_chunk_embeddings_np = None # Initialize
-        raw_embeddings_for_debug = None # Variable to hold raw output for logging type if needed
-        try:
-            raw_embeddings_for_debug = embedder.encode_batch(all_country_chunks)
+        logger.info(f"Embedding {len(valid_chunk_texts)} chunks for {country_name}...")
 
+        raw_embeddings_for_debug = []
+        valid_chunk_texts = []
+        valid_chunk_urls = []
+        valid_chunk_titles = []
+
+        for i, chunk in enumerate(valid_chunk_texts):
+            try:
+                emb = embedder.encode_batch([chunk])[0]
+                raw_embeddings_for_debug.append(emb)
+                valid_chunk_texts.append(chunk)
+                valid_chunk_urls.append(valid_chunk_urls[i])
+                valid_chunk_titles.append(valid_chunk_titles[i])
+            except Exception as e:
+                logger.warning(f"⚠ Skipping chunk {i} due to embedding error: {e}")
+                continue
+
+        if not raw_embeddings_for_debug:
+            logger.warning(f"No valid chunk embeddings generated for {country_name}. Skipping questions.")
+            country_markdown_parts.append("\n*Failed to generate valid chunk embeddings.*\n\n---\n")
+            country_file_path = output_path / f"{country_doc_id.replace('.', '_')}_report.md"
+            with open(country_file_path, "w", encoding="utf-8") as f:
+                f.write("".join(country_markdown_parts))
+            continue
+
+        try:
             # Check if raw_embeddings_for_debug is a non-empty numpy ndarray
             if isinstance(raw_embeddings_for_debug, np.ndarray) and raw_embeddings_for_debug.size > 0:
                 country_chunk_embeddings_np = raw_embeddings_for_debug
                 # Handle case of single chunk resulting in 1D array, ensure it's 2D
                 if country_chunk_embeddings_np.ndim == 1: # .size > 0 is already confirmed
-                     country_chunk_embeddings_np = country_chunk_embeddings_np.reshape(1, -1)
+                    country_chunk_embeddings_np = country_chunk_embeddings_np.reshape(1, -1)
             # If not a valid numpy ndarray, country_chunk_embeddings_np remains None
 
             # Final check for validity (it should be a non-empty 2D numpy array here)
@@ -164,11 +188,14 @@ def retrieve_and_format_answers(output_dir_name="retrieved_country_reports_v2_ch
 
             best_chunk_index = np.argmax(similarities)
             best_score = similarities[0, best_chunk_index]
-            best_matching_chunk_text = all_country_chunks[best_chunk_index]
-            best_matching_chunk_source_url = all_country_chunk_source_urls[best_chunk_index]
-            source_section_title_for_log = all_country_chunk_source_section_titles[best_chunk_index] if all_country_chunk_source_section_titles else "N/A"
-            
-            logger.debug(f"Q: '{{question[:50].replace('\n', ' ')}}...' - Best chunk for {country_name} (from section '{source_section_title_for_log}'): '{best_matching_chunk_text[:100].replace('\n', ' ')}...', Score: {best_score:.4f}")
+            best_matching_chunk_text = valid_chunk_texts[best_chunk_index]
+            best_matching_chunk_source_url = valid_chunk_urls[best_chunk_index]
+            source_section_title_for_log = valid_chunk_titles[best_chunk_index]
+
+            # Format the strings before putting them in the f-string
+            question_short = question[:50].replace('\n', ' ')
+            chunk_short = best_matching_chunk_text[:100].replace('\n', ' ')
+            logger.debug(f"Q: '{question_short}...' - Best chunk for {country_name} (from section '{source_section_title_for_log}'): '{chunk_short}...', Score: {best_score:.4f}")
 
             country_markdown_parts.append(f"**Answer/Evidence (Similarity: {best_score:.4f}):**\n")
             

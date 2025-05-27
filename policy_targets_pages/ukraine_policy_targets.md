@@ -3,9 +3,9 @@
 
 ## Net Zero Target
 
-- **Answer**: `no`
+- **Answer**: `low_confidence`
 
-- **Explanation**: None
+- **Explanation**: Low semantic similarity.
 
 - **Confidence**: 0.6689
 
@@ -16,9 +16,9 @@
 
 ## Sector Targets
 
-- **Answer**: `no`
+- **Answer**: `low_confidence`
 
-- **Explanation**: None
+- **Explanation**: Low semantic similarity.
 
 - **Confidence**: 0.6548
 
@@ -29,9 +29,9 @@
 
 ## Efficiency Target
 
-- **Answer**: `no`
+- **Answer**: `low_confidence`
 
-- **Explanation**: None
+- **Explanation**: Low semantic similarity.
 
 - **Confidence**: 0.6568
 
@@ -42,9 +42,9 @@
 
 ## Electricity Net Zero
 
-- **Answer**: `no`
+- **Answer**: `low_confidence`
 
-- **Explanation**: None
+- **Explanation**: Low semantic similarity.
 
 - **Confidence**: 0.6859
 
@@ -55,9 +55,9 @@
 
 ## Carbon Pricing
 
-- **Answer**: `no`
+- **Answer**: `low_confidence`
 
-- **Explanation**: None
+- **Explanation**: Low semantic similarity.
 
 - **Confidence**: 0.656
 

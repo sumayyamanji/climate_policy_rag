@@ -2652,8 +2652,8 @@
   },
   "ukraine": {
     "net_zero_target": {
-      "yes_no": "no",
-      "explanation": null,
+      "yes_no": "low_confidence",
+      "explanation": "Low semantic similarity.",
       "year": null,
       "sectors": null,
       "quote": "Answer/Evidence (Similarity: 0.6668):\n## Overview   We have suspended our rating for Ukraine as the country defends itself from the unlawful Russian invasion. We stand in solidarity with the people of Ukraine at this terrible time. Our previous assessment is available here.",
@@ -2661,8 +2661,8 @@
       "source_url": "https://climateactiontracker.org/countries/ukraine/"
     },
     "sector_targets": {
-      "yes_no": "no",
-      "explanation": null,
+      "yes_no": "low_confidence",
+      "explanation": "Low semantic similarity.",
       "year": null,
       "sectors": null,
       "quote": "Answer/Evidence (Similarity: 0.6529):\n## Overview   We have suspended our rating for Ukraine as the country defends itself from the unlawful Russian invasion. We stand in solidarity with the people of Ukraine at this terrible time. Our previous assessment is available here.",
@@ -2670,8 +2670,8 @@
       "source_url": "https://climateactiontracker.org/countries/ukraine/"
     },
     "efficiency_target": {
-      "yes_no": "no",
-      "explanation": null,
+      "yes_no": "low_confidence",
+      "explanation": "Low semantic similarity.",
       "year": null,
       "sectors": null,
       "quote": "Answer/Evidence (Similarity: 0.6670):\nOur previous assessment is available here.",
@@ -2679,8 +2679,8 @@
       "source_url": "https://climateactiontracker.org/countries/ukraine/"
     },
     "electricity_net_zero": {
-      "yes_no": "no",
-      "explanation": null,
+      "yes_no": "low_confidence",
+      "explanation": "Low semantic similarity.",
       "year": null,
       "sectors": null,
       "quote": "Answer/Evidence (Similarity: 0.6764):\n## Overview   We have suspended our rating for Ukraine as the country defends itself from the unlawful Russian invasion. We stand in solidarity with the people of Ukraine at this terrible time. Our previous assessment is available here.",
@@ -2688,8 +2688,8 @@
       "source_url": "https://climateactiontracker.org/countries/ukraine/"
     },
     "carbon_pricing": {
-      "yes_no": "no",
-      "explanation": null,
+      "yes_no": "low_confidence",
+      "explanation": "Low semantic similarity.",
       "year": null,
       "sectors": null,
       "quote": "Answer/Evidence (Similarity: 0.6721):\nOur previous assessment is available here.",

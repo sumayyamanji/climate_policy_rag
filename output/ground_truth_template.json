@@ -5,7 +5,7 @@
       "target_year": "2050"
     },
     "sector_targets": {
-      "yes_no": "no",
+      "yes_no": "yes",
       "targets": [
         {
           "sector": "LULUCF",
@@ -35,7 +35,7 @@
       "target_year": "2050"
     },
     "sector_targets": {
-      "yes_no": "no",
+      "yes_no": "yes",
       "targets": [
         {
           "sector": ["transport", "agriculture", "energy"],
@@ -51,7 +51,7 @@
       "target_year": null
     },
     "electricity_net_zero": {
-      "yes_no": "no",
+      "yes_no": "yes",
       "target_year": null
     },
     "carbon_pricing": {
@@ -121,7 +121,7 @@
   },
   "kenya": {
     "net_zero_target": {
-      "yes_no": "no",
+      "yes_no": "yes",
       "target_year": null
     },
     "sector_targets": {
@@ -130,8 +130,8 @@
         {
           "sector": ["transport", "agriculture"],
           "percentage_reduction": null,
-          "target_year": "2037",
-          "base_year": "2017"
+          "target_year": "2030",
+          "base_year": "2015"
         }
       ]
     },

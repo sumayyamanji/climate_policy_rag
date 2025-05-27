@@ -23,13 +23,13 @@ def get_user_questions():
         "carbon_pricing"
     ]
     for tag in prediction_keys:
-        question = input(f"📝 Question for '{tag}' (press Enter to skip): ").strip()
+        question = input(f"Question for '{tag}' (press Enter to skip): ").strip()
         if question:
             tag_question_map[tag] = question
     return tag_question_map
 
 def get_user_countries():
-    user_input = input("🌍 Enter countries (comma-separated), or 'all' for all countries: ").strip()
+    user_input = input("Enter countries (comma-separated), or 'all' for all countries: ").strip()
     if user_input.lower() == "all":
         return CAT_COUNTRIES
     return [c.strip() for c in user_input.split(",") if c.strip() in CAT_COUNTRIES]

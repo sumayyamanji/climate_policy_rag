@@ -1,167 +1,7 @@
 
-### Japan – Net Zero Target
+### Mexico – Net Zero Target
 
-**Question:** Has Japan set a national net zero target by 2050?  
-**Answer:** ✅ Yes  
-**Explanation:** Mentions net zero target. (Note: negation present in sentence, which may weaken the claim.)  
-**Target Year(s):** 2030, 2050  
-**Sectors:** N/A
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 82.08%  
-**Source:** [Link](https://climateactiontracker.org/countries/japan/net-zero-targets/)
-
----
-
-### Japan – Sector Targets
-
-**Question:** What sector-specific climate targets has Japan implemented?  
-**Answer:** ✅ Yes  
-**Explanation:** Mentions sector-specific targets.  
-**Target Year(s):** 2009, 2019, 2023, 2030, 2050  
-**Sectors:** Energy, Lulucf
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 80.95%  
-**Source:** [Link](https://climateactiontracker.org/countries/japan/assumptions/)
-
----
-
-### Japan – Efficiency Target
-
-**Question:** Does Japan have a policy to improve energy efficiency in buildings or transport?  
-**Answer:** ❌ No  
-**Explanation:** None  
-**Target Year(s):** N/A  
-**Sectors:** Energy
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 81.56%  
-**Source:** [Link](https://climateactiontracker.org/countries/japan/sources/)
-
----
-
-### Japan – Electricity Net Zero
-
-**Question:** Is Japan aiming for net zero emissions in its electricity or power sector?  
-**Answer:** ❌ No  
-**Explanation:** None  
-**Target Year(s):** 2013, 2030, 2035, 2050  
-**Sectors:** N/A
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 85.45%  
-**Source:** [Link](https://climateactiontracker.org/countries/japan/2035-ndc/)
-
----
-
-### Japan – Carbon Pricing
-
-**Question:** Has Japan introduced carbon pricing or an emissions trading scheme?  
-**Answer:** ❌ No  
-**Explanation:** None  
-**Target Year(s):** 2022, 2023, 2024  
-**Sectors:** Energy, Power
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 83.2%  
-**Source:** [Link](https://climateactiontracker.org/countries/japan/policies-action/)
-
----
-
-### Brazil – Net Zero Target
-
-**Question:** Has Brazil set a national net zero target by 2050?  
-**Answer:** ✅ Yes  
-**Explanation:** Mentions net zero target.  
-**Target Year(s):** 2023, 2050  
-**Sectors:** N/A
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 83.48%  
-**Source:** [Link](https://climateactiontracker.org/countries/brazil/net-zero-targets/)
-
----
-
-### Brazil – Sector Targets
-
-**Question:** What sector-specific climate targets has Brazil implemented?  
-**Answer:** ✅ Yes  
-**Explanation:** Mentions sector-specific targets.  
-**Target Year(s):** 2005, 2035  
-**Sectors:** Lulucf
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 84.57%  
-**Source:** [Link](https://climateactiontracker.org/countries/brazil/2035-ndc/)
-
----
-
-### Brazil – Efficiency Target
-
-**Question:** Does Brazil have a policy to improve energy efficiency in buildings or transport?  
-**Answer:** ❌ No  
-**Explanation:** None  
-**Target Year(s):** 2024  
-**Sectors:** Energy
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 79.33%  
-**Source:** [Link](https://climateactiontracker.org/countries/brazil/sources/)
-
----
-
-### Brazil – Electricity Net Zero
-
-**Question:** Is Brazil aiming for net zero emissions in its electricity or power sector?  
-**Answer:** ❌ No  
-**Explanation:** None  
-**Target Year(s):** 2023, 2050  
-**Sectors:** N/A
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 83.98%  
-**Source:** [Link](https://climateactiontracker.org/countries/brazil/net-zero-targets/)
-
----
-
-### Brazil – Carbon Pricing
-
-**Question:** Has Brazil introduced carbon pricing or an emissions trading scheme?  
-**Answer:** ❌ No  
-**Explanation:** None  
-**Target Year(s):** N/A  
-**Sectors:** N/A
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 80.16%  
-**Source:** [Link](https://climateactiontracker.org/countries/brazil/2035-ndc/)
-
----
-
-### Nigeria – Net Zero Target
-
-**Question:** Has Nigeria set a national net zero target by 2050?  
+**Question:** Has Mexico set a national net zero target by 2050?  
 **Answer:** ✅ Yes  
 **Explanation:** Mentions net zero target.  
 **Target Year(s):** N/A  
@@ -171,68 +11,228 @@
 > No quote provided.
 
 **Confidence:** 83.1%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/net-zero-targets/)
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/net-zero-targets/)
 
 ---
 
-### Nigeria – Sector Targets
+### Mexico – Sector Targets
 
-**Question:** What sector-specific climate targets has Nigeria implemented?  
+**Question:** What sector-specific climate targets has Mexico implemented?  
 **Answer:** ✅ Yes  
 **Explanation:** Mentions sector-specific targets.  
-**Target Year(s):** 2021, 2023, 2030, 2060  
-**Sectors:** Sectoral targets
+**Target Year(s):** 2020, 2021, 2022  
+**Sectors:** Agriculture, Energy, Industry
 
 **Quote:**  
 > No quote provided.
 
-**Confidence:** 82.53%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/policies-action/)
+**Confidence:** 84.35%  
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/assumptions/)
 
 ---
 
-### Nigeria – Efficiency Target
+### Mexico – Efficiency Target
 
-**Question:** Does Nigeria have a policy to improve energy efficiency in buildings or transport?  
+**Question:** Does Mexico have a policy to improve energy efficiency in buildings or transport?  
 **Answer:** ❌ No  
-**Explanation:** Mentions energy efficiency law or strategy, but target is unclear or missing. (Note: negation present in sentence, which may weaken the claim.)  
-**Target Year(s):** 2023, 2024, 2060  
+**Explanation:** Mentions energy efficiency themes, but no clear policy or target.  
+**Target Year(s):** N/A  
+**Sectors:** Electricity
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 82.42%  
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/)
+
+---
+
+### Mexico – Electricity Net Zero
+
+**Question:** Is Mexico aiming for net zero emissions in its electricity or power sector?  
+**Answer:** ❌ No  
+**Explanation:** None  
+**Target Year(s):** 2015, 2018, 2020, 2021, 2024  
 **Sectors:** Electricity, Energy, Power
 
 **Quote:**  
 > No quote provided.
 
-**Confidence:** 81.79%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/)
+**Confidence:** 83.12%  
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/policies-action/)
 
 ---
 
-### Nigeria – Electricity Net Zero
+### Mexico – Carbon Pricing
 
-**Question:** Is Nigeria aiming for net zero emissions in its electricity or power sector?  
+**Question:** Has Mexico introduced carbon pricing or an emissions trading scheme?  
+**Answer:** ✅ Yes  
+**Explanation:** Mentions carbon pricing mechanism.  
+**Target Year(s):** 2017, 2018  
+**Sectors:** N/A
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 81.73%  
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/policies-action/)
+
+---
+
+### Kenya – Net Zero Target
+
+**Question:** Has Kenya set a national net zero target by 2050?  
+**Answer:** ✅ Yes  
+**Explanation:** Mentions net zero target. (Note: negation present in sentence, which may weaken the claim.)  
+**Target Year(s):** 2020  
+**Sectors:** N/A
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 82.35%  
+**Source:** [Link](https://climateactiontracker.org/countries/kenya/targets/)
+
+---
+
+### Kenya – Sector Targets
+
+**Question:** What sector-specific climate targets has Kenya implemented?  
+**Answer:** ✅ Yes  
+**Explanation:** Mentions sector-specific targets. (Note: negation present in sentence, which may weaken the claim.)  
+**Target Year(s):** 2015, 2020, 2030  
+**Sectors:** Lulucf
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 82.76%  
+**Source:** [Link](https://climateactiontracker.org/countries/kenya/policies-action/)
+
+---
+
+### Kenya – Efficiency Target
+
+**Question:** Does Kenya have a policy to improve energy efficiency in buildings or transport?  
+**Answer:** ✅ Yes  
+**Explanation:** Mentions energy efficiency law or strategy and sets an efficiency target.  
+**Target Year(s):** 2015, 2020, 2025  
+**Sectors:** Agriculture, Energy, Industry, Power, Transport
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 84.64%  
+**Source:** [Link](https://climateactiontracker.org/countries/kenya/policies-action/)
+
+---
+
+### Kenya – Electricity Net Zero
+
+**Question:** Is Kenya aiming for net zero emissions in its electricity or power sector?  
 **Answer:** ❌ No  
-**Explanation:** Only scenario-based evidence for net zero electricity.  
-**Target Year(s):** 2024, 2060  
+**Explanation:** None  
+**Target Year(s):** 2015, 2020, 2025  
+**Sectors:** Agriculture, Energy, Industry, Power, Transport
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 81.29%  
+**Source:** [Link](https://climateactiontracker.org/countries/kenya/policies-action/)
+
+---
+
+### Kenya – Carbon Pricing
+
+**Question:** Has Kenya introduced carbon pricing or an emissions trading scheme?  
+**Answer:** ❌ No  
+**Explanation:** None  
+**Target Year(s):** 2020, 2021  
+**Sectors:** Energy, Industry
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 79.96%  
+**Source:** [Link](https://climateactiontracker.org/countries/kenya/policies-action/)
+
+---
+
+### Indonesia – Net Zero Target
+
+**Question:** Has Indonesia set a national net zero target by 2050?  
+**Answer:** ✅ Yes  
+**Explanation:** Mentions net zero target. (Note: negation present in sentence, which may weaken the claim.)  
+**Target Year(s):** 2021, 2060  
+**Sectors:** N/A
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 82.4%  
+**Source:** [Link](https://climateactiontracker.org/countries/indonesia/targets/)
+
+---
+
+### Indonesia – Sector Targets
+
+**Question:** What sector-specific climate targets has Indonesia implemented?  
+**Answer:** ✅ Yes  
+**Explanation:** Mentions sector-specific targets.  
+**Target Year(s):** N/A  
+**Sectors:** Energy, Lulucf
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 82.39%  
+**Source:** [Link](https://climateactiontracker.org/countries/indonesia/assumptions/)
+
+---
+
+### Indonesia – Efficiency Target
+
+**Question:** Does Indonesia have a policy to improve energy efficiency in buildings or transport?  
+**Answer:** ❌ No  
+**Explanation:** Mentions energy efficiency law or strategy, but target is unclear or missing.  
+**Target Year(s):** 2014, 2025  
 **Sectors:** Energy
 
 **Quote:**  
 > No quote provided.
 
-**Confidence:** 82.96%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/)
+**Confidence:** 84.54%  
+**Source:** [Link](https://climateactiontracker.org/countries/indonesia/policies-action/)
 
 ---
 
-### Nigeria – Carbon Pricing
+### Indonesia – Electricity Net Zero
 
-**Question:** Has Nigeria introduced carbon pricing or an emissions trading scheme?  
+**Question:** Is Indonesia aiming for net zero emissions in its electricity or power sector?  
+**Answer:** ❌ No  
+**Explanation:** Only scenario-based evidence for net zero electricity.  
+**Target Year(s):** 2023, 2030, 2050, 2060  
+**Sectors:** Electricity, Energy, Power
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 83.46%  
+**Source:** [Link](https://climateactiontracker.org/countries/indonesia/policies-action/)
+
+---
+
+### Indonesia – Carbon Pricing
+
+**Question:** Has Indonesia introduced carbon pricing or an emissions trading scheme?  
 **Answer:** ✅ Yes  
 **Explanation:** Mentions carbon pricing mechanism.  
-**Target Year(s):** 2024  
+**Target Year(s):** 2023, 2024, 2025, 2027  
 **Sectors:** Power
 
 **Quote:**  
 > No quote provided.
 
-**Confidence:** 83.43%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/sources/)
+**Confidence:** 83.51%  
+**Source:** [Link](https://climateactiontracker.org/countries/indonesia/policies-action/)

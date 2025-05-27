@@ -1,11 +1,11 @@
 # Information_Retrieval_Report.md
 
-## `climate_tracker/scripts/05_information_retrieval.py`
+## `climate_tracker/scripts/information_retrieval.py`
 
 
 **Overall Purpose:**
 
-The script `05_information_retrieval.py` is designed to process textual data related to different countries' climate policies. For each country, it extracts relevant text segments (chunks) from its associated documents/webpage sections. Then, for a predefined set of questions about climate policies, it finds the text chunk that is most semantically similar to each question and presents this chunk as the "answer" or "evidence." The output for each country is a Markdown file containing the questions and their corresponding best-matching text chunks, along with similarity scores and source URLs.
+The script `information_retrieval.py` is designed to process textual data related to different countries' climate policies. For each country, it extracts relevant text segments (chunks) from its associated documents/webpage sections. Then, for a predefined set of questions about climate policies, it finds the text chunk that is most semantically similar to each question and presents this chunk as the "answer" or "evidence." The output for each country is a Markdown file containing the questions and their corresponding best-matching text chunks, along with similarity scores and source URLs.
 
 **How it Works:**
 

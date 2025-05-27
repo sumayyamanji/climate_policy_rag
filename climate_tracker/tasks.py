@@ -3,11 +3,12 @@
 Management script for Climate Action Tracker project.
 Supports scraping and embedding generation.
 """
+
+import click
 import os
 import sys
 import subprocess
 from pathlib import Path
-import click
 from dotenv import load_dotenv
 import psycopg2
 from sqlalchemy import create_engine, text
@@ -15,14 +16,19 @@ from sqlalchemy import create_engine, text
 from climate_tracker.models import Base, get_db_session
 from climate_tracker.utils import now_london_time
 from climate_tracker.utils import generate_word_embeddings, save_word2vec_model
-from climate_tracker.scripts.generate_embeddings import generate_embeddings
+from climate_tracker.scripts.generate_embeddings import generate_embeddings as generate_embeddings_main
 from climate_tracker.scripts.information_retrieval import retrieve_and_format_answers
 from climate_tracker.scripts.policy_extraction import run_policy_extraction
 from climate_tracker.scripts.tsne_and_heatmap import generate_visualizations
-from climate_tracker.scripts.evaluate_extraction import evaluate
+from climate_tracker.scripts.evaluate_extraction import evaluate as run_evaluation
 from climate_tracker.scripts.qa_boxes import generate_qa_markdown
 
 load_dotenv()
+
+@click.group()
+def cli():
+    """Management commands for the climate policy extractor."""
+    pass
 
 # Constants
 STRUCTURED_DIR = os.getenv("STRUCTURED_JSON_DIR", "data/full_text/structured")
@@ -57,11 +63,6 @@ def extract(log_level="INFO"):
     except Exception as e:
         print(f"Failed to run spider: {e}")
         return False
-
-@click.group()
-def cli():
-    """Management commands for the climate policy extractor."""
-    pass
 
 def create_engine_and_extension():
     """Create the database engine and vector extension."""
@@ -128,7 +129,14 @@ def store():
 @click.option('--force/--no-force', default=False, help='Force reprocessing')
 def generate_embeddings(batch_size, model_name, sentence_based, chunk_size, overlap, force):
     """Generate embeddings for document chunks."""
-    generate_embeddings(batch_size=batch_size)
+    generate_embeddings_main(
+        batch_size=batch_size,
+        model_name=model_name,
+        sentence_based=sentence_based,
+        chunk_size=chunk_size,
+        overlap=overlap,
+        force=force
+    )
 
 @cli.command(name="05_information_retrieval")
 def information_retrieval():
@@ -148,7 +156,7 @@ def visualize():
 @cli.command(name="08_evaluate")
 def evaluate():
     """Evaluate policy extraction results."""
-    evaluate()
+    run_evaluation()
 
 @cli.command(name="09_qa_boxes")
 def qa_boxes():

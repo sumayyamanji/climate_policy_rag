@@ -1,8 +1,11 @@
 # Q&A Boxes Report
 
+`climate_tracker/climate_tracker/scripts/qa_boxes.py`
+
+
 ## 1. Input Sources 
 
-Each Q&A box is generated from the structured predictions stored in the policy_targets_output.json file, produced by the 06_policy_extractor.py script. These predictions are organized by country and policy area (e.g., net_zero_target, sector_targets, etc.), and are derived from earlier retrieved evidence in the form of text excerpts.
+Each Q&A box is generated from the structured predictions stored in the `output/policy_targets_output.json` file, produced by the `climate_tracker/climate_tracker/scripts/policy_extractor.py` script. These predictions are organized by country and policy area (e.g., net_zero_target, sector_targets, etc.), and are derived `retrieved_country_reports_v2_chunked`.
 
 For each policy area, the following fields are extracted:
 
@@ -122,15 +125,16 @@ Terminal Output:
 📝 Question for 'efficiency_target' (press Enter to skip): Does {country} have a policy to improve energy efficiency in buildings or transport?
 📝 Question for 'electricity_net_zero' (press Enter to skip): Is {country} aiming for net zero emissions in its electricity or power sector?
 📝 Question for 'carbon_pricing' (press Enter to skip): Has {country} introduced carbon pricing or an emissions trading scheme? 
-🌍 Enter countries (comma-separated), or 'all' for all countries: Japan, Brazil, Nigeria
+🌍 Enter countries (comma-separated), or 'all' for all countries: Mexico, Kenya, Indonesia
 ```
 
-Markdown Output (showing Nigeria below, but the full output can be seen in `output/qa_boxes.md`): 
+Markdown Output (showing ... below, but the full output can be seen in `output/qa_boxes.md`): 
 
 ``` markdown
-### Nigeria – Net Zero Target
 
-**Question:** Has Nigeria set a national net zero target by 2050?  
+### Mexico – Net Zero Target
+
+**Question:** Has Mexico set a national net zero target by 2050?  
 **Answer:** ✅ Yes  
 **Explanation:** Mentions net zero target.  
 **Target Year(s):** N/A  
@@ -140,70 +144,85 @@ Markdown Output (showing Nigeria below, but the full output can be seen in `outp
 > No quote provided.
 
 **Confidence:** 83.1%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/net-zero-targets/)
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/net-zero-targets/)
 
 ---
 
-### Nigeria – Sector Targets
+### Mexico – Sector Targets
 
-**Question:** What sector-specific climate targets has Nigeria implemented?  
+**Question:** What sector-specific climate targets has Mexico implemented?  
 **Answer:** ✅ Yes  
 **Explanation:** Mentions sector-specific targets.  
-**Target Year(s):** 2021, 2023, 2030, 2060  
-**Sectors:** Sectoral targets
+**Target Year(s):** 2020, 2021, 2022  
+**Sectors:** Agriculture, Energy, Industry
 
 **Quote:**  
 > No quote provided.
 
-**Confidence:** 82.53%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/policies-action/)
+**Confidence:** 84.35%  
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/assumptions/)
 
 ---
 
-### Nigeria – Efficiency Target
+### Mexico – Efficiency Target
 
-**Question:** Does Nigeria have a policy to improve energy efficiency in buildings or transport?  
+**Question:** Does Mexico have a policy to improve energy efficiency in buildings or transport?  
 **Answer:** ❌ No  
-**Explanation:** Mentions energy efficiency law or strategy, but target is unclear or missing. (Note: negation present in sentence, which may weaken the claim.)  
-**Target Year(s):** 2023, 2024, 2060  
+**Explanation:** Mentions energy efficiency themes, but no clear policy or target.  
+**Target Year(s):** N/A  
+**Sectors:** Electricity
+
+**Quote:**  
+> No quote provided.
+
+**Confidence:** 82.42%  
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/)
+
+---
+
+### Mexico – Electricity Net Zero
+
+**Question:** Is Mexico aiming for net zero emissions in its electricity or power sector?  
+**Answer:** ❌ No  
+**Explanation:** None  
+**Target Year(s):** 2015, 2018, 2020, 2021, 2024  
 **Sectors:** Electricity, Energy, Power
 
 **Quote:**  
 > No quote provided.
 
-**Confidence:** 81.79%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/)
+**Confidence:** 83.12%  
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/policies-action/)
 
 ---
 
-### Nigeria – Electricity Net Zero
+### Mexico – Carbon Pricing
 
-**Question:** Is Nigeria aiming for net zero emissions in its electricity or power sector?  
-**Answer:** ❌ No  
-**Explanation:** Only scenario-based evidence for net zero electricity.  
-**Target Year(s):** 2024, 2060  
-**Sectors:** Energy
-
-**Quote:**  
-> No quote provided.
-
-**Confidence:** 82.96%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/)
-
----
-
-### Nigeria – Carbon Pricing
-
-**Question:** Has Nigeria introduced carbon pricing or an emissions trading scheme?  
+**Question:** Has Mexico introduced carbon pricing or an emissions trading scheme?  
 **Answer:** ✅ Yes  
 **Explanation:** Mentions carbon pricing mechanism.  
-**Target Year(s):** 2024  
-**Sectors:** Power
+**Target Year(s):** 2017, 2018  
+**Sectors:** N/A
 
 **Quote:**  
 > No quote provided.
 
-**Confidence:** 83.43%  
-**Source:** [Link](https://climateactiontracker.org/countries/nigeria/sources/)
+**Confidence:** 81.73%  
+**Source:** [Link](https://climateactiontracker.org/countries/mexico/policies-action/)
 ```
 
+
+## 6. Evaluation 
+
+### Better quote extraction and validation 
+1. Improve mechanism for quote extraction, as no quote is provided for any of the answers
+2. Add a minimum confidence threshold for including quotes
+3. Add fallback sources when primary quotes are unavailable
+
+
+### User Experience 
+1. Adding a preview feature before generating the final markdown
+
+
+### Performance and Scalability 
+1. Batch processing for large numbers of countries 

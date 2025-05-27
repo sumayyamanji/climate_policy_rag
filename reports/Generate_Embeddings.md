@@ -1,8 +1,10 @@
-# Improved Fallback Mechanism in 04_generate_embeddings.py
+#`climate_tracker/climate_tracker/scripts/generate_embeddings.py`
 
 ** WRITE UP ABOUT THE SCRIPT **
 
-To enhance robustness and flexibility in our embedding pipeline, we updated the 04_generate_embeddings.py script with a more resilient fallback mechanism and optional filtering support.
+## Improved Fallback Mechanism 
+
+To enhance robustness and flexibility in our embedding pipeline, we updated the generate_embeddings.py script with a more resilient fallback mechanism and optional filtering support.
 
 ## Creating a Fallback Mechanism for Generating the Embeddings
 Initially: if one chunk in the batch failed, the whole batch was skipped — causing valid sections to be lost.
@@ -63,7 +65,7 @@ All valid sections are embedded and saved.
 
 Run embedding for a specific country only:
 ```python 
-python 04_generate_embeddings.py --only-country gabon
+python generate_embeddings.py --only-country gabon
 ```
 
 ### 3. Early Exit for Countries with No Valid Text

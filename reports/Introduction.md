@@ -49,7 +49,7 @@ We held group meetings every 2–3 days to:
 Since we were working sequentially, we divided up the workload fairly, based on everyone's exam schedules. 
 
 **First: Toscane**
-* Setting up format, basis of the README.md and main pipeline for the project 
+* Setting up format, README.md and main pipeline for the project 
 * Scraping CAT website and storing it 
 * And documenting the above
 
@@ -71,8 +71,11 @@ Since we were working sequentially, we divided up the workload fairly, based on 
 * Question and answer boxes
 * And documenting the above
 
+Tasks.py: 
+
 
 ## Decision Making 
+
 
 ### Choosing the BAAI Model 
 
@@ -80,6 +83,7 @@ A key technical decision in our project was to use the BAAI bge-m3 model for emb
 - The BAAI bge-m3 model is specifically optimized for dense retrieval tasks, making it ideal for our RAG-style question-answering system. Unlike standard SentenceTransformers, it has been instruction-tuned and trained on broad, multilingual corpora, improving its ability to handle varied climate policy language. 
 - The model produces high-quality, unit-normalized embeddings that work well with vector search tools like pgvector, ensuring accurate and efficient semantic matching. 
 - Its strong zero-shot performance and efficiency in batch embedding also made it a technically robust and practical choice for our team.
+
 
 ### Data Handling, Structure, and Embedding Strategy
 
@@ -93,6 +97,8 @@ This separation of concerns — structured metadata for referencing and unstruct
 
 
 ## Cohesive Structure 
+
+Our project has a cohesive structure, where each script leads neatly on from one another: 
 
 `climate_tracker/climate_tracker/scripts/init_db.py`
 Initializes the database with vector support by creating necessary extensions and tables, setting up the foundation for storing and querying vector embeddings.

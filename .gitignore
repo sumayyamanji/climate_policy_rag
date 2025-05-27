@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 models/
-.DS Store
+.DS_Store
 climate_tracker/archive/
 
 # Distribution / packaging

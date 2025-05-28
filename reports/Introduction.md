@@ -2,7 +2,7 @@
 
 ## Team Organisation & Workflow
 
-We began by meeting together, and reviewing the ASCOR Framework and identifying a wide range of potential policy-relevant questions.
+We began by meeting together, and reviewing the ASCOR Framework and identifying a wide range of potential policy-relevant questions. We confirmed the relevant questions through a first meeting with Sylvan.
 
 As a group, we narrowed these down to a final set of questions that:
 * Were most relevant to the ClimateActionTracker.org data source,
@@ -71,7 +71,7 @@ Since we were working sequentially, we divided up the workload fairly, based on 
 * Question and answer boxes
 * And documenting the above
 
-Tasks.py: 
+Tasks.py: all four of us 
 
 
 ## Decision Making 
@@ -79,15 +79,16 @@ Tasks.py:
 
 ### Choosing the BAAI Model 
 
-A key technical decision in our project was to use the BAAI bge-m3 model for embedding generation, diverging from the SentenceTransformer-based approach used in previous problem sets:
+A key technical decision in our project was to use the BAAI bge-m3 model for embedding generation, diverging from the SentenceTransformer-based approach used in previous problem set by Toscane:
 - The BAAI bge-m3 model is specifically optimized for dense retrieval tasks, making it ideal for our RAG-style question-answering system. Unlike standard SentenceTransformers, it has been instruction-tuned and trained on broad, multilingual corpora, improving its ability to handle varied climate policy language. 
 - The model produces high-quality, unit-normalized embeddings that work well with vector search tools like pgvector, ensuring accurate and efficient semantic matching. 
 - Its strong zero-shot performance and efficiency in batch embedding also made it a technically robust and practical choice for our team.
+-  The main reason we switched to this model is to accomodate for those using Nuvolos.
 
 
 ### Data Handling, Structure, and Embedding Strategy
 
-Our pipeline began by importing structured JSON files generated from Scrapy crawls of the ClimateActionTracker.org website (`climate_tracker/climate_tracker/scripts/store.py`). These JSON files preserved a **structured hierarchy** of sections, titles, URLs, and content. However, the actual content to be embedded and searched semantically was **unstructured** — specifically, the content fields within each section, consisting of natural-language paragraphs and descriptive policy text.
+We ran a scrapy crawl and generated both structured and unstructured output for each country, found in `climate_tracker/data/full_text`. 
 
 During ingestion, we preserved the structured metadata (e.g., `section_title`, `section_url`, `country_doc_id`) in our `country_page_sections_v2` table to ensure traceability and citation. However, for semantic embedding and information retrieval, we deliberately focused only on the unstructured text_content, ignoring tables or numeric scorecards, as unstructured narrative text provides **richer context for qualitative question answering**. We decided to focus on answering qualitative questions, as per Dr Cardoso-Silva's and Sylvan's recommendations. 
 

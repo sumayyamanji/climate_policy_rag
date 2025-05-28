@@ -133,7 +133,7 @@ climate_tracker/
 Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone "https://github.com/MaxL75/DS205-final-project-team-CPR.git"
 cd DS205-final-project-team-CPR
 ```
 
@@ -211,16 +211,16 @@ EMBEDDING_MODEL=models/local/BAAI-bge-m3
 CHUNK_DIR=data/full_text/structured
 ```
 
-#### Step 6
-Create climate database: 
-
-```bash
-createdb -U postgres climate_db
-```
-
 ---
 ### Running the Pipeline
 There are two options: either using tasks.py (easier - Option A), or running each script individually (Option B)
+
+### Extracting the data: Run this script to extract the data from the websites, output in MD, Structured and Unstructured Format.
+```bash
+scrapy crawl climate_action_tracker_fulltext
+```
+
+
 
 ---
 ### Running the Pipeline (Option A - using `climate_tracker/tasks.py`)

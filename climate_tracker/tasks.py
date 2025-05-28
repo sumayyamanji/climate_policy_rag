@@ -114,7 +114,7 @@ def create_table():
 @cli.command(name="03_store")
 def store():
     """Store extracted text into the database."""
-    from climate_tracker.scripts.store_text import main
+    from climate_tracker.scripts.store import main
     try:
         main()
     except Exception as e:

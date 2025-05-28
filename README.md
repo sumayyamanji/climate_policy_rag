@@ -60,15 +60,15 @@ climate_tracker/
 │   │   └── climate_action_tracker.py
 │   │
 │   ├── scripts/                       # Data processing scripts
-│   │   ├── 01_init-db.py             # Database initialization
-│   │   ├── 02_create-table.py        # Table creation
-│   │   ├── 03_store.py              # Data storage
-│   │   ├── 04_generate_embeddings.py # Embedding generation
-│   │   ├── 05_information_retrieval.py # RAG pipeline
-│   │   ├── 06_policy_extraction.py   # Policy target extraction
-│   │   ├── 07_tsne_and_heatmap.py   # Data visualization
-│   │   ├── 08_evaluate_extraction.py # Extraction evaluation
-│   │   └── 09_qa_boxes.py           # QA box generation
+│   │   ├── init-db.py             # Database initialization
+│   │   ├── create-table.py        # Table creation
+│   │   ├── store.py              # Data storage
+│   │   ├── generate_embeddings.py # Embedding generation
+│   │   ├── information_retrieval.py # RAG pipeline
+│   │   ├── policy_extraction.py   # Policy target extraction
+│   │   ├── tsne_and_heatmap.py   # Data visualization
+│   │   ├── evaluate_extraction.py # Extraction evaluation
+│   │   └── qa_boxes.py           # QA box generation
 │   │
 │   ├── data/                         # Data directories
 │   │   └── full_text/               # Scraped data outputs
@@ -85,23 +85,38 @@ climate_tracker/
 │   ├── my_logging.py              # Custom logging configuration
 │   └── utils.py                   # Utility functions
 │
+├── policy_targets_pages/              # Policy target analysis pages
+│
 ├── retrieved_country_reports_v2_chunked/  # Generated fact sheets
 │
 ├── output/                              # Output directory
 │   ├── policy_targets_output.json       # Extracted policy targets
 │   ├── tsne_plot.png                    # t-SNE visualization
 │   ├── heatmap.png                      # Similarity heatmap
+│   ├── confidence_heatmap.png          # Confidence scores heatmap
+│   ├── country_f1_scores.png           # Country-level F1 score visualization
+│   ├── label_f1_scores.png             # Label-level F1 score visualization
+│   ├── evaluation_summary.md           # Summary of evaluation metrics
+│   ├── ground_truth_template.json      # Template for ground truth data
+│   ├── low_confidence_summary.csv      # Summary of low confidence predictions
+│   ├── qa_boxes.md                     # Generated QA boxes in markdown format
 │   └── evaluation_metrics.json          # Extraction evaluation results
 │
 ├── reports/                             # Generated reports
 │   ├── QA_Boxes_Report.md              # QA boxes report
-│   └── evaluation_report.md            # Evaluation results report
+│   ├── Evaluate_Policy_Extraction.md    # Policy extraction evaluation report
+│   ├── Generate_Embeddings.md          # Embedding generation report
+│   ├── Information_Retrieval.md        # Information retrieval report
+│   ├── Introduction.md                 # Project introduction
+│   ├── Policy_Extraction.md            # Policy extraction report
+│   └── Scripts_01-03_Report.md         # Initial scripts report
 │
 ├── tasks.py                            # Management CLI commands
 ├── scrapy.cfg                         # Scrapy project configuration
 ├── requirements.txt                   # Python dependencies
-├── .env                              # Environment variables
-└── .env.example                      # Example environment variables template
+├── README.md                         # Main project README
+├── CLIMATEREADME.md                  # Climate-specific documentation
+└── LICENSE                           # Project license file
 ```
 
 ## Quick Start
@@ -262,9 +277,8 @@ python climate_tracker/tasks.py 04_generate_embeddings
 #### Step 1: Initialize the database
 
 ```bash
-PYTHONPATH=climate_tracker python climate_tracker/scripts/init-db.py
-PYTHONPATH=climate_tracker python climate_tracker/scripts/create-table.py
-
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/init_db.py
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/create-table.py
 ```
 
 #### Step 2: Web Scraping
@@ -280,49 +294,45 @@ cd ..  # Return to project root
 Assuming you're in the project root: 
 
 ```bash
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/store.py
-```
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/store.py```
 
 #### Step 4: Generate Embeddings
 
 ```bash
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/generate_embeddings.py
-
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/generate_embeddings.py
 ```
 
 #### Step 5: Generate Fact Sheets (Information Retrieval)
 
 ```bash
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/information_retrieval.py
-```
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/information_retrieval.py```
 
 #### Step 6: Run Refined Policy Extraction
 Assuming your markdown reports are saved in retrieved_country_reports_v2_chunked:
 
 ```bash
 # All countries
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/policy_extraction.py --save
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/policy_extraction.py --save
 # Specific country (e.g., Nigeria)
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/policy_extraction.py --country nigeria --save
-
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/policy_extraction.py --country nigeria --save
 ```
 
 #### Step 7: t-SNE and Heatmap Plot 
 These plots are based on the similarity scores from the refined policy extraction in Step 5
 
 ```bash
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/tsne_and_heatmap.py
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/tsne_and_heatmap.py
 ```
 
 #### Step 8: Running Metrics Between Ground Truth and Predicted Model 
 ```bash
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/evaluate_extraction.py
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/evaluate_extraction.py
 ```
 
 #### Step 9: Q&A Boxes
 
 ```bash
-PYTHONPATH=climate_tracker python climate_tracker/climate_tracker/scripts/qa_boxes.py
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/qa_boxes.py
 ```
 
 ---
@@ -478,113 +488,3 @@ CREATE TABLE country_page_sections_v2 (
     scraped_at TIMESTAMPTZ DEFAULT NOW()
 );
 ```
----
-
-
-### Data Models
-
-The Scrapy pipeline uses structured item definitions:
-
-```python
-class CountrySectionItem(scrapy.Item):
-    # Country-level fields
-    country_doc_id = scrapy.Field()      # Primary key identifier
-    country_name = scrapy.Field()        # Human-readable name
-    country_main_url = scrapy.Field()    # Main country page URL
-   
-    # Section-specific fields 
-    section_title = scrapy.Field()       # Section heading
-    section_url = scrapy.Field()         # Section-specific URL
-    section_text_content = scrapy.Field() # Extracted text content
-    language = scrapy.Field(default='en') # Content language
-```
----
-
-### Embedding Strategy
-
-- **Model**: BAAI/bge-m3 (multilingual, high-performance)
-- **Chunking**: 3-sentence overlapping windows
-- **Similarity**: Cosine similarity for semantic matching
-- **Batch Processing**: Efficient embedding generation
-
----
-
-## Performance & Robustness
-
-### Key Metrics
-
-- **Semantic Accuracy**: 0.76+ similarity scores for relevant matches
-- **Country Coverage**: Comprehensive data for 195+ countries
-- **Question Coverage**: 5 standardized policy assessment questions
-- **Citation Accuracy**: 100% source URL verification
-
-### Robustness Features
-
-- **Error Handling**: Graceful degradation for missing data
-- **Chunk Validation**: Minimum content length requirements
-- **Embedding Fallbacks**: Multiple retry mechanisms
-- **Database Integrity**: ACID compliance and rollback support
-
----
-
-
-## Previous Work Integration
-
-This project builds upon extensive previous research in climate policy extraction:
-
-### NDC Extraction Analysis
-
-- **Rule-based vs Transformer comparison**: Demonstrated superior performance of semantic approaches
-- **Multi-country validation**: Tested across diverse policy document formats
-- **Robustness testing**: Comprehensive evaluation of extraction accuracy
-
-### Key Improvements
-
-- **Semantic Understanding**: Context-aware information retrieval
-- **Scalability**: Database-driven architecture for large-scale processing
-- **Standardization**: Consistent question framework across all countries
-
----
-
-
-## Evaluation & Validation
-
-### Similarity Score Analysis
-
-- **High Relevance**: 0.75+ scores indicate strong semantic matches
-- **Moderate Relevance**: 0.50-0.75 scores for related content
-- **Quality Thresholds**: Automatic filtering of low-relevance results
-
-### Content Validation
-
-- **Manual Verification**: Spot-checking of fact sheet accuracy
-- **Source Verification**: All citations link to original content
-- **Completeness Assessment**: Coverage analysis across policy domains
-
----
-
-## Limitations & Future Work
-
-### Current Limitations
-
-- **Language Support**: Primarily English content from Climate Action Tracker
-- **Real-time Updates**: Static snapshots require manual refresh
-- **Answer Generation**: Retrieval-only system without natural language generation, ie. our system does not generate free-text answers
-
-### Future Enhancements
-
-- **Multilingual Support**: Expand to non-English policy documents
-- **Comparative Analysis**: Cross-country policy comparison features
-- **Temporal Tracking**: Historical policy evolution analysis
-- **Answer Synthesis**: LLM integration for natural language responses for answering queries 
-
----
-
-## Contributing
-
-We welcome contributions! Please see our Contributing Guidelines for details on:
-
-- Code style and standards
-- Pull request process
-- Issue reporting
-- Documentation updates

@@ -54,11 +54,11 @@ Intent: Does the country commit to a net zero target? If so, when?
 
 Suggested questions:
 
-Has {country} set a national net zero target by 2050?
-What is {country}’s long-term net zero emissions goal?
-Has {country} formally adopted a net zero policy?
-Is {country} committed to achieving net zero emissions by mid-century?
-When does {country} plan to reach net zero greenhouse gas emissions?
+- Has {country} set a national net zero target by 2050?
+- What is {country}’s long-term net zero emissions goal?
+- Has {country} formally adopted a net zero policy?
+- Is {country} committed to achieving net zero emissions by mid-century?
+- When does {country} plan to reach net zero greenhouse gas emissions?
 
 
 #### sector_targets
@@ -67,11 +67,11 @@ Intent: Are there targets for specific sectors like transport, electricity, etc.
 
 Suggested questions:
 
-What sector-specific climate targets has {country} implemented?
-Has {country} introduced emission targets for any key sectors?
-Are there reduction goals for transport, energy, or industry in {country}?
-Does {country} target specific sectors like LULUCF or electricity in its climate plan?
-Which sectors are included in {country}’s national mitigation strategies?
+- What sector-specific climate targets has {country} implemented?
+- Has {country} introduced emission targets for any key sectors?
+- Are there reduction goals for transport, energy, or industry in {country}?
+- Does {country} target specific sectors like LULUCF or electricity in its climate plan?
+- Which sectors are included in {country}’s national mitigation strategies?
 
 
 #### efficiency_target
@@ -80,11 +80,11 @@ Intent: Is there an energy efficiency strategy or target?
 
 Suggested questions:
 
-Does {country} have a policy to improve energy efficiency in buildings or transport?
-Has {country} set energy efficiency targets for industry or households?
-Are there national standards or benchmarks for energy efficiency in {country}?
-What measures has {country} taken to improve energy use efficiency?
-Is improving energy efficiency a formal policy objective for {country}?
+- Does {country} have a policy to improve energy efficiency in buildings or transport?
+- Has {country} set energy efficiency targets for industry or households?
+- Are there national standards or benchmarks for energy efficiency in {country}?
+- What measures has {country} taken to improve energy use efficiency?
+- Is improving energy efficiency a formal policy objective for {country}?
 
 
 #### electricity_net_zero
@@ -93,11 +93,11 @@ Intent: Is the electricity sector on a net-zero or clean energy pathway?
 
 Suggested questions:
 
-Is {country} aiming for net zero emissions in its electricity or power sector?
-What are {country}’s decarbonisation goals for electricity generation?
-Has {country} committed to clean or renewable electricity targets?
-Is {country} phasing out coal or fossil fuels from its power sector?
-How is {country} planning to transition to a net zero electricity system?
+- Is {country} aiming for net zero emissions in its electricity or power sector?
+- What are {country}’s decarbonisation goals for electricity generation?
+- Has {country} committed to clean or renewable electricity targets?
+- Is {country} phasing out coal or fossil fuels from its power sector?
+- How is {country} planning to transition to a net zero electricity system?
 
 
 #### carbon_pricing
@@ -106,11 +106,11 @@ Intent: Is there a carbon tax or emissions trading system?
 
 Suggested questions:
 
-Has {country} introduced carbon pricing or an emissions trading scheme?
-Is there a carbon tax or cap-and-trade system in place in {country}?
-How does {country} price carbon emissions, if at all?
-Has {country} implemented any form of carbon market mechanism?
-What role does carbon pricing play in {country}’s climate policy?
+- Has {country} introduced carbon pricing or an emissions trading scheme?
+- Is there a carbon tax or cap-and-trade system in place in {country}?
+- How does {country} price carbon emissions, if at all?
+- Has {country} implemented any form of carbon market mechanism?
+- What role does carbon pricing play in {country}’s climate policy?
 
 ---
 
@@ -128,7 +128,7 @@ Terminal Output:
 🌍 Enter countries (comma-separated), or 'all' for all countries: Mexico, Kenya, Indonesia
 ```
 
-Markdown Output (showing ... below, but the full output can be seen in `output/qa_boxes.md`): 
+Markdown Output (showing Mexico below, but the full output can be seen in `output/qa_boxes.md`): 
 
 ``` markdown
 

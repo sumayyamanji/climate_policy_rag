@@ -1,7 +1,5 @@
 #`climate_tracker/climate_tracker/scripts/generate_embeddings.py`
 
-** WRITE UP ABOUT THE SCRIPT **
-
 ## Improved Fallback Mechanism 
 
 To enhance robustness and flexibility in our embedding pipeline, we updated the generate_embeddings.py script with a more resilient fallback mechanism and optional filtering support.

@@ -218,6 +218,7 @@ Markdown Output (showing ... below, but the full output can be seen in `output/q
 1. Improve mechanism for quote extraction, as no quote is provided for any of the answers
 2. Add a minimum confidence threshold for including quotes
 3. Add fallback sources when primary quotes are unavailable
+4. Only question 2 outputting the "sectors" section
 
 
 ### User Experience 

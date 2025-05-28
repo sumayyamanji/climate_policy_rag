@@ -13,13 +13,15 @@ def get_logger(name):
     Get a standard logger.
     """
     logger = logging.getLogger(name)
-    # Basic configuration if no handlers are present for the root logger
-    # Scrapy will likely configure its own handlers later.
-    if not logging.getLogger().handlers:
-        logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(name)s] %(levelname)s: %(message)s")
-    
-    # Ensure a level is set if Scrapy hasn't set one from settings yet.
-    # This is a basic default.
+
+    # Set default level if not already set
     if logger.level == logging.NOTSET:
         logger.setLevel(logging.INFO)
-    return logger 
+
+    # Add console output if no handlers present on this logger
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        handler.setFormatter(logging.Formatter("%(asctime)s [%(name)s] %(levelname)s: %(message)s"))
+        logger.addHandler(handler)
+
+    return logger

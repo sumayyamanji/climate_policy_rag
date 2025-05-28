@@ -213,13 +213,14 @@ CHUNK_DIR=data/full_text/structured
 
 ---
 ### Running the Pipeline
-There are two options: either using tasks.py (easier - Option A), or running each script individually (Option B)
 
 ### Extracting the data: Run this script to extract the data from the websites, output in MD, Structured and Unstructured Format.
 ```bash
+cd climate_tracker
 scrapy crawl climate_action_tracker_fulltext
 ```
 
+Now there are two options: either using tasks.py (easier - Option A), or running each script individually (Option B)
 
 
 ---
@@ -233,24 +234,25 @@ This project includes a CLI management tool in tasks.py that lets you run all ke
 #### Step 1: View available commands
 To see all available tasks:
 ```bash
-python climate_tracker/tasks.py --help
+PYTHONPATH=. python -m climate_tracker.tasks --help 
 ```
 
 You should see a list of commands like:
 ```sql
 Commands:
-  01_init_db                Initialize the database with vector support.
-  02_create_table           Create the `countries` table.
-  03_store                  Store extracted text into the database.
-  04_generate_embeddings    Generate embeddings for document chunks.
-  05_information_retrieval  Run information retrieval pipeline.
-  06_policy_extraction      Extract policy targets using LLMs.
-  07_visualize              Generate TSNE and heatmap visualizations.
-  08_evaluate               Evaluate policy extraction results.
-  09_qa_boxes               Generate QA boxes.
-  drop-db                   Drop all tables from the database.
-  list-tables               List all tables in the database.
-  recreate-db               Recreate all database tables (destructive).
+  create_table           Step 3: Create the `countries` table.
+  drop_db                Drop all tables from the database.
+  evaluate               Step 9: Evaluate policy extraction results.
+  generate_embeddings    Step 5: Generate embeddings for document sections.
+  information_retrieval  Step 6: Run information retrieval pipeline.
+  init_db                Step 2: Initialize the database with vector...
+  list_tables            List all tables in the database.
+  policy_extraction      Step 7: Extract policy targets.
+  qa_boxes               Step 10: Generate QA boxes.
+  recreate_db            Recreate all database tables (destructive).
+  scrapy_crawl           Step 1: Run the Climate Action Tracker spider
+  store                  Step 4: Store extracted text into the database.
+  visualize              Step 8: Generate TSNE and heatmap visualizations.
 ```
 
 #### Step 2: Run a specific task
@@ -258,13 +260,13 @@ Commands:
 Each command can be run individually, for example:
 ```bash
 # Initialize the database
-python climate_tracker/tasks.py 01_init_db
+PYTHONPATH=. python -m climate_tracker.tasks -- init_db
 
 # Store text into the database
-python climate_tracker/tasks.py 03_store
+PYTHONPATH=. python -m climate_tracker.tasks -- store
 
 # Generate document embeddings
-python climate_tracker/tasks.py 04_generate_embeddings
+PYTHONPATH=. python -m climate_tracker.tasks -- generate_embeddings
 
 ```
 
@@ -293,11 +295,16 @@ Assuming you're in the project root:
 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/store.py```
+```
 
 #### Step 4: Generate Embeddings
 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/generate_embeddings.py
+```
+For one country: 
+```bash
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/generate_embeddings.py --only-country mexico
 ```
 
 #### Step 5: Generate Fact Sheets (Information Retrieval)

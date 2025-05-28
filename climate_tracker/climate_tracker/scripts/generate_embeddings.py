@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from sqlalchemy import text, and_
 from tqdm import tqdm
 
+
 # --- Path setup: START ---
 _project_root = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(_project_root))
@@ -14,10 +15,16 @@ sys.path.insert(0, str(_project_root))
 
 load_dotenv()
 
-from climate_tracker.my_logging import get_logger
+from climate_tracker.climate_tracker.my_logging import get_logger
 logger = get_logger(__name__)
-from climate_tracker.models import Base, get_db_session, CountryPageSectionModel
-from climate_tracker.embedding_utils import BAAIEmbedder
+from climate_tracker.climate_tracker.models import Base, get_db_session, CountryPageSectionModel
+from climate_tracker.climate_tracker.embedding_utils import BAAIEmbedder
+
+print("🟢 Script is running...")
+
+
+# Define a zero-vector matching your embedding dimension (e.g. 1024)
+ZERO_VECTOR = [0.0] * 1024
 
 def generate_embeddings(batch_size=5, max_chars=30000, only_country=None):
     default_model_path = "BAAI/bge-m3"
@@ -54,13 +61,22 @@ def generate_embeddings(batch_size=5, max_chars=30000, only_country=None):
         for section_obj in sections_to_embed:
             if not section_obj.text_content:
                 logger.warning(f"Section ID {section_obj.id} (URL: {section_obj.section_url}) has no text_content. Skipping.")
+                section_obj.embedding = ZERO_VECTOR  # Mark as processed with zero-vector
+                session.add(section_obj)
                 continue
+
             trimmed_text = section_obj.text_content.strip()[:max_chars]
             if len(trimmed_text) < 20:
                 logger.warning(f"Section ID {section_obj.id} (URL: {section_obj.section_url}) text_content too short after trimming. Skipping. Content: '{trimmed_text[:50]}...'")
+                section_obj.embedding = ZERO_VECTOR  # Mark as processed with zero-vector
+                session.add(section_obj)
                 continue
+
             texts.append(trimmed_text)
             valid_sections.append(section_obj)
+
+        # Commit skipped sections
+        session.commit()
 
         if not texts:
             logger.info("No valid texts to embed in the current batch. Checking if more sections are pending...")
@@ -76,13 +92,11 @@ def generate_embeddings(batch_size=5, max_chars=30000, only_country=None):
                 break
             continue
 
-
         logger.info(f"Embedding batch of {len(texts)} sections...")
         embeddings = []
         for i, txt in enumerate(texts):
             try:
                 vec = embedder.encode_batch([txt])[0]
-
                 embeddings.append(vec)
             except Exception as e:
                 logger.warning(f"⚠ Failed to embed section index {i}: {e}")
@@ -106,10 +120,3 @@ def generate_embeddings(batch_size=5, max_chars=30000, only_country=None):
 
     logger.info("✅ Embedding generation complete.")
     session.close()
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate embeddings for section texts.")
-    parser.add_argument("--only-country", type=str, help="Optionally limit to one country_doc_id (e.g., 'gabon')")
-    args = parser.parse_args()
-
-    generate_embeddings(only_country=args.only_country)

@@ -71,7 +71,7 @@ Since we were working sequentially, we divided up the workload fairly, based on 
 * Question and answer boxes
 * And documenting the above
 
-Tasks.py: all four of us 
+Tasks.py: Toscane and Sumayya
 
 
 ## Decision Making 
@@ -101,6 +101,10 @@ This separation of concerns — structured metadata for referencing and unstruct
 
 Our project has a cohesive structure, where each script leads neatly on from one another: 
 
+`climate_tracker/climate_tracker/spiders/climate_action_tracker.py`
+Scraping the data from all the websites
+Chose to go with the unstructured data 
+
 `climate_tracker/climate_tracker/scripts/init_db.py`
 Initializes the database with vector support by creating necessary extensions and tables, setting up the foundation for storing and querying vector embeddings.
 
@@ -127,3 +131,7 @@ Evaluates the accuracy of policy extraction by comparing predictions against gro
 
 `climate_tracker/climate_tracker/scripts/qa_boxes.py`
 Generates formatted Q&A boxes in Markdown format, presenting policy information in a clear, structured way with confidence scores and source citations.
+
+
+
+

@@ -215,7 +215,7 @@ def write_country_markdown(country_id, structured):
         f.write("\n\n".join(lines))
 
 def run_policy_extraction(country_filter=None):
-    from climate_tracker.embedding_utils import BAAIEmbedder
+    from climate_tracker.climate_tracker.embedding_utils import BAAIEmbedder
     embedder = BAAIEmbedder(os.getenv("BGE_MODEL_PATH", "BAAI/bge-m3"))
 
     results = {}

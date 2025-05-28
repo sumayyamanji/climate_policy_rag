@@ -317,7 +317,7 @@ PYTHONPATH=. python climate_tracker/climate_tracker/scripts/policy_extraction.py
 ```
 
 #### Step 7: t-SNE and Heatmap Plot 
-These plots are based on the similarity scores from the refined policy extraction in Step 5
+These plots are based on the similarity scores from the refined policy extraction in Step 6
 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/tsne_and_heatmap.py

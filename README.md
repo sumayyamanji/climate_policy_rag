@@ -306,6 +306,7 @@ PYTHONPATH=. python climate_tracker/climate_tracker/scripts/generate_embeddings.
 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/information_retrieval.py```
+```
 
 #### Step 6: Run Refined Policy Extraction
 Assuming your markdown reports are saved in retrieved_country_reports_v2_chunked:

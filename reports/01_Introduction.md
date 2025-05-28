@@ -1,4 +1,4 @@
-# Introudction and Team Organisation 
+# Introduction and Team Organisation 
 
 ## Team Organisation & Workflow
 
@@ -49,9 +49,9 @@ We held group meetings every 2–3 days to:
 Since we were working sequentially, we divided up the workload fairly, based on everyone's exam schedules. 
 
 **First: Toscane**
-* Setting up format, README.md and main pipeline for the project 
+* Setting up format, README.md, items.py and main pipeline for the project 
 * Scraping CAT website and storing it 
-* And documenting the above
+* Quantitativa analysis
 
 **Second: Max**
 * Finalising and polishing scraping + cleaning.
@@ -71,7 +71,7 @@ Since we were working sequentially, we divided up the workload fairly, based on 
 * Question and answer boxes
 * And documenting the above
 
-Tasks.py: Toscane and Sumayya
+Tasks.py: all four of us 
 
 
 ## Decision Making 

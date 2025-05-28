@@ -218,8 +218,6 @@ Create climate database:
 createdb -U postgres climate_db
 ```
 
-
-```
 ---
 ### Running the Pipeline
 There are two options: either using tasks.py (easier - Option A), or running each script individually (Option B)

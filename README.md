@@ -212,22 +212,21 @@ CHUNK_DIR=data/full_text/structured
 ```
 
 ---
+
 ### Running the Pipeline
 
-### Extracting the data: Run this script to extract the data from the websites, output in MD, Structured and Unstructured Format.
+First run the scrapy crawl: 
+
 ```bash
+### Extracting the data: Run this script to extract the data from the websites, output in MD, Structured and Unstructured Format.
 cd climate_tracker
 scrapy crawl climate_action_tracker_fulltext
 ```
-
-Now there are two options: either using tasks.py (easier - Option A), or running each script individually (Option B)
-
 
 ---
 ### Running the Pipeline (Option A - using `climate_tracker/tasks.py`)
 
 Can use the tasks.py CLI to manage and execute each step of the pipeline.
-
 
 This project includes a CLI management tool in tasks.py that lets you run all key steps in the Climate Action Tracker pipeline.
 
@@ -240,19 +239,18 @@ PYTHONPATH=. python -m climate_tracker.tasks --help
 You should see a list of commands like:
 ```sql
 Commands:
-  create_table           Step 3: Create the `countries` table.
+  create_table           Step 2: Create the `countries` table.
   drop_db                Drop all tables from the database.
-  evaluate               Step 9: Evaluate policy extraction results.
-  generate_embeddings    Step 5: Generate embeddings for document sections.
-  information_retrieval  Step 6: Run information retrieval pipeline.
-  init_db                Step 2: Initialize the database with vector...
+  evaluate               Step 8: Evaluate policy extraction results.
+  generate_embeddings    Step 4: Generate embeddings for document sections.
+  information_retrieval  Step 5: Run information retrieval pipeline.
+  init_db                Step 1: Initialize the database with vector...
   list_tables            List all tables in the database.
-  policy_extraction      Step 7: Extract policy targets.
-  qa_boxes               Step 10: Generate QA boxes.
+  policy_extraction      Step 6: Extract policy targets.
+  qa_boxes               Step 9: Generate QA boxes.
   recreate_db            Recreate all database tables (destructive).
-  scrapy_crawl           Step 1: Run the Climate Action Tracker spider
-  store                  Step 4: Store extracted text into the database.
-  visualize              Step 8: Generate TSNE and heatmap visualizations.
+  store                  Step 3: Store extracted text into the database.
+  visualize              Step 7: Generate TSNE and heatmap visualizations.
 ```
 
 #### Step 2: Run a specific task
@@ -274,30 +272,22 @@ PYTHONPATH=. python -m climate_tracker.tasks -- generate_embeddings
 
 ### Running the Pipeline (Option B - running each script individually)
 
+
 #### Step 1: Initialize the database
 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/init_db.py
-PYTHONPATH=. python climate_tracker/climate_tracker/scripts/create-table.py
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/create_table.py
 ```
 
-#### Step 2: Web Scraping
-
-```bash
-cd climate_tracker
-scrapy crawl climate_action_tracker_fulltext
-cd ..  # Return to project root
-
-```
-
-#### Step 3: Data Storage
+#### Step 2: Data Storage
 Assuming you're in the project root: 
 
 ```bash
-PYTHONPATH=. python climate_tracker/climate_tracker/scripts/store.py```
+PYTHONPATH=. python climate_tracker/climate_tracker/scripts/store.py
 ```
 
-#### Step 4: Generate Embeddings
+#### Step 3: Generate Embeddings
 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/generate_embeddings.py
@@ -307,13 +297,13 @@ For one country:
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/generate_embeddings.py --only-country mexico
 ```
 
-#### Step 5: Generate Fact Sheets (Information Retrieval)
+#### Step 4: Generate Fact Sheets (Information Retrieval)
 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/information_retrieval.py```
 ```
 
-#### Step 6: Run Refined Policy Extraction
+#### Step 5: Run Refined Policy Extraction
 Assuming your markdown reports are saved in retrieved_country_reports_v2_chunked:
 
 ```bash
@@ -323,19 +313,19 @@ PYTHONPATH=. python climate_tracker/climate_tracker/scripts/policy_extraction.py
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/policy_extraction.py --country nigeria --save
 ```
 
-#### Step 7: t-SNE and Heatmap Plot 
+#### Step 6: t-SNE and Heatmap Plot 
 These plots are based on the similarity scores from the refined policy extraction in Step 6
 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/tsne_and_heatmap.py
 ```
 
-#### Step 8: Running Metrics Between Ground Truth and Predicted Model 
+#### Step 7: Running Metrics Between Ground Truth and Predicted Model 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/evaluate_extraction.py
 ```
 
-#### Step 9: Q&A Boxes
+#### Step 8: Q&A Boxes
 
 ```bash
 PYTHONPATH=. python climate_tracker/climate_tracker/scripts/qa_boxes.py

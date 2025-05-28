@@ -22,8 +22,8 @@ import psycopg2
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from models import Base, get_db_session
-from utils import now_london_time
+from climate_tracker.climate_tracker.models import Base, get_db_session
+from climate_tracker.climate_tracker.utils import now_london_time
 load_dotenv()
 DATABASE_URL = os.getenv('DATABASE_URL')
 # Define outside the try block

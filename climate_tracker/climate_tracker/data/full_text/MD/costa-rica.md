@@ -2208,3 +2208,183 @@ The Costa Rican government does not provide explicit and transparent assumptions
 
 In 2019, Costa Rica presented its National Decarbonisation Plan 2018-2050 (Government of Costa Rica, 2019c). In this document, Costa Rica sets a national target of net-zero emissions in 2050—emissions including LULUCF—and describes a roadmap towards achieving this target. According to the sectoral breakdown provided in the plan, emissions in 2050 will be 5.5 MtCO2e excluding LULUCF. The pathway towards decarbonisation has been modelled as a linear decrease between 2020 and 2050.
 
+
+# Summary
+
+
+## Overview
+
+**Note: We have updated the text assessment to reflect the latest policy developments in Costa Rica. The CAT’s ratings and data are from our 2023 evaluation and will be updated soon.**
+
+**Costa Rica has made good progress towards its climate goals. This shows in the uptake of electric vehicles (EVs) and the enhancement of carbon sinks. However, the current administration are sending worrying signals that the full implementation of the climate policies and measures necessary to meet Costa Rica’s own targets could be deterred.**
+
+**Key electric public transportation projects have been on pause or have been downscaled in ambition. The oil moratorium bill also faces challenges, as President Chaves has announced his opposition to it, along with his intention to explore Costa Rica’s fossil fuel reserves. Despite these recent developments, the CAT still rates Costa Rica’s climate targets and policies as “Almost sufficient”.**
+
+The most important climate policy in Costa Rica is its National Decarbonisation Plan (NDP), which sets out economy-wide policies and actions to meet its net zero target. While Costa Rica had regularly published updates on the implementation of the NDP, the most recent iteration of the report (from 2022) only evaluated progress up to 2021. Some of the most significant goals of the first implementation phase that were considered ‘at risk’ of not being achieved, such as the electrified rail projects, are still under scrutiny by the current government. If this trend persists, Costa Rica's chances of meeting its 2030 emissions targets becomes increasingly unlikely.
+
+Between 2015 and 2022, Costa Rica generated nearly 100% of its electricity from renewables, mainly hydropower. This decreased to 95% in 2023 due to low rainfall conditions. This decreasing trend escalated in 2024, with a quarter of Costa Rica’s electricity generation coming from fossil-fuel-powered thermal plants in April, although this has dropped to under 10% as of July. To sustain renewable electricity production, Costa Rica needs to take steps to diversify its electricity mix, especially by expanding solar and wind capacity.
+
+Costa Rica has reached a considerable national market share of EVs, making up 12% of total vehicle sales in 2023. It has also advanced the deployment of key infrastructure to support its growing EV fleet, although the installation rate of fast charging points has not kept up with EV growth. On the other hand, the steps to electrify public transport and promote modal shift have either made little progress or have been scaled down in ambition, with public transport projects decreasing their planned coverage or not running as a fully electric unit (i.e. diesel-hybrids).
+
+Costa Rica could set itself on a firm 1.5°C-compatible trajectory by considering the following actions:
+
+- **Setting a conditional NDC target** which also outlines the international support necessary to achieve it.
+- **Ratifying the oil moratorium**, originally declared in 2002, to enshrine the bill into law and ensure that Costa Rica does not become an oil producer.
+- **Continue to monitor and report progress on the implementation of the National Decarbonisation Plan** to ensure that its goals are achieved by Costa Rica’s current policies and mitigation actions.
+- **Diversify its renewable energy portfolio** to reduce overreliance on hydropower for electricity generation, which is heavily affected by weather conditions.
+Since the last CAT update, there have also been some positive developments in Costa Rica’s climate policies, including:
+
+- A rapid increase in EV sales.
+- The continued development of new policies and initiatives (e.g. NAMAs) to address emissions in the agriculture sector, which accounts for a notable share of Costa Rica’s emissions.
+- The biofuel mandate will require gas stations to incorporate 10% ethanol into their gasoline and is a positive sign that some main objectives of the National Decarbonisation Plan are being met, provided it does not result in emissions increases elsewhere.
+
+## Description of CAT ratings
+
+The CAT rates each country’s targets and policies against (1) its fair share contribution to climate change mitigation considering a range of equity principles including responsibility, capability and equality, and (2) what is technically and economically feasible using modelled domestic pathways which in absence of a better method are based on global least-cost climate change mitigation.
+
+Comparing a country’s fair share ranges and modelled domestic pathways provides insights into which governments should provide climate finance and which should receive it. Developed countries with large responsibility for historical emissions and high per-capita emissions, must not only implement ambitious climate action domestically but must also support climate action in developing countries with lower historical responsibility, capability, and lower per-capita emissions.
+
+**The CAT rates Costa Rica’s climate targets and policies as “Almost sufficient”.** The “Almost sufficient” rating indicates that while Costa Rica’s climate policies are consistent with the Paris Agreement’s 1.5°C temperature limit, its climate commitments are not, but could be with moderate improvements.
+
+Costa Rica’s 2030 emissions reduction target of “maximum absolute net emissions of 9.11 MtCO2e incl. LULUCF” is rated as “Almost sufficient” when compared to modelled domestic emissions pathways and “1.5°C Paris Agreement compatible” when compared with its fair-share contribution to climate action. Given that the target already meets its fair-share contribution to limiting warming to 1.5°C, Costa Rica should receive external support to implement its additional climate policies and further strengthen its reduction target.
+
+**We rate Costa Rica’s policies and actions as “1.5°C compatible” when compared to its fair share.** The “1.5°C compatible” rating indicates that Costa Rica’s climate policies and action are consistent with limiting warming to 1.5°C.
+
+Costa Rica has made strides in implementing its National Decarbonisation Plan, but some key policies and projects have yet to be realised, especially those related to electric transportation and modal shift. On the other hand, Costa Rica’s efforts have been evident in the significant uptake of EVs, which made up 12% of vehicle sales in 2023.
+
+The large majority of Costa Rica’s electricity comes from renewable sources, but in 2024 a notable share of thermal energy (from burning fossil fuels) has been used to compensate for reduced hydropower production due to drought. Efforts to enshrine the fossil fuel moratorium into law have also faced challenges during the legislative process. Costa Rica should focus on expanding the use of its many renewable energy sources instead of increasing its dependence on fossil fuels.
+
+If Costa Rica wants to maintain its 1.5°C compatibility, it should ensure that the measures under the National Decarbonisation Plan continue to be implemented and should also avoid increased fossil fuel use through abandoning the moratorium. The full analysis of policies and action can be found here.
+
+**We rate Costa Rica’s 2030 NDC target as “Almost sufficient” when compared with modelled domestic emissions pathways.** The “Almost sufficient” rating indicates that Costa Rica’s NDC target is not yet consistent with the 1.5°C temperature limit but could be with moderate improvements.
+
+Costa Rica’s updated climate target represents an improvement compared to its first NDC, however, it is not stringent enough to limit warming to 1.5°C. To improve its rating and be consistent with the 1.5°C temperature limit, Costa Rica could submit a 2030 climate target that is at least 7% lower than its current target (equivalent to an absolute emissions limit of 11 MtCO2e excl. LULUCF in 2030) and, if necessary, outline the international support that it would need to achieve it.
+
+**We rate Costa Rica’s 2030 NDC target as “1.5°C compatible” when compared with its fair-share contribution to climate action.** The “1.5°C compatible” rating indicates that Costa Rica’s NDC target is consistent with limiting warming to 1.5°C when compared to its fair share.
+
+Costa Rica has drastically reduced its LULUCF emissions over the past 20 years, reaching net negative emissions in 2014. In 2017, Costa Rica’s LULUCF emissions sink was equivalent to more than 20% of its economy-wide emissions. Costa Rica is counting on the LULUCF sector to achieve its carbon neutrality goal. To meet the emissions trajectory outlined in its LTS, the LULUCF sink would have to more than double compared to current levels. Thus, Costa Rica should work towards increasing its LULUCF sink in the long-term.
+
+For more information about forestry activities in Costa Rica, please see the Forestry section under Policies & Action.
+
+**We evaluate the net zero target as “Acceptable”.** Costa Rica’s target covers all sectors and gases and is underpinned by emissions pathway analysis and the communication of strategic goals and emissions targets per sector.
+
+The Costa Rican government provides comprehensive pathways and key measures and sets interim goals attributable to discernible periods. The government plans to reach net zero through domestic actions and without the use of international credits. That said, the government currently fails to provide explicit and transparent assumptions on key elements. The government also provides no information on its intention to establish a formal periodic reviewing cycle of measures and interim targets.
+
+
+# Net zero targets
+
+
+## Summary
+
+We evaluate the net zero target as**: Acceptable**.
+
+Costa Rica announced a net zero target for 2050 in its National Decarbonisation Plan 2018-2050 (Government of Costa Rica, 2019c). The net zero target covers most key elements but fails to meet best practice standards for some of them. Costa Rica’s target covers all sectors and gases and is underpinned by emissions pathway analysis and the communication of strategic goals and emissions targets per sector. Pathways and key measures are identified comprehensively with interim goals attributable to discernible periods to reach net zero through domestic actions and without the use of international credits.
+
+The Costa Rican government fails to provide explicit and transparent assumptions on some key elements. Strikingly, the government provides no information on its intention to establish a formal periodic reviewing cycle of measures and interim targets.
+
+To further improve its strategy, the Costa Rican government could provide separate targets for emission reductions and removals and include emissions from international aviation and shipping. The policy document has also not yet been enshrined in law, which could make targets and measures legally binding and more robust.
+
+Target covers all GHG emissions
+
+The target excludes both international aviation and shipping
+
+Plans to reach net zero through domestic actions and no removals outside borders
+
+Net zero target in proposed legislation or in a policy document
+
+Separate emission reduction and removal targets
+
+Non-legally binding process to review net zero target OR In process of establishing a review cycle for net zero
+
+Transparent assumptions or pathways for LULUCF and removals
+
+Underlying (governmental or government-endorsed) analysis that identifies a pathway to and key measures for reaching net zero. The analysis includes sector-specific detail
+
+Country makes no reference to fairness or equity in the context of its net zero target
+
+
+## Ten key elements
+
+**Scope**
+
+- **Target year** – Costa Rica aims to reach net zero by 2050.
+- **Emissions coverage** – The target covers all GHG emissions (i.e., the 7 Kyoto gases: CO2, CH4, N2O, HFCs, PFCs, SF6, NF3) and all sectors of the economy (excluding international bunkers).
+- **International aviation and shipping** – Costa Rica provides no information on its intention to cover emissions from international aviation and shipping.
+- **Reductions or removals outside of own borders** – Costa Rica plans to reach net zero through domestic actions and will not use reductions or removals outside its borders towards its net zero goal.
+**Target architecture**
+
+- **Legal status** – Costa Rica includes the net zero target in its National Decarbonisation Plan, which is the country’s LTS submitted to the UNFCCC (Government of Costa Rica, 2019c). However, it has not enshrined the target in law domestically yet.
+- **Separate reduction & removal targets** – The National Decarbonisation Plan does not explicitly set separate reduction and removal targets. However, the Plan estimates sectoral emissions by 2050. Energy, industrial processes, agriculture, and waste are estimated to emit 5.5 MtCO2e and the LULUCF sector to remove net 5.5 MtCO2e.
+- **Review process** – Costa Rica has no formal review mechanism, but the National Decarbonisation Plan (NDP) stipulates it will be regularly updated and provide more detailed information on medium- and long-term measures as new conditions arise. Costa Rica has released annual update reports on the implementation of the NDP up to the year 2021, but there have been no new reports since (Dirección de Cambio Climático, 2022).
+**Transparency**
+
+- **Carbon dioxide removal** – Costa Rica provides a transparent pathway for agriculture, forestry, and other land uses’ (AFOLU) net emissions until 2050.
+- **Comprehensive planning** – The strategy sets periodic goals and provides interim visions across ten “axes of decarbonisation” such as the development of a renewable mobility system, transformation to a zero-emissions vehicle fleet, promotion of a sustainable freight transport, consolidation of the national electricity system, development of high efficiency and low-emission buildings, the transformation of the industrial sector, an integrated waste management system, promotion of highly efficient and low-carbon agri-food systems, consolidation of an eco-competitive livestock model, and facilitating the protection of biodiversity based on nature-based solutions. For each axis, interim goals and activities are outlined for three distinct periods (2019–2022, 2023–2030, 2031–2050). The strategy highlights eight overarching and cross-cutting strategies.
+- **Clarity on fairness of target** – Costa Rica does not provide information on why it considers its net zero target a fair or equitable contribution to the goal of limiting global warming to 1.5°C.
+
+## Good practice
+
+The Climate Action Tracker has defined the following good practice for all ten key elements of net zero targets. Countries can refer to this good practice to design or enhance their net zero targets.
+
+
+# Summary
+
+
+## Overview
+
+**Note: We have updated the text assessment to reflect the latest policy developments in Costa Rica. The CAT’s ratings and data are from our 2023 evaluation and will be updated soon.**
+
+**Costa Rica has made good progress towards its climate goals. This shows in the uptake of electric vehicles (EVs) and the enhancement of carbon sinks. However, the current administration are sending worrying signals that the full implementation of the climate policies and measures necessary to meet Costa Rica’s own targets could be deterred.**
+
+**Key electric public transportation projects have been on pause or have been downscaled in ambition. The oil moratorium bill also faces challenges, as President Chaves has announced his opposition to it, along with his intention to explore Costa Rica’s fossil fuel reserves. Despite these recent developments, the CAT still rates Costa Rica’s climate targets and policies as “Almost sufficient”.**
+
+The most important climate policy in Costa Rica is its National Decarbonisation Plan (NDP), which sets out economy-wide policies and actions to meet its net zero target. While Costa Rica had regularly published updates on the implementation of the NDP, the most recent iteration of the report (from 2022) only evaluated progress up to 2021. Some of the most significant goals of the first implementation phase that were considered ‘at risk’ of not being achieved, such as the electrified rail projects, are still under scrutiny by the current government. If this trend persists, Costa Rica's chances of meeting its 2030 emissions targets becomes increasingly unlikely.
+
+Between 2015 and 2022, Costa Rica generated nearly 100% of its electricity from renewables, mainly hydropower. This decreased to 95% in 2023 due to low rainfall conditions. This decreasing trend escalated in 2024, with a quarter of Costa Rica’s electricity generation coming from fossil-fuel-powered thermal plants in April, although this has dropped to under 10% as of July. To sustain renewable electricity production, Costa Rica needs to take steps to diversify its electricity mix, especially by expanding solar and wind capacity.
+
+Costa Rica has reached a considerable national market share of EVs, making up 12% of total vehicle sales in 2023. It has also advanced the deployment of key infrastructure to support its growing EV fleet, although the installation rate of fast charging points has not kept up with EV growth. On the other hand, the steps to electrify public transport and promote modal shift have either made little progress or have been scaled down in ambition, with public transport projects decreasing their planned coverage or not running as a fully electric unit (i.e. diesel-hybrids).
+
+Costa Rica could set itself on a firm 1.5°C-compatible trajectory by considering the following actions:
+
+- **Setting a conditional NDC target** which also outlines the international support necessary to achieve it.
+- **Ratifying the oil moratorium**, originally declared in 2002, to enshrine the bill into law and ensure that Costa Rica does not become an oil producer.
+- **Continue to monitor and report progress on the implementation of the National Decarbonisation Plan** to ensure that its goals are achieved by Costa Rica’s current policies and mitigation actions.
+- **Diversify its renewable energy portfolio** to reduce overreliance on hydropower for electricity generation, which is heavily affected by weather conditions.
+Since the last CAT update, there have also been some positive developments in Costa Rica’s climate policies, including:
+
+- A rapid increase in EV sales.
+- The continued development of new policies and initiatives (e.g. NAMAs) to address emissions in the agriculture sector, which accounts for a notable share of Costa Rica’s emissions.
+- The biofuel mandate will require gas stations to incorporate 10% ethanol into their gasoline and is a positive sign that some main objectives of the National Decarbonisation Plan are being met, provided it does not result in emissions increases elsewhere.
+
+## Description of CAT ratings
+
+The CAT rates each country’s targets and policies against (1) its fair share contribution to climate change mitigation considering a range of equity principles including responsibility, capability and equality, and (2) what is technically and economically feasible using modelled domestic pathways which in absence of a better method are based on global least-cost climate change mitigation.
+
+Comparing a country’s fair share ranges and modelled domestic pathways provides insights into which governments should provide climate finance and which should receive it. Developed countries with large responsibility for historical emissions and high per-capita emissions, must not only implement ambitious climate action domestically but must also support climate action in developing countries with lower historical responsibility, capability, and lower per-capita emissions.
+
+**The CAT rates Costa Rica’s climate targets and policies as “Almost sufficient”.** The “Almost sufficient” rating indicates that while Costa Rica’s climate policies are consistent with the Paris Agreement’s 1.5°C temperature limit, its climate commitments are not, but could be with moderate improvements.
+
+Costa Rica’s 2030 emissions reduction target of “maximum absolute net emissions of 9.11 MtCO2e incl. LULUCF” is rated as “Almost sufficient” when compared to modelled domestic emissions pathways and “1.5°C Paris Agreement compatible” when compared with its fair-share contribution to climate action. Given that the target already meets its fair-share contribution to limiting warming to 1.5°C, Costa Rica should receive external support to implement its additional climate policies and further strengthen its reduction target.
+
+**We rate Costa Rica’s policies and actions as “1.5°C compatible” when compared to its fair share.** The “1.5°C compatible” rating indicates that Costa Rica’s climate policies and action are consistent with limiting warming to 1.5°C.
+
+Costa Rica has made strides in implementing its National Decarbonisation Plan, but some key policies and projects have yet to be realised, especially those related to electric transportation and modal shift. On the other hand, Costa Rica’s efforts have been evident in the significant uptake of EVs, which made up 12% of vehicle sales in 2023.
+
+The large majority of Costa Rica’s electricity comes from renewable sources, but in 2024 a notable share of thermal energy (from burning fossil fuels) has been used to compensate for reduced hydropower production due to drought. Efforts to enshrine the fossil fuel moratorium into law have also faced challenges during the legislative process. Costa Rica should focus on expanding the use of its many renewable energy sources instead of increasing its dependence on fossil fuels.
+
+If Costa Rica wants to maintain its 1.5°C compatibility, it should ensure that the measures under the National Decarbonisation Plan continue to be implemented and should also avoid increased fossil fuel use through abandoning the moratorium. The full analysis of policies and action can be found here.
+
+**We rate Costa Rica’s 2030 NDC target as “Almost sufficient” when compared with modelled domestic emissions pathways.** The “Almost sufficient” rating indicates that Costa Rica’s NDC target is not yet consistent with the 1.5°C temperature limit but could be with moderate improvements.
+
+Costa Rica’s updated climate target represents an improvement compared to its first NDC, however, it is not stringent enough to limit warming to 1.5°C. To improve its rating and be consistent with the 1.5°C temperature limit, Costa Rica could submit a 2030 climate target that is at least 7% lower than its current target (equivalent to an absolute emissions limit of 11 MtCO2e excl. LULUCF in 2030) and, if necessary, outline the international support that it would need to achieve it.
+
+**We rate Costa Rica’s 2030 NDC target as “1.5°C compatible” when compared with its fair-share contribution to climate action.** The “1.5°C compatible” rating indicates that Costa Rica’s NDC target is consistent with limiting warming to 1.5°C when compared to its fair share.
+
+Costa Rica has drastically reduced its LULUCF emissions over the past 20 years, reaching net negative emissions in 2014. In 2017, Costa Rica’s LULUCF emissions sink was equivalent to more than 20% of its economy-wide emissions. Costa Rica is counting on the LULUCF sector to achieve its carbon neutrality goal. To meet the emissions trajectory outlined in its LTS, the LULUCF sink would have to more than double compared to current levels. Thus, Costa Rica should work towards increasing its LULUCF sink in the long-term.
+
+For more information about forestry activities in Costa Rica, please see the Forestry section under Policies & Action.
+
+**We evaluate the net zero target as “Acceptable”.** Costa Rica’s target covers all sectors and gases and is underpinned by emissions pathway analysis and the communication of strategic goals and emissions targets per sector.
+
+The Costa Rican government provides comprehensive pathways and key measures and sets interim goals attributable to discernible periods. The government plans to reach net zero through domestic actions and without the use of international credits. That said, the government currently fails to provide explicit and transparent assumptions on key elements. The government also provides no information on its intention to establish a formal periodic reviewing cycle of measures and interim targets.
+

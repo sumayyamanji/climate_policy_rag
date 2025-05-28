@@ -2248,3 +2248,176 @@ The full net zero target analysis can be found here.
 
 Colombia did not submit concrete emission reduction targets for 2020 under the Copenhagen Accord. Instead it set a unilateral target to achieve 77% of its electricity generation from renewable sources by 2020 along with two targets dependent on financial support from Annex I parties: zero deforestation in the Colombian Amazon and a share or 20% biofuels in the country’s total liquid fuel use by 2020 (Bermúdez Merizalde, 2010).
 
+
+# Summary
+
+
+## Overview
+
+**In August 2022, the newly elected president Gustavo Petro took office, pledging to put** **climate change at the top of his political agenda:** **to protect forests, reduce emissions from deforestation, make a sustainable energy transition away from oil investment, and stop fracking. In his** **inaugural speech****, he mentioned the importance of Colombia moving to a low-carbon economy and strongly committed to a low-carbon transition conditional on international cooperation.** **Since taking office, he has already moved to ban fracking, with draft legislation already out for review.**
+
+**Colombia needs to take stronger action to cut emissions across the board. In 2020, Colombia updated its NDC with a stronger target, but it did not go far enough. It is not on track to meet its updated NDC with current policies resulting around 24% over target. Even with planned measures, Colombia will need further action both to reach its current target and to be 1.5°C compatible. In December 2021, Colombia enacted the Climate Action Law, enshrining both its NDC and net zero targets into law.**
+
+**To enhance climate action, Colombia should sign up to the coal exit. It depends on coal for roughly 10% of its power supply, economically accounting for about 13% of total exports in 2020.The Colombian coal mining sector is facing uncertainty as pressure mounts for firms to decarbonise foreign investments. The latest long-term expansion plan from the National Energy Planning Unit rules out completely new coal-fired power plants due to low competitiveness against major growth of cheaper renewable sources.**
+
+**The development of renewables and the global drive towards decarbonisation** **may risk leaving Colombia with stranded assets and lost economic opportunities if it does not initiate the transition away from fossil fuels. It is too soon to gauge whether the new President will be able to achieve this.**
+
+**Colombia can also strengthen its 2030 electric vehicle (EV) target and accelerate the establishing of charging infrastructure. We estimate that its current 2030 EV target is equivalent to about a 50% EV sales target. While Colombia has a number of EV policies, recent legislative developments supporting natural gas take the sector in the wrong direction. In August 2021, Colombia passed ****law 2128, ****which declared the use of natural gas to be in the national interest.**
+
+**The CAT’s rating of Colombia’s overall and target ratings have improved compared to our last assessment because Colombia provided further information in its latest biennial report on the policies and measures it will implement to achieve its target. While the overall NDC target remains the same, Colombia will focus more on reducing emissions outside of the land sector (LULUCF) than we had previously assumed, therefore leading to a more stringent target (when excluding LULUCF) under our methods. Colombia’s overall rating has changed from “Highly insufficient” to** **“Insufficient”.**
+
+The CAT gives Colombia’s climate targets and policies an overall rating of “Insufficient”. The “Insufficient” rating indicates that Colombia’s climate policies and commitments need substantial improvements to be consistent with the Paris Agreement’s 1.5°C temperature limit. Colombia’s NDC target is consistent with 3°C of warming when compared to modelled emissions pathways and 2°C of warming when compared to its fair share contribution.
+
+Colombia needs to strengthen its unconditional NDC target and make it even more ambitious with international support.
+
+Colombia will not meet its NDC target neither with the current policies and action, nor with its planned policies. Colombia will need to implement additional policies using its own resources but will also need international support to implement further policies in line with full decarbonisation.
+
+Colombia’s overall and target ratings have improved compared to our last assessment, due changes in the methods we use to exclude LULUCF from the NDC, rather than any change in the target itself.
+
+Colombia’s current policies and action are not 1.5°C compatible when compared to its expected fair share contribution. Under current policy projections, Colombia’s 2030 emissions are likely to fall between 199-203 MtCO2e excl. LULUCF, which is far above its fair share contribution of 139 MtCO2e in 2030 for a 1.5°C consistent pathway.
+
+Planned policies are estimated to cut emissions to between 176-180 MtCO2e in 2030, which is insufficient to meet Colombia’s NDC target (161 MtCO2e excluding LULUCF). Further policy action is needed.
+
+We rate Colombia’s policies and action as “Insufficient”. The “Insufficient” rating indicates that Colombia’s climate policies and action in 2030 need substantial improvements to be consistent with limiting warming to 1.5°C. If all countries were to follow Colombia’s approach, warming would reach over 2°C and up to 3°C.
+
+Colombia will need to implement additional policies using its own resources but will also need international support to implement further policies in line with full decarbonisation.
+
+For more on Colombia's policies and action, click here.
+
+Colombia has not put forward a conditional target, and so we rate its NDC target against modelled domestic pathways and find it to be “Insufficient”. The CAT methodology shows that provision of international support is consistent with the wide range of literature on fair share contributions to meeting the Paris Agreement's goals.
+
+The “Insufficient” rating indicates that Colombia’s NDC target in 2030 needs substantial improvements to be consistent with limiting warming to 1.5°C. If all countries were to follow Colombia’s approach, warming would reach over 2°C and up to 3°C.
+
+Colombia’s rating has improved by one category, from “Highly insufficient” to “Insufficient”. The change is due to the manner in which we exclude LULUCF from the NDC, rather than any change in the target itself. In our last assessment, we indicated that there was significant uncertainty on the extent to which Colombia intends to rely on the land sector and so we developed a target range based on different approaches. Due to the further information provided in the country’s latest biennial report, we have dropped the upper end of our range (see Assumptions tab for further details).
+
+Colombia’s NDC target is also inconsistent with limiting warming to 1.5°C when compared to its fair share contribution. We estimate the target to be 161 MtCO2e by 2030 (excl. LULUCF). To achieve its fair share contribution to limiting warming to 1.5°C, Colombia would need to reach absolute emissions of at or below 139 MtCO2e in 2030 (excl. LULUCF).
+
+The CAT rates Colombia’s NDC target as “Almost sufficient”. The “Almost sufficient” rating indicates that Colombia’s fair share target in 2030 is not yet consistent with the 1.5°C temperature limit but could be, with moderate improvements. Colombia’s target would require other countries to make deeper reductions and comparably greater effort to limit warming to 1.5°C. If all countries were to follow Colombia’s approach, warming could be held below—but not well below—2°C.
+
+Colombia’s rating has improved by one category, from “Insufficient” to “Almost sufficient”. The change is due to the manner in which we exclude LULUCF from the NDC, rather than any change in the target itself (see the Assumptions tab for further details).
+
+The land use, land-use change and forestry sector has consistently been significant source of emissions in Colombia. Emissions from land use in 2018 were 36% of the country’s total emissions, and reducing emissions from deforestation is a vital part of Colombia’s climate mitigation target (IDEAM, 2021). Land-based mitigation measures account for approximately 70% of the total mitigation potential outlined in its updated NDC (2020), which, if fully implemented, would turn Colombia’s land sector from a current net source of emissions to a net sink.
+
+In November 2021, Colombia submitted a 2050 net zero GHG emissions target as National Long Term Strategy (E2050) to the UNFCCC. The Strategy includes different scenarios and pathways and outlines 9 strategic initiatives with 48 transformation options for decision-makers to consider (Government of Colombia, 2021).
+
+In December 2021, through Law No. 2169, Colombia promotes the country's low-carbon development through the establishment of minimum targets and measures for carbon neutrality and climate resilience (Ley de Accion Climatica N°2169, 2021)
+
+We evaluate Colombia’s net-zero target as “acceptable”.
+
+The full net zero target analysis can be found here.
+
+
+# Net zero targets
+
+
+## Summary
+
+We evaluate Colombia’s net zero target as: **Acceptable**.
+
+Colombia has a 2050 net zero GHG emissions target, which has been enshrined in domestic law (Ley de Accion Climatica N°2169/2021, 2021). In November 2021, Colombia submitted its long-term Climate Strategy E2050 to the UNFCCC. The strategy includes a pathway to reach the 2050 target, and outlines nine strategic initiatives with 48 transformation options for decision-makers to consider (Government of Colombia, 2021).
+
+The strategy describes the need to carry out mitigation actions in all sectors, intending to reduce GHG emissions by 90% compared to 2015. The remaining 10% of emissions will be either covered by carbon capture and storage or compensated through land-based CO2 sequestration in order to reach net zero. The E2050 allows a continued role for fossil fuels in the Colombian energy matrix.
+
+
+## CAT analysis of net zero target
+
+Target covers all GHG emissions
+
+The target excludes both international aviation and shipping
+
+Plans to reach net zero through domestic actions and no removals outside borders
+
+Net zero target in law
+
+Separate emission reduction and removal targets
+
+Legally binding process to review the net zero target
+
+Transparent assumptions or pathways only for removals or only for LULUCF
+
+Underlying (governmental or government-endorsed) analysis that identifies a pathway to and key measures for reaching net zero. The analysis includes sector-specific detail
+
+Clear statement in government document on why target is fair
+
+
+## Ten key elements
+
+**Scope**
+
+- **Target year** – Colombia aims to reach net zero GHG emissions by 2050 (Ley de Accion Climatica N°2169/2021, 2021) .
+- **Emissions coverage** – The target covers all GHG emissions and sectors of the economy. (Ley de Accion Climatica N°2169/2021, 2021)
+- **International aviation and shipping** – The 2021 Climate Action Law does not make any reference to international aviation and shipping.
+- **Reductions or removals outside of own borders** – Colombia plans to reach net zero emissions through domestic action (Government of Colombia, 2021).
+**Target architecture**
+
+- **Legal status** – Colombia enshrined its net zero target into law in December 2021 (Ley 2169 de 2021). It also submitted its long-term strategy to the UNFCCC in November 2021.
+- **Separate reduction & removal targets** – Colombia aims to reduce GHG emissions by around 90% compared to 2015 emissions and balance the remaining 10% with proportional domestic removals and capture to achieve a net zero balance between GHG emissions and removals from 2050 onwards.
+- **Review process** – Colombia stated in Art. 24 of the Climate Law that from 2023 onwards and every 2 years, the Inter-sectoral Commission on Climate Change will review the results from monitoring the state of compliance in order to make adjustments to the implementation and adoption of new measures if necessary.
+**Transparency**
+
+- **Carbon dioxide removal** – Colombia is transparent in its estimated emissions reductions through actions in the LULUCF sector and stated that further action is needed to reach net-zero as 14.4 to 31.5 MtCO2e would need to be increased as sinks. It also aims to achieve further reductions through carbon removals and storage, but this is currently not clearly quantified.
+- **Comprehensive planning** – The Strategy include a defined pathway to reach the 2050 target, and outlines nine strategic initiatives with 48 transformation options for decision-makers to consider. Further, Art. 23 of Law 2169 establishes the mandate to develop an implementation and monitoring plan, and Art. 24 mentions the minimum components that the plan should include (Ley de Accion Climatica N°2169/2021, 2021) .
+- **Clarity on fairness of target** – Colombia E250 long-term strategy mentions that Colombia is one of the most exposed countries to climate change and that its share of global emissions is 0.6% of total CO2 and that its contribution is in line with science and the global goal of limiting warming to 1.5 ̊C above pre-industrial levels.
+
+## Good practice
+
+The Climate Action Tracker has defined the following good practice for all ten key elements of net zero targets. Countries can refer to this good practice to design or enhance their net zero targets.
+
+
+# Summary
+
+
+## Overview
+
+**In August 2022, the newly elected president Gustavo Petro took office, pledging to put** **climate change at the top of his political agenda:** **to protect forests, reduce emissions from deforestation, make a sustainable energy transition away from oil investment, and stop fracking. In his** **inaugural speech****, he mentioned the importance of Colombia moving to a low-carbon economy and strongly committed to a low-carbon transition conditional on international cooperation.** **Since taking office, he has already moved to ban fracking, with draft legislation already out for review.**
+
+**Colombia needs to take stronger action to cut emissions across the board. In 2020, Colombia updated its NDC with a stronger target, but it did not go far enough. It is not on track to meet its updated NDC with current policies resulting around 24% over target. Even with planned measures, Colombia will need further action both to reach its current target and to be 1.5°C compatible. In December 2021, Colombia enacted the Climate Action Law, enshrining both its NDC and net zero targets into law.**
+
+**To enhance climate action, Colombia should sign up to the coal exit. It depends on coal for roughly 10% of its power supply, economically accounting for about 13% of total exports in 2020.The Colombian coal mining sector is facing uncertainty as pressure mounts for firms to decarbonise foreign investments. The latest long-term expansion plan from the National Energy Planning Unit rules out completely new coal-fired power plants due to low competitiveness against major growth of cheaper renewable sources.**
+
+**The development of renewables and the global drive towards decarbonisation** **may risk leaving Colombia with stranded assets and lost economic opportunities if it does not initiate the transition away from fossil fuels. It is too soon to gauge whether the new President will be able to achieve this.**
+
+**Colombia can also strengthen its 2030 electric vehicle (EV) target and accelerate the establishing of charging infrastructure. We estimate that its current 2030 EV target is equivalent to about a 50% EV sales target. While Colombia has a number of EV policies, recent legislative developments supporting natural gas take the sector in the wrong direction. In August 2021, Colombia passed ****law 2128, ****which declared the use of natural gas to be in the national interest.**
+
+**The CAT’s rating of Colombia’s overall and target ratings have improved compared to our last assessment because Colombia provided further information in its latest biennial report on the policies and measures it will implement to achieve its target. While the overall NDC target remains the same, Colombia will focus more on reducing emissions outside of the land sector (LULUCF) than we had previously assumed, therefore leading to a more stringent target (when excluding LULUCF) under our methods. Colombia’s overall rating has changed from “Highly insufficient” to** **“Insufficient”.**
+
+The CAT gives Colombia’s climate targets and policies an overall rating of “Insufficient”. The “Insufficient” rating indicates that Colombia’s climate policies and commitments need substantial improvements to be consistent with the Paris Agreement’s 1.5°C temperature limit. Colombia’s NDC target is consistent with 3°C of warming when compared to modelled emissions pathways and 2°C of warming when compared to its fair share contribution.
+
+Colombia needs to strengthen its unconditional NDC target and make it even more ambitious with international support.
+
+Colombia will not meet its NDC target neither with the current policies and action, nor with its planned policies. Colombia will need to implement additional policies using its own resources but will also need international support to implement further policies in line with full decarbonisation.
+
+Colombia’s overall and target ratings have improved compared to our last assessment, due changes in the methods we use to exclude LULUCF from the NDC, rather than any change in the target itself.
+
+Colombia’s current policies and action are not 1.5°C compatible when compared to its expected fair share contribution. Under current policy projections, Colombia’s 2030 emissions are likely to fall between 199-203 MtCO2e excl. LULUCF, which is far above its fair share contribution of 139 MtCO2e in 2030 for a 1.5°C consistent pathway.
+
+Planned policies are estimated to cut emissions to between 176-180 MtCO2e in 2030, which is insufficient to meet Colombia’s NDC target (161 MtCO2e excluding LULUCF). Further policy action is needed.
+
+We rate Colombia’s policies and action as “Insufficient”. The “Insufficient” rating indicates that Colombia’s climate policies and action in 2030 need substantial improvements to be consistent with limiting warming to 1.5°C. If all countries were to follow Colombia’s approach, warming would reach over 2°C and up to 3°C.
+
+Colombia will need to implement additional policies using its own resources but will also need international support to implement further policies in line with full decarbonisation.
+
+For more on Colombia's policies and action, click here.
+
+Colombia has not put forward a conditional target, and so we rate its NDC target against modelled domestic pathways and find it to be “Insufficient”. The CAT methodology shows that provision of international support is consistent with the wide range of literature on fair share contributions to meeting the Paris Agreement's goals.
+
+The “Insufficient” rating indicates that Colombia’s NDC target in 2030 needs substantial improvements to be consistent with limiting warming to 1.5°C. If all countries were to follow Colombia’s approach, warming would reach over 2°C and up to 3°C.
+
+Colombia’s rating has improved by one category, from “Highly insufficient” to “Insufficient”. The change is due to the manner in which we exclude LULUCF from the NDC, rather than any change in the target itself. In our last assessment, we indicated that there was significant uncertainty on the extent to which Colombia intends to rely on the land sector and so we developed a target range based on different approaches. Due to the further information provided in the country’s latest biennial report, we have dropped the upper end of our range (see Assumptions tab for further details).
+
+Colombia’s NDC target is also inconsistent with limiting warming to 1.5°C when compared to its fair share contribution. We estimate the target to be 161 MtCO2e by 2030 (excl. LULUCF). To achieve its fair share contribution to limiting warming to 1.5°C, Colombia would need to reach absolute emissions of at or below 139 MtCO2e in 2030 (excl. LULUCF).
+
+The CAT rates Colombia’s NDC target as “Almost sufficient”. The “Almost sufficient” rating indicates that Colombia’s fair share target in 2030 is not yet consistent with the 1.5°C temperature limit but could be, with moderate improvements. Colombia’s target would require other countries to make deeper reductions and comparably greater effort to limit warming to 1.5°C. If all countries were to follow Colombia’s approach, warming could be held below—but not well below—2°C.
+
+Colombia’s rating has improved by one category, from “Insufficient” to “Almost sufficient”. The change is due to the manner in which we exclude LULUCF from the NDC, rather than any change in the target itself (see the Assumptions tab for further details).
+
+The land use, land-use change and forestry sector has consistently been significant source of emissions in Colombia. Emissions from land use in 2018 were 36% of the country’s total emissions, and reducing emissions from deforestation is a vital part of Colombia’s climate mitigation target (IDEAM, 2021). Land-based mitigation measures account for approximately 70% of the total mitigation potential outlined in its updated NDC (2020), which, if fully implemented, would turn Colombia’s land sector from a current net source of emissions to a net sink.
+
+In November 2021, Colombia submitted a 2050 net zero GHG emissions target as National Long Term Strategy (E2050) to the UNFCCC. The Strategy includes different scenarios and pathways and outlines 9 strategic initiatives with 48 transformation options for decision-makers to consider (Government of Colombia, 2021).
+
+In December 2021, through Law No. 2169, Colombia promotes the country's low-carbon development through the establishment of minimum targets and measures for carbon neutrality and climate resilience (Ley de Accion Climatica N°2169, 2021)
+
+We evaluate Colombia’s net-zero target as “acceptable”.
+
+The full net zero target analysis can be found here.
+

@@ -9,9 +9,9 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from climate_tracker.models import Base, get_db_session
-from climate_tracker.utils import now_london_time
-from climate_tracker.utils import generate_word_embeddings, save_word2vec_model
+from climate_tracker.climate_tracker.models import Base, get_db_session
+from climate_tracker.climate_tracker.utils import now_london_time
+from climate_tracker.climate_tracker.utils import generate_word_embeddings, save_word2vec_model
 load_dotenv()
 DATABASE_URL = os.getenv('DATABASE_URL')
 

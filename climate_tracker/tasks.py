@@ -7,10 +7,13 @@ Supports scraping and embedding generation.
 import click
 import os
 import subprocess
+import sys
 from pathlib import Path
 from dotenv import load_dotenv
 import psycopg2
 from sqlalchemy import create_engine, text
+
+from pathlib import Path
 
 from climate_tracker.climate_tracker.models import Base, get_db_session
 from climate_tracker.climate_tracker.utils import (
@@ -38,36 +41,28 @@ DATABASE_URL = os.getenv('DATABASE_URL')
 if not DATABASE_URL:
     raise ValueError("DATABASE_URL not found in environment variables")
 
-@cli.command(name="scrapy_crawl")
-def extract(log_level="INFO"):
-    """Step 1: Run the Climate Action Tracker spider"""
-    print(f"Starting Climate Action Tracker data extraction with log level {log_level}...")
-    current_dir = Path(os.getcwd())
+def main():
+    """
+    Main function that handles the command line interface.
+    """
+    if len(sys.argv) > 1 and sys.argv[1].lower() == "extract":
+        # Get log level if provided
+        log_level = "INFO"
+        if len(sys.argv) > 2:
+            log_level = sys.argv[2].upper()
+        
+        # Run the extraction
+        extract(log_level)
+    else:
+        print("Usage: python tasks.py extract [log_level]")
+        print("Example: python tasks.py extract DEBUG")
 
-    if not (current_dir / "scrapy.cfg").exists():
-        print(f"Error: scrapy.cfg not found in {current_dir}")
-        print("Make sure you're running this script from the directory that contains scrapy.cfg")
-        return False
-
-    cmd = ["scrapy", "crawl", "climate_action_tracker_fulltext", f"--loglevel={log_level}"]
-    print(f"Running command: {' '.join(cmd)}")
-    print("---------- SPIDER OUTPUT BEGIN ----------")
-
-    try:
-        result = subprocess.run(cmd)
-        print("---------- SPIDER OUTPUT END ----------")
-        if result.returncode != 0:
-            print(f"Error: Spider exited with code {result.returncode}")
-            return False
-        print("Data extraction completed successfully.")
-        return True
-    except Exception as e:
-        print(f"Failed to run spider: {e}")
-        return False
+if __name__ == "__main__":
+    main()
 
 @cli.command(name="init_db")
 def init_db():
-    """Step 2: Initialize the database with vector support."""
+    """Step 1: Initialize the database with vector support."""
     engine = create_engine(DATABASE_URL)
     try:
         with engine.connect() as conn:
@@ -81,7 +76,7 @@ def init_db():
 
 @cli.command(name="create_table")
 def create_table():
-    """Step 3: Create the `countries` table."""
+    """Step 2: Create the `countries` table."""
     try:
         conn = psycopg2.connect(DATABASE_URL)
         cursor = conn.cursor()
@@ -105,7 +100,7 @@ def create_table():
 
 @cli.command(name="store")
 def store():
-    """Step 4: Store extracted text into the database."""
+    """Step 3: Store extracted text into the database."""
     from climate_tracker.climate_tracker.scripts.store import main
     try:
         main()
@@ -117,7 +112,7 @@ def store():
 @click.option('--max-chars', default=30000, help='Maximum characters per section')
 @click.option('--only-country', help='Optionally limit to one country_doc_id (e.g., "gabon")')
 def generate_embeddings(batch_size, max_chars, only_country):
-    """Step 5: Generate embeddings for document sections."""
+    """Step 4: Generate embeddings for document sections."""
     generate_embeddings_main(
         batch_size=batch_size,
         max_chars=max_chars,
@@ -126,27 +121,27 @@ def generate_embeddings(batch_size, max_chars, only_country):
 
 @cli.command(name="information_retrieval")
 def information_retrieval():
-    """Step 6: Run information retrieval pipeline."""
+    """Step 5: Run information retrieval pipeline."""
     retrieve_and_format_answers()
 
 @cli.command(name="policy_extraction")
 def policy_extraction():
-    """Step 7: Extract policy targets."""
+    """Step 6: Extract policy targets."""
     run_policy_extraction()
 
 @cli.command(name="visualize")
 def visualize():
-    """Step 8: Generate TSNE and heatmap visualizations."""
+    """Step 7: Generate TSNE and heatmap visualizations."""
     generate_visualizations()
 
 @cli.command(name="evaluate")
 def evaluate():
-    """Step 9: Evaluate policy extraction results."""
+    """Step 8: Evaluate policy extraction results."""
     run_evaluation()
 
 @cli.command(name="qa_boxes")
 def qa_boxes():
-    """Step 10: Generate QA boxes."""
+    """Step 9: Generate QA boxes."""
     generate_qa_markdown("output/policy_targets_output.json", "output/qa_boxes.md")
 
 @cli.command(name="recreate_db")

@@ -2,6 +2,16 @@
 
 A comprehensive RAG (Retrieval-Augmented Generation) pipeline for extracting and analyzing climate policy information from the Climate Action Tracker website to generate structured country-specific fact sheets for policy analysts.
 
+ **Attribution & Team Credit**  
+This repository mirrors the team project originally hosted at:  
+👉 https://github.com/MaxL75/DS205-final-project-team-CPR  
+
+License: Apache-2.0 (retained).  
+All contributors’ commit history is preserved.  
+
+**My role in the project:** Worked on climate policy document analysis pipeline, embeddings, and extraction logic.  
+**Team members:** Credit to all team members for joint development (see commit history).
+
 ## Project Overview
 
 This project builds upon previous NDC (Nationally Determined Contributions) extraction work to create an intelligent information retrieval system that helps policy analysts access relevant climate policy facts from Climate Action Tracker. The system follows the ASCOR methodology framework to identify and extract key climate policy indicators for informed assessment.
